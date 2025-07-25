@@ -1,5 +1,5 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
 
 import { work } from "@cv"
 ---
@@ -9,9 +9,9 @@ import { work } from "@cv"
     {
       work.map(
         ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
+          const startYear = new Date(startDate).getFullYear();
           const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+            endDate != null ? new Date(endDate).getFullYear() : "Actual";
 
           return (
             <li>
@@ -27,16 +27,12 @@ import { work } from "@cv"
                   </div>
 
                   <div>
-                    <time 
-                      datetime={startDate}
-                      data-title={startDate}>
-                        {startYear}
+                    <time datetime={startDate} data-title={startDate}>
+                      {startYear}
                     </time>
                     {" - "}
-                    <time 
-                      datetime={endDate}
-                      data-title={endDate}>
-                        {endYear}
+                    <time datetime={endDate} data-title={endDate}>
+                      {endYear}
                     </time>
                   </div>
                 </header>
@@ -46,7 +42,7 @@ import { work } from "@cv"
                 </footer>
               </article>
             </li>
-          )
+          );
         }
       )
     }
