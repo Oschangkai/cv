@@ -1,11 +1,12 @@
 ---
 import Section from "../Section.astro";
+import { useTranslation, getCVSection } from "@/utils/language-context";
 
-import { basics } from "@cv"
-const { summary } = basics
+const { summary } = getCVSection("basics");
+const t = useTranslation();
 ---
 
-<Section title="Sobre mí">
+<Section title={t("about.title")}>
   <p>
     {summary}
   </p>

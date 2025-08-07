@@ -1,41 +1,24 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import About from "@/components/sections/About.astro";
-import Education from "@/components/sections/Education.astro";
-import Experience from "@/components/sections/Experience.astro";
-import Hero from "@/components/sections/Hero.astro";
-import Projects from "@/components/sections/Projects.astro";
-import Skills from "@/components/sections/Skills.astro";
-import KeyboardManager from "@/components/KeyboardManager.astro";
-
-import { basics } from "@cv"
-const { name, label } = basics
+import { i18nConfig } from "@astro.config";
+const defaultLang = i18nConfig.defaultLocale;
 ---
 
-<Layout title={`Portafolio de ${name} - ${label}`}>
-  <main>
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Projects />
-    <Skills />
-  </main>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loading...</title>
+    <script define:vars={{ defaultLang }}>
+      var storedLang = localStorage.getItem("preferred-language");
+      var targetLang = storedLang || defaultLang;
 
-  <KeyboardManager />
-</Layout>
-
-<style>
-  main {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-  }
-
-  @media (width <= 700px) {
-    main {
-      padding: 2rem;
-    }
-  }
-</style>
+      // Immediately redirect, without waiting
+      window.location.replace("/" + targetLang);
+    </script>
+    <!-- Backup redirect, if JavaScript fails -->
+    <meta http-equiv="refresh" content=`2;url=/${defaultLang}` />
+  </head>
+  <body>
+    <p>Loading...</p>
+  </body>
+</html>

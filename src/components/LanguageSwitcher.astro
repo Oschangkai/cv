@@ -1,0 +1,242 @@
+---
+import { i18nConfig } from "@astro.config";
+import { useTranslation, getCVLang } from "@/utils/language-context";
+
+const cvLang = getCVLang();
+const t = useTranslation();
+---
+
+<div class="language-switcher no-print">
+  <button
+    id="language-toggle"
+    class="language-button"
+    aria-label={t("language.switch")}
+    title={t("language.switch")}
+  >
+    <span class="current-lang"
+      >{
+        i18nConfig.languageNames[
+          cvLang as keyof typeof i18nConfig.languageNames
+        ] || cvLang
+      }</span
+    >
+    <svg
+      class="chevron"
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="currentColor"
+    >
+      <path
+        d="M2 4l4 4 4-4"
+        stroke="currentColor"
+        stroke-width="1.5"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
+  <div class="language-dropdown" id="language-dropdown">
+    {
+      i18nConfig.locales.map((lang) => (
+        <a
+          href={`/${lang}`}
+          class={`language-option ${lang === cvLang ? "active" : ""}`}
+          data-lang={lang}
+        >
+          <span class="lang-name">
+            {i18nConfig.languageNames[
+              lang as keyof typeof i18nConfig.languageNames
+            ] || lang}
+          </span>
+          <span class="lang-code">{lang.toUpperCase()}</span>
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  // Language selection memory
+  const STORAGE_KEY = "preferred-language";
+
+  // Save language preference
+  function storeLanguage(lang: string): void {
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem(STORAGE_KEY, lang);
+    }
+  }
+
+  // When the page loads, initialize the language switcher
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("language-toggle");
+    const dropdown = document.getElementById("language-dropdown");
+
+    if (!toggle || !dropdown) return;
+
+    // Switch the dropdown menu
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle("show");
+    });
+
+    // Click other places to close the dropdown menu
+    document.addEventListener("click", () => {
+      dropdown.classList.remove("show");
+    });
+
+    // Prevent the dropdown menu from closing when clicked
+    dropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+
+    // Handle language selection
+    const languageOptions = dropdown.querySelectorAll(".language-option");
+    languageOptions.forEach((option) => {
+      option.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = (e.currentTarget as HTMLElement).dataset.lang;
+        if (lang) {
+          storeLanguage(lang);
+          window.location.href = `/${lang}`;
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .language-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+
+  .language-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+
+  .language-button:hover {
+    background: #f9f9f9;
+    border-color: #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .current-lang {
+    font-weight: 500;
+  }
+
+  .chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .language-dropdown.show .chevron {
+    transform: rotate(180deg);
+  }
+
+  .language-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 180px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s ease;
+  }
+
+  .language-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .language-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background-color 0.2s ease;
+  }
+
+  .language-option:last-child {
+    border-bottom: none;
+  }
+
+  .language-option:hover {
+    background: #f9f9f9;
+  }
+
+  .language-option.active {
+    background: #f0f9ff;
+    color: #0066cc;
+  }
+
+  .lang-name {
+    font-weight: 500;
+  }
+
+  .lang-code {
+    font-size: 0.75rem;
+    color: #666;
+    font-family: Menlo, Monaco, "Lucida Console", "Courier New", monospace;
+  }
+
+  .language-option.active .lang-code {
+    color: #0066cc;
+  }
+
+  /* Mobile style */
+  @media (width <= 700px) {
+    .language-switcher {
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+
+    .language-button {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .current-lang {
+      display: none;
+    }
+
+    .language-button::before {
+      content: "🌐";
+      font-size: 1.2rem;
+    }
+
+    .language-dropdown {
+      min-width: 160px;
+    }
+  }
+
+  /* Hide when printing */
+  @media print {
+    .language-switcher {
+      display: none !important;
+    }
+  }
+</style>

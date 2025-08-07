@@ -1,10 +1,12 @@
 ---
 import Section from "../Section.astro";
+import { useTranslation, getCVSection } from "@/utils/language-context";
 
-import { work } from "@cv"
+const work = getCVSection("work");
+const t = useTranslation();
 ---
 
-<Section title="Experiencia laboral">
+<Section title={t("experience.title")}>
   <ul>
     {
       work.map(

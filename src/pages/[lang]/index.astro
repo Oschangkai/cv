@@ -1,0 +1,71 @@
+---
+import { i18nConfig } from "@astro.config";
+
+// Define all supported language static paths
+export async function getStaticPaths() {
+  return i18nConfig.locales.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+import Layout from "@/layouts/Layout.astro";
+
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import { initializeLanguageContext } from "@/utils/language-context";
+
+const { lang } = Astro.params;
+
+const { cvData, t, cvLang } = await initializeLanguageContext(lang);
+const { basics } = cvData;
+const { name, label, image, summary, url } = basics;
+---
+
+<Layout
+  title={`${t("portfolio.title")} ${name} - ${label}`}
+  summary={summary}
+  image={image}
+  url={url}
+  currentLang={cvLang}
+>
+  <LanguageSwitcher />
+  <main>
+    <Hero />
+    <About />
+    <Experience />
+    <Education />
+    <Projects />
+    <Skills />
+  </main>
+
+  <KeyboardManager />
+
+  <!-- Automatically record the current language to localStorage -->
+  <script define:vars={{ lang: cvLang }}>
+    // When the page loads, record the current language
+    if (typeof localStorage !== "undefined" && lang) {
+      const STORAGE_KEY = "preferred-language";
+      localStorage.setItem(STORAGE_KEY, lang);
+    }
+  </script>
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+</style>

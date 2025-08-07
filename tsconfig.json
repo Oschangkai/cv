@@ -6,9 +6,17 @@
       "@cv": [
         "./cv.json"
       ],
+      "@cv/*": [
+        "./cv.*.json"
+      ],
       "@/*": [
-        "src/*"
+        "./src/*"
+      ],
+      "@astro.config": [
+        "./astro.config.mjs"
       ]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   }
 }

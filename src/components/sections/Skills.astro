@@ -1,5 +1,4 @@
 ---
-import { skills } from "@cv"
 import Section from "../Section.astro";
 import HTML from "@/icons/html.astro";
 import CSS from "@/icons/css.astro";
@@ -16,6 +15,10 @@ import Swift from "@/icons/swift.astro";
 import SwiftUI from "@/icons/swiftui.astro";
 import Kotlin from "@/icons/kotlin.astro";
 import Flutter from "@/icons/flutter.astro";
+import { useTranslation, getCVSection } from "@/utils/language-context";
+
+const skills = getCVSection("skills");
+const t = useTranslation();
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -36,7 +39,7 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 ---
 
-<Section title="Habilidades">
+<Section title={t("skills.title")}>
   <ul>
     {
       skills.map(({ name }) => {
