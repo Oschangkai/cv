@@ -19,6 +19,7 @@ import Skills from "@/components/sections/Skills.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 import { initializeLanguageContext } from "@/utils/language-context";
+import { getSectionVisibility } from "@/utils/section-utils";
 
 const { lang } = Astro.params;
 
@@ -26,6 +27,9 @@ const { cvData, t, cvLang, selectedLang } =
   await initializeLanguageContext(lang);
 const { basics } = cvData;
 const { name, label, image, summary, url } = basics;
+
+// Check which sections have content and should be visible
+const sectionVisibility = getSectionVisibility(cvData);
 ---
 
 <Layout
@@ -38,11 +42,11 @@ const { name, label, image, summary, url } = basics;
   <LanguageSwitcher />
   <main>
     <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Projects />
-    <Skills />
+    {sectionVisibility.about && <About />}
+    {sectionVisibility.experience && <Experience />}
+    {sectionVisibility.education && <Education />}
+    {sectionVisibility.projects && <Projects />}
+    {sectionVisibility.skills && <Skills />}
   </main>
 
   <KeyboardManager />
