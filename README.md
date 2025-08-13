@@ -1,104 +1,134 @@
+# Minimalist Portfolio JSON
 
+> **Forked from [midudev/minimalist-portfolio-json](https://github.com/midudev/minimalist-portfolio-json)**
 
-<div align="center">
-<img src="logo.png" height="90px" width="auto" /> 
-<h2>
-    <em>Résumé</em> minimalista maquetado para web y pdf
-</h2>
-<p>
-Esquema del JSON de CV de <a href="https://jsonresume.org/schema/">jsonresume.org</a>
-</p>
-
-
-<p>
-Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a>
-
-</p>
-
-</div>
-
-<div align="center">
-    <a href="#🚀-empezar">
-        Empezar
-    </a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="#🧞-comandos">
-        Comandos
-    </a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="#🔑-licencia">
-        Licencia
-    </a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="https://midu.dev">
-        Personal
-    </a>
-   
-</div>
-
-<p></p>
-
-<div align="center">
+A minimalist CV/portfolio built with Astro and enhanced with multilingual support and some features.
 
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
-![GitHub stars](https://img.shields.io/github/stars/midudev/minimalist-portfolio-json)
-![GitHub issues](https://img.shields.io/github/issues/midudev/minimalist-portfolio-json)
-![GitHub forks](https://img.shields.io/github/forks/midudev/minimalist-portfolio-json)
-![GitHub PRs](https://img.shields.io/github/issues-pr/midudev/minimalist-portfolio-json)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-</div>
+## ✨ Features
 
-<img src="portada.png"></img>
+- **🌍 Multi-language Support** - With automatic language detection
+- **⌨️ Smart Keyboard Shortcuts** - Press `/` to open command palette, print with `Cmd+P`
+- **📱 Language Switcher** - Dynamic language switching with localStorage persistence
+- **🎨 Clean Design** - Based on Bartosz Jarocki's elegant design
+- **📄 Print Optimized** - Perfect for both web viewing and PDF generation
 
-## 🛠️ Stack
+## 🛠️ Tech Stack
 
-- [**Astro**](https://astro.build/) - El framework web de la nueva época.
-- [**Typescript**](https://www.typescriptlang.org/) - JavaScript con sintaxis de tipado.
-- [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Menu desplegable con atajos de teclado hecho en puro Javascript.
+- [**Astro**](https://astro.build/) - Modern web framework
+- [**TypeScript**](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [**Hotkeypad**](https://github.com/ssleptsov/ninja-keys) - Keyboard shortcuts menu
 
+## 🚀 Quick Start
 
-## 🚀 Empezar
-
-### 1. Usa este [repo](https://github.com/midudev/minimalist-portfolio-json) como _template_ de un proyecto de Astro
-
-
-- Yo uso [pnpm](https://pnpm.io/installation) como gestor de dependencias y empaquetador.
+### 1. Clone or Fork This Repository
 
 ```bash
-# Activa pnpm en MacOS, WSL & Linux:
-corepack enable
-corepack prepare pnpm@latest --activate
+# Clone this enhanced version
+git clone https://github.com/[your-username]/cv.git
+cd cv
 
-# Inicializa el proyecto
-pnpm create astro@latest -- --template midudev/minimalist-portfolio-json
+# Install dependencies (using bun recommended)
+bun i
 ```
 
-### 2. Añade tu contenido:
-Edita el archivo `cv.json` para crear tu propio Portafolio/CV imprimible.
-### 3. Lanza el servidor de desarrollo:
+### 2. Add Your Content
+
+Create your CV data files for each supported language:
+- `cv.en_us.json` - English version
+- `cv.zh_tw.json` - Traditional Chinese version
+- ...etc
+
+Use the [JSON Resume schema](https://jsonresume.org/schema/) format.
+
+### 3. Start Development
 
 ```bash
-# Disfruta del resultado
 pnpm dev
 ```
 
+Open [http://localhost:4321](http://localhost:4321) to see your CV.
 
-1. Abre [**http://localhost:4321**](http://localhost:4321/) en tu navegador para ver el resultado 🚀
+## 📁 Project Structure
+
+```
+/
+├── src/
+│   ├── components/
+│   │   ├── sections/          # CV sections (Hero, About, Experience, etc.)
+│   │   ├── KeyboardManager.astro
+│   │   └── LanguageSwitcher.astro
+│   ├── i18n/
+│   │   ├── ui.ts             # UI translations
+│   │   └── utils.ts          # Translation utilities
+│   ├── utils/
+│   │   ├── language-context.ts # Language management
+│   │   ├── date-formatter.ts   # Date formatting utilities
+│   │   └── section-utils.ts    # Content validation
+│   └── pages/
+│       ├── [lang]/
+│       │   └── index.astro   # Multi-language pages
+│       ├── 404.astro         # Error page with redirection
+│       └── index.astro       # Language detection & redirect
+├── cv.<language_code>.json   # Language specific CV data (e.g., `cv.en_us.json`, `cv.zh_tw.json`)
+└── cv.json                   # Default CV data
+```
+
+## 🧞 Commands
+
+| Command | Action |
+|:--------|:-------|
+| `bun dev` / `bun start` | Start development server at `localhost:4321` |
+| `bun run build` | Build production site to `./dist/` |
+| `bun preview` | Preview build locally |
 
 
-## 🧞 Comandos
+## 🔧 Language Configuration
 
-|     | Comando          | Acción                                        |
-| :-- | :--------------- | :-------------------------------------------- |
-| ⚙️  | `dev` o `start` | Lanza un servidor de desarrollo local en  `localhost:4321`.  |
-| ⚙️  | `build`          | Comprueba posibles errores y hace un empaquetado de producción en `./dist/`.      |
-| ⚙️  | `preview`        | Vista previa en local `localhost:4321` |
+The system automatically detects available CV files and UI translations, falling back gracefully when content isn't available in the user's preferred language.
 
+**1. UI Translations**
+- Location: `src/i18n/ui.ts`
+- Add new language keys to the `ui` object with corresponding translations
+- Supports parameter interpolation (e.g., `{name}`, `{network}`)
 
+**2. CV Data Files**
+- Format: `cv.{language_code}.json` (e.g., `cv.en_us.json`, `cv.zh_tw.json`)
+- Place in project root directory
+- Follow [JSON Resume schema](https://jsonresume.org/schema/) format
 
-## 🔑 Licencia
+**3. Language Display Names and Default Language**
+- Location: `astro.config.mjs` → `i18nConfig.languageNames`
+- Controls how language names appear in the language switcher
+- Format: `'language_code': 'Display Name'`
 
-[MIT](LICENSE.txt) - Creado por [**midudev**](https://midu.dev).
+```javascript
+// Example in astro.config.mjs
+languageNames: {
+  'zh_tw': '繁體中文',
+  'en_us': 'English (US)',
+  'ja_jp': '日本語',
+  'es_es': 'Español'
+}
+```
 
+## 🎯 Key Enhancements
 
+1. **Dynamic Language Detection** - Scans available CV files automatically
+2. **Smart Date Formatting** - Displays work duration in natural language
+3. **Conditional Section Rendering** - Hides empty sections for cleaner layouts
+4. **Enhanced Keyboard UX** - Multiple shortcuts including `/` for quick access
+5. **Language Persistence** - Remembers user's language choice
+6. **Graceful Fallbacks** - Handles missing translations and CV data elegantly
 
+## 📄 License
+
+[MIT](LICENSE.txt) - Originally created by [**midudev**](https://midu.dev), enhanced with additional features.
+
+## 🙏 Credits
+
+- Original design: [Bartosz Jarocki](https://github.com/BartoszJarocki/cv)
+- Base template: [midudev](https://github.com/midudev/minimalist-portfolio-json)
+- JSON Resume schema: [jsonresume.org](https://jsonresume.org/schema/)
