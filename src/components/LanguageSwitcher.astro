@@ -1,9 +1,17 @@
 ---
 import { i18nConfig } from "@astro.config";
-import { useTranslation, getCVLang } from "@/utils/language-context";
+import {
+  useTranslation,
+  getSelectedLang,
+  getAvailableLanguages,
+} from "@/utils/language-context";
 
-const cvLang = getCVLang();
+// Use the user selected language for display, not the CV fallback language
+const selectedLang = getSelectedLang();
 const t = useTranslation();
+
+// Get all available languages dynamically (UI languages + CV files)
+const availableLanguages = await getAvailableLanguages();
 ---
 
 <div class="language-switcher no-print">
@@ -16,8 +24,8 @@ const t = useTranslation();
     <span class="current-lang"
       >{
         i18nConfig.languageNames[
-          cvLang as keyof typeof i18nConfig.languageNames
-        ] || cvLang
+          selectedLang as keyof typeof i18nConfig.languageNames
+        ] || selectedLang
       }</span
     >
     <svg
@@ -39,10 +47,10 @@ const t = useTranslation();
 
   <div class="language-dropdown" id="language-dropdown">
     {
-      i18nConfig.locales.map((lang) => (
+      availableLanguages.map((lang) => (
         <a
           href={`/${lang}`}
-          class={`language-option ${lang === cvLang ? "active" : ""}`}
+          class={`language-option ${lang === selectedLang ? "active" : ""}`}
           data-lang={lang}
         >
           <span class="lang-name">

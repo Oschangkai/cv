@@ -1,0 +1,165 @@
+---
+import { i18nConfig } from "@astro.config";
+
+// Get the default language from config
+const defaultLang = i18nConfig.defaultLocale;
+---
+
+<!doctype html>
+<html lang={defaultLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - Redirecting...</title>
+    <meta
+      name="description"
+      content="Page not found, redirecting to homepage"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Immediate redirect script -->
+    <script define:vars={{ defaultLang }}>
+      // Function to get user's preferred language from localStorage
+      function getPreferredLanguage() {
+        if (typeof localStorage !== "undefined") {
+          const stored = localStorage.getItem("preferred-language");
+          if (stored) return stored;
+        }
+        return defaultLang;
+      }
+
+      // Function to redirect to homepage
+      function redirectToHome() {
+        const preferredLang = getPreferredLanguage();
+        const targetUrl = `/${preferredLang}`;
+
+        // Use replace instead of href to avoid adding to browser history
+        window.location.replace(targetUrl);
+      }
+
+      // Redirect immediately when page loads
+      if (typeof window !== "undefined") {
+        redirectToHome();
+      }
+    </script>
+
+    <!-- Fallback meta refresh for cases where JavaScript is disabled -->
+    <meta http-equiv="refresh" content={`2;url=/${defaultLang}`} />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>🔍 Page Not Found</h1>
+        <p>The page you're looking for doesn't exist.</p>
+        <p>Redirecting you to the homepage...</p>
+        <noscript>
+          <p>
+            <a href={`/${defaultLang}`}
+              >Click here if you're not redirected automatically</a
+            >
+          </p>
+        </noscript>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      "Roboto",
+      sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  /* Loading animation */
+  .content::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 1.2rem;
+    background: white;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .content {
+      padding: 2rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>

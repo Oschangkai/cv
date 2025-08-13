@@ -16,7 +16,7 @@ export const ui = {
     'actions.print': '列印',
     'actions.email': '發送電子郵件給',
     'actions.phone': '致電',
-    'actions.visit': '造訪',
+    'actions.visit': '前往',
     'actions.section': '操作',
     
     // 鍵盤快捷鍵
@@ -24,13 +24,13 @@ export const ui = {
     'keyboard.search': '搜尋指令',
     
     // 社群媒體
-    'social.visit': '造訪',
+    'social.visit': '前往',
     'social.section': '社群媒體',
     
     // 聯絡資訊
     'contact.email.title': '發送電子郵件給 {name}',
     'contact.phone.title': '致電給 {name}',
-    'contact.profile.title': '造訪 {name} 在 {network} 的個人檔案',
+    'contact.profile.title': '前往 {name} 在 {network} 的個人檔案',
     
     // 專案相關
     'projects.view': '查看 {name} 專案',
@@ -39,19 +39,18 @@ export const ui = {
     // 其他
     'loading': '載入中...',
   },
-  
   en_us: {
-    // 頁面標題
+    // Page title
     'portfolio.title': 'Portfolio of',
     
-    // 區塊標題  
+    // Section titles
     'about.title': 'About me',
     'experience.title': 'Work Experience',
     'education.title': 'Education',
     'projects.title': 'Projects', 
     'skills.title': 'Skills',
     
-    // 按鈕與動作
+    // Buttons and actions
     'language.switch': 'Switch Language',
     'actions.print': 'Print',
     'actions.email': 'Send email to',
@@ -59,37 +58,38 @@ export const ui = {
     'actions.visit': 'Visit',
     'actions.section': 'Actions',
     
-    // 鍵盤快捷鍵
+    // Keyboard shortcuts
     'keyboard.hint': 'Press <kbd>Cmd</kbd> + <kbd>K</kbd> to open command palette',
     'keyboard.search': 'Search commands',
     
-    // 社群媒體
+    // Social media
     'social.visit': 'Visit',
     'social.section': 'Social',
     
-    // 聯絡資訊
+    // Contact information
     'contact.email.title': 'Send email to {name}',
     'contact.phone.title': 'Call {name}',
     'contact.profile.title': 'Visit {name} profile on {network}',
     
-    // 專案相關
+    // Project related
     'projects.view': 'View project {name}',
     'projects.source': 'View source code of {name}',
     
-    // 其他
+    // Other
     'loading': 'Loading...',
-  },es_es: {
-    // 頁面標題
+  },
+  es_es: {
+    // Page title
     'portfolio.title': 'Portafolio de',
     
-    // 區塊標題  
+    // Section titles
     'about.title': 'Sobre mí',
     'experience.title': 'Experiencia Laboral',
     'education.title': 'Educación',
     'projects.title': 'Proyectos', 
     'skills.title': 'Habilidades',
     
-    // 按鈕與動作
+    // Buttons and actions
     'language.switch': 'Cambiar Idioma',
     'actions.print': 'Imprimir',
     'actions.email': 'Enviar email a',
@@ -97,24 +97,24 @@ export const ui = {
     'actions.visit': 'Visitar',
     'actions.section': 'Acciones',
     
-    // 鍵盤快捷鍵
+    // Keyboard shortcuts
     'keyboard.hint': 'Presiona <kbd>Cmd</kbd> + <kbd>K</kbd> para abrir la paleta de comandos',
     'keyboard.search': 'Buscar comandos',
     
-    // 社群媒體
+    // Social media
     'social.visit': 'Visitar',
     'social.section': 'Social',
     
-    // 聯絡資訊
+    // Contact information
     'contact.email.title': 'Enviar email a {name}',
     'contact.phone.title': 'Llamar a {name}',
     'contact.profile.title': 'Visitar perfil de {name} en {network}',
     
-    // 專案相關
+    // Project related
     'projects.view': 'Ver proyecto {name}',
     'projects.source': 'Ver código fuente de {name}',
     
-    // 其他
+    // Other
     'loading': 'Cargando...',
   }
 } as const;

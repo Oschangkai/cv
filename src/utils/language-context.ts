@@ -1,4 +1,5 @@
 import type { UiLang, TranslationKey } from '@/i18n/ui';
+import { ui } from '@/i18n/ui';
 import { getUILang, useTranslations } from '@/i18n/utils';
 import type { CV } from '@/cv.d.ts';
 import { i18nConfig } from '@astro.config';
@@ -10,7 +11,9 @@ import { i18nConfig } from '@astro.config';
 export interface LanguageContext {
   /** UI interface language */
   uiLang: UiLang;
-  /** CV content language */
+  /** User selected language (what user actually chose) */
+  selectedLang: string;
+  /** CV content language (may be different from selectedLang due to fallback) */
   cvLang: string;
   /** Translation function */
   t: (key: TranslationKey, params?: Record<string, string>) => string;
@@ -27,7 +30,7 @@ let globalLanguageContext: LanguageContext | null = null;
 /**
  * Initialize the language context
  * This function should be called once at the page level
- * @param lang The language code
+ * @param lang The language code (user selected language)
  */
 export async function initializeLanguageContext(lang: string): Promise<LanguageContext> {
 
@@ -38,7 +41,8 @@ export async function initializeLanguageContext(lang: string): Promise<LanguageC
   
   const context: LanguageContext = {
     uiLang,
-    cvLang,
+    selectedLang: lang, // Keep track of what user actually selected
+    cvLang, // This might be different due to CV fallback
     t,
     cvData,
   };
@@ -66,6 +70,14 @@ export function getLanguageContext(): LanguageContext {
  */
 export function useTranslation(): (key: TranslationKey, params?: Record<string, string>) => string {
   return getLanguageContext().t;
+}
+
+/**
+ * Convenience function: get the user selected language
+ * @returns The user selected language code
+ */
+export function getSelectedLang(): string {
+  return getLanguageContext().selectedLang;
 }
 
 /**
@@ -114,4 +126,61 @@ export async function getCVData(lang: string): Promise<{ cvData: CV; cvLang: str
       };
     }
   }
+}
+
+/**
+ * Get all available languages (combination of UI languages and CV files)
+ * @returns Array of available language codes
+ */
+export async function getAvailableLanguages(): Promise<string[]> {
+  const availableLanguages = new Set<string>();
+
+  // Add all UI languages
+  const uiLanguages = Object.keys(ui) as UiLang[];
+  uiLanguages.forEach(lang => availableLanguages.add(lang));
+
+  // Use Vite's import.meta.glob to scan for CV files
+  // This will be resolved at build time and includes all matching files
+  const cvFiles = import.meta.glob('../../cv.*.json', { as: 'url' });
+
+  // Extract language codes from CV file paths
+  Object.keys(cvFiles).forEach(filePath => {
+    // Example: '../../cv.ja_jp.json' -> extract 'ja_jp'
+    const match = filePath.match(/\/cv\.(.+)\.json$/);
+    if (match) {
+      const lang = match[1];
+      availableLanguages.add(lang);
+    }
+  });
+
+  // Check for base cv.json file (represents default language)
+  const baseCvFiles = import.meta.glob('../../cv.json', { as: 'url' });
+  if (Object.keys(baseCvFiles).length > 0) {
+    availableLanguages.add(i18nConfig.defaultLocale);
+  }
+
+  return Array.from(availableLanguages).sort();
+}
+
+/**
+ * Check if a CV file exists for the given language
+ * @param lang Language code to check
+ * @returns Promise<boolean> indicating if CV file exists
+ */
+export async function hasCVFile(lang: string): Promise<boolean> {
+  try {
+    await import(`../../cv.${lang}.json`);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Check if UI translation exists for the given language
+ * @param lang Language code to check
+ * @returns boolean indicating if UI translation exists
+ */
+export function hasUITranslation(lang: string): boolean {
+  return lang in ui;
 }

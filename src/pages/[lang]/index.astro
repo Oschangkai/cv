@@ -1,9 +1,9 @@
 ---
-import { i18nConfig } from "@astro.config";
+import { getAvailableLanguages } from "@/utils/language-context";
 
-// Define all supported language static paths
+// Define all supported language static paths dynamically
 export async function getStaticPaths() {
-  return i18nConfig.locales.map((lang) => ({
+  return (await getAvailableLanguages()).map((lang) => ({
     params: { lang },
   }));
 }
@@ -22,7 +22,8 @@ import { initializeLanguageContext } from "@/utils/language-context";
 
 const { lang } = Astro.params;
 
-const { cvData, t, cvLang } = await initializeLanguageContext(lang);
+const { cvData, t, cvLang, selectedLang } =
+  await initializeLanguageContext(lang);
 const { basics } = cvData;
 const { name, label, image, summary, url } = basics;
 ---
@@ -46,9 +47,9 @@ const { name, label, image, summary, url } = basics;
 
   <KeyboardManager />
 
-  <!-- Automatically record the current language to localStorage -->
-  <script define:vars={{ lang: cvLang }}>
-    // When the page loads, record the current language
+  <!-- Automatically record the user selected language to localStorage -->
+  <script define:vars={{ lang: selectedLang }}>
+    // When the page loads, record the user selected language
     if (typeof localStorage !== "undefined" && lang) {
       const STORAGE_KEY = "preferred-language";
       localStorage.setItem(STORAGE_KEY, lang);

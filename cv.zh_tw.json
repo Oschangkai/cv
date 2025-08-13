@@ -1,0 +1,319 @@
+{
+  "basics": {
+    "name": "Miguel Ángel Durán",
+    "label": "擁有超過15年經驗的全端開發者 & 程式設計內容創作者",
+    "image": "/me.webp",
+    "email": "miduga@gmail.com",
+    "phone": "+34 688888888",
+    "url": "https://midu.dev",
+    "summary": "擁有超過15年的網頁開發經驗。目前擔任內容創作者和程式設計教育者。居住在西班牙巴塞隆納。我曾在不同環境中工作：從加速新創公司發展到領導跨國企業團隊。",
+    "location": {
+      "address": "",
+      "postalCode": "08820",
+      "city": "埃爾普拉特德略布雷加特",
+      "countryCode": "ES",
+      "region": "西班牙"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "midudev",
+        "url": "https://linkedin.com/in/midudev"
+      },
+      {
+        "network": "X",
+        "username": "midudev",
+        "url": "https://x.com/midudev"
+      },
+      {
+        "network": "GitHub",
+        "username": "midudev",
+        "url": "https://github.com/midudev"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "midudev",
+      "position": "網頁程式設計教育者",
+      "url": "https://twitch.tv/midudev",
+      "startDate": "2021-01-01",
+      "endDate": null,
+      "summary": "Twitch 上最多人觀看的西班牙語程式設計實況主。在所有社交網路上擁有超過100萬追蹤者。因對開發者社群的影響力而獲得 Google、Microsoft 和 GitHub 的認可。",
+      "highlights": [
+        "創辦公司"
+      ]
+    },
+    {
+      "name": "Adevinta",
+      "position": "首席前端架構師",
+      "url": "https://twitch.tv/midudev",
+      "startDate": "2016-06-01",
+      "endDate": "2022-09-01",
+      "summary": "領導不同產品間的技術整合，並將單體架構遷移到更靈活和優化的架構。推廣最佳實踐並改善效能文化，以及快速向用戶交付價值。",
+      "highlights": [
+        "創辦公司"
+      ]
+    },
+    {
+      "name": "Hubii",
+      "position": "資深前端開發者",
+      "startDate": "2011-03-01",
+      "endDate": "2016-05-01",
+      "summary": "開發了地理定位新聞平台和資訊消費 API。擴展服務以支援每日數十萬次請求的負載。將交付時間和生產部署時間縮短一半。與 Mozilla 和 Telefónica 合作開發了首個 FirefoxOS 電視應用程式。",
+      "highlights": [
+        "創辦公司"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "組織",
+      "position": "志工",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "描述…",
+      "highlights": [
+        "獲得「當月最佳志工」獎項"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "加泰羅尼亞開放大學",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "軟體工程師",
+      "studyType": "學士",
+      "startDate": "2003-01-01",
+      "endDate": "2009-01-01",
+      "score": "4.0",
+      "courses": [
+        "DB1101 - 基礎 SQL"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "獎項",
+      "date": "2014-11-01",
+      "awarder": "公司",
+      "summary": "沒有湯匙。"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "證書",
+      "date": "2021-11-07",
+      "issuer": "公司",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "出版物",
+      "publisher": "公司",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "描述…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "精通",
+      "keywords": [
+        "網頁開發",
+        "前端"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "精通",
+      "keywords": [
+        "網頁開發",
+        "前端",
+        "響應式設計"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "精通",
+      "keywords": [
+        "網頁開發",
+        "前端",
+        "後端",
+        "全端"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "進階",
+      "keywords": [
+        "網頁開發",
+        "前端",
+        "CSS 框架",
+        "響應式設計"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "進階",
+      "keywords": [
+        "網頁開發",
+        "前端",
+        "後端",
+        "JavaScript 超集"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "進階",
+      "keywords": [
+        "網頁開發",
+        "後端",
+        "JavaScript",
+        "伺服器"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "進階",
+      "keywords": [
+        "資料庫",
+        "SQL",
+        "資料儲存",
+        "後端"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "進階",
+      "keywords": [
+        "版本控制",
+        "協作",
+        "原始碼"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "進階",
+      "keywords": [
+        "版本控制",
+        "協作",
+        "原始碼",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "進階",
+      "keywords": [
+        "網頁開發",
+        "前端",
+        "React 框架",
+        "SSR",
+        "靜態生成"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "進階",
+      "keywords": [
+        "網頁開發",
+        "前端",
+        "JavaScript 函式庫",
+        "使用者介面"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "西班牙語",
+      "fluency": "母語"
+    },
+    {
+      "language": "英語",
+      "fluency": "進階"
+    }
+  ],
+  "interests": [
+    {
+      "name": "野生動物",
+      "keywords": [
+        "雪貂",
+        "獨角獸"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "推薦信…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "mars.codes",
+      "isActive": true,
+      "description": "互動式故事配合程式設計挑戰，一起前往火星",
+      "highlights": [
+        "選擇你的冒險",
+        "開發中"
+      ],
+      "url": "https://mars.codes"
+    },
+    {
+      "name": "AdventJS",
+      "isActive": true,
+      "description": "十二月每日 JavaScript 程式設計挑戰，直到聖誕節",
+      "highlights": [
+        "超過100萬次造訪",
+        "多語言",
+        "JavaScript & TypeScript"
+      ],
+      "url": "https://adventjs.dev"
+    },
+    {
+      "name": "Codember",
+      "isActive": true,
+      "description": "互動式程式設計遊戲，包含挑戰和秘密",
+      "highlights": [
+        "超過2000位活躍用戶",
+        "適用任何程式語言的挑戰"
+      ],
+      "url": "https://codember.dev"
+    },
+    {
+      "name": "codi.link",
+      "isActive": true,
+      "description": "用於分享的 HTML、CSS 和 JavaScript 程式碼遊樂場",
+      "highlights": [
+        "每月10萬次造訪",
+        "社群開發"
+      ],
+      "url": "https://codi.link",
+      "github": "https://github.com/midudev/codi.link"
+    },
+    {
+      "name": "技術測試",
+      "isActive": true,
+      "description": "公司技術測試清單，用於練習程式設計",
+      "highlights": [
+        "100% 免費",
+        "超過500個社群解答"
+      ],
+      "url": "https://pruebastecnicas.com",
+      "github": "https://github.com/midudev/pruebas-tecnicas"
+    },
+    {
+      "name": "miduConf",
+      "description": "為西班牙語社群舉辦的串流程式設計會議，featuring 頂級演講",
+      "highlights": [
+        "發放超過1.5萬張門票",
+        "超過5萬名直播觀眾"
+      ],
+      "url": "https://miduconf.com"
+    }
+  ]
+}
