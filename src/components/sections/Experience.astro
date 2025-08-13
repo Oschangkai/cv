@@ -1,7 +1,10 @@
 ---
 import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
-import { formatWorkDateRange } from "@/utils/date-formatter";
+import {
+  formatWorkDateRange,
+  calculateWorkDuration,
+} from "@/utils/date-formatter";
 
 const work = getCVSection("work");
 const t = useTranslation();
@@ -14,6 +17,8 @@ const t = useTranslation();
         ({ name, startDate, endDate, position, summary, highlights, url }) => {
           // Use the formatWorkDateRange function to format the date range
           const formattedDateRange = formatWorkDateRange(startDate, endDate, t);
+          // Calculate work duration
+          const workDuration = calculateWorkDuration(startDate, endDate, t);
 
           return (
             <li>
@@ -28,13 +33,14 @@ const t = useTranslation();
                     <h4>{position}</h4>
                   </div>
 
-                  <div>
+                  <div class="date-info">
                     <time
                       datetime={startDate}
                       data-title={`${startDate} - ${endDate ?? "Present"}`}
                     >
                       {formattedDateRange}
                     </time>
+                    <div class="duration">{`(${workDuration})`}</div>
                   </div>
                 </header>
 
@@ -82,11 +88,24 @@ const t = useTranslation();
     margin-bottom: 4px;
   }
 
+  .date-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+  }
+
   time {
     color: #555;
     font-size: 0.85rem;
     min-width: fit-content;
     cursor: default;
+  }
+
+  .duration {
+    color: #777;
+    font-size: 0.75rem;
+    font-style: italic;
   }
 
   [data-title]:hover:after {

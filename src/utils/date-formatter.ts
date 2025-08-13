@@ -59,3 +59,43 @@ export function formatWorkDateRange(
 
   return `${startFormatted} - ${endFormatted}`;
 }
+
+/**
+ * Calculate the duration between two dates
+ * @param startDate start date
+ * @param endDate end date (can be null, means present)
+ * @param t translation function
+ * @returns formatted duration string
+ */
+export function calculateWorkDuration(
+  startDate: string,
+  endDate: string | null,
+  t: (key: TranslationKey, params?: Record<string, string>) => string
+): string {
+  const start = new Date(startDate);
+  const end = endDate ? new Date(endDate) : new Date(); // If there is no end date, use the current date
+
+  // Calculate the difference in years and months
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+
+  // If the months are negative, adjust the years and months
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  // Format the output
+  if (years === 0 && months === 0) {
+    return t('duration.less_than_month');
+  } else if (years === 0) {
+    return t('duration.months', { months: months.toString() });
+  } else if (months === 0) {
+    return t('duration.years', { years: years.toString() });
+  } else {
+    return t('duration.years_months', { 
+      years: years.toString(),
+      months: months.toString()
+    });
+  }
+}

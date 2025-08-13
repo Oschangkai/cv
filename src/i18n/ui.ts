@@ -41,6 +41,12 @@ export const ui = {
     'date.format.year_month': '{year} 年 {month} 月',
     'date.format.year_only': '{year} 年',
     
+    // 時間長度
+    'duration.years': '{years} 年',
+    'duration.months': '{months} 個月',
+    'duration.years_months': '{years} 年 {months} 個月',
+    'duration.less_than_month': '不到 1 個月',
+    
     // 其他
     'loading': '載入中...',
   },
@@ -85,6 +91,12 @@ export const ui = {
     'date.format.year_month': '{month}/{year}',
     'date.format.year_only': '{year}',
     
+    // Duration
+    'duration.years': '{years} years',
+    'duration.months': '{months} months',
+    'duration.years_months': '{years} years {months} months',
+    'duration.less_than_month': 'Less than 1 month',
+    
     // Other
     'loading': 'Loading...',
   },
@@ -128,6 +140,12 @@ export const ui = {
     'date.current': 'Presente',
     'date.format.year_month': '{month}/{year}',
     'date.format.year_only': '{year}',
+    
+    // Duration
+    'duration.years': '{years} años',
+    'duration.months': '{months} meses',
+    'duration.years_months': '{years} años {months} meses',
+    'duration.less_than_month': 'Menos de 1 mes',
     
     // Other
     'loading': 'Cargando...',
