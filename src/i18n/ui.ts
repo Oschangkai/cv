@@ -20,7 +20,7 @@ export const ui = {
     'actions.section': '操作',
     
     // 鍵盤快捷鍵
-    'keyboard.hint': '按下 <kbd>Cmd</kbd> + <kbd>K</kbd> 開啟指令面板',
+    'keyboard.hint': '按下 <kbd>/</kbd> 開啟指令面板',
     'keyboard.search': '搜尋指令',
     
     // 社群媒體
@@ -59,7 +59,7 @@ export const ui = {
     'actions.section': 'Actions',
     
     // Keyboard shortcuts
-    'keyboard.hint': 'Press <kbd>Cmd</kbd> + <kbd>K</kbd> to open command palette',
+    'keyboard.hint': 'Press <kbd>/</kbd> to open command palette',
     'keyboard.search': 'Search commands',
     
     // Social media
@@ -98,7 +98,7 @@ export const ui = {
     'actions.section': 'Acciones',
     
     // Keyboard shortcuts
-    'keyboard.hint': 'Presiona <kbd>Cmd</kbd> + <kbd>K</kbd> para abrir la paleta de comandos',
+    'keyboard.hint': 'Presiona <kbd>/</kbd> para abrir la paleta de comandos',
     'keyboard.search': 'Buscar comandos',
     
     // Social media

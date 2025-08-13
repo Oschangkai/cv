@@ -140,18 +140,30 @@ const profilesInfo = profiles.map(({ network, url }) => {
 
     const footerButton = document.getElementById("footer-button");
     footerButton?.addEventListener("click", () => {
-      var event = new KeyboardEvent("keydown", {
-        key: "K",
-        code: "KeyK",
-        keyCode: 75,
-        which: 75,
-        ctrlKey: true,
-        altKey: false,
-        shiftKey: false,
-        metaKey: false,
-      });
+      hotkeypad.open();
+    });
 
-      document.dispatchEvent(event);
+    const footer = document.getElementById("normal-footer");
+    footer?.addEventListener("click", () => {
+      hotkeypad.open();
+    });
+
+    // Add "/" key support - when "/" is pressed, trigger keypad
+    document.addEventListener("keydown", (event) => {
+      // Only trigger when there's no focused input field and "/" is pressed
+      if (
+        event.key === "/" &&
+        !event.ctrlKey &&
+        !event.metaKey &&
+        !event.altKey &&
+        document.activeElement?.tagName !== "INPUT" &&
+        document.activeElement?.tagName !== "TEXTAREA" &&
+        !document.activeElement?.getAttribute("contenteditable")
+      ) {
+        // Prevent default behavior (avoid entering "/")
+        event.preventDefault();
+        hotkeypad.open();
+      }
     });
   });
 </script>
@@ -213,6 +225,13 @@ const profilesInfo = profiles.map(({ network, url }) => {
     animation: linear 0.3s fadeIn;
     animation-timeline: --revealing;
     animation-range: entry 100% cover 10%;
+
+    user-select: none;
+  }
+
+  footer:hover {
+    background: #f5f5f5;
+    cursor: pointer;
   }
 
   kbd {
