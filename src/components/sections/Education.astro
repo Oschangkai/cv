@@ -13,7 +13,8 @@ const t = useTranslation();
         const startYear = new Date(startDate).getFullYear();
         const endYear =
           endDate != null ? new Date(endDate).getFullYear() : "Actual";
-        const years = `${startYear} - ${endYear}`;
+        const years =
+          startYear === endYear ? `${startYear}` : `${startYear} - ${endYear}`;
 
         return (
           <li>

@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
+import { formatWorkDateRange } from "@/utils/date-formatter";
 
 const work = getCVSection("work");
 const t = useTranslation();
@@ -11,9 +12,8 @@ const t = useTranslation();
     {
       work.map(
         ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear();
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual";
+          // Use the formatWorkDateRange function to format the date range
+          const formattedDateRange = formatWorkDateRange(startDate, endDate, t);
 
           return (
             <li>
@@ -29,12 +29,11 @@ const t = useTranslation();
                   </div>
 
                   <div>
-                    <time datetime={startDate} data-title={startDate}>
-                      {startYear}
-                    </time>
-                    {" - "}
-                    <time datetime={endDate} data-title={endDate}>
-                      {endYear}
+                    <time
+                      datetime={startDate}
+                      data-title={`${startDate} - ${endDate ?? "Present"}`}
+                    >
+                      {formattedDateRange}
                     </time>
                   </div>
                 </header>
@@ -86,7 +85,7 @@ const t = useTranslation();
   time {
     color: #555;
     font-size: 0.85rem;
-    min-width: 102px;
+    min-width: fit-content;
     cursor: default;
   }
 
@@ -100,10 +99,15 @@ const t = useTranslation();
     content: attr(data-title);
     background-color: #333;
     color: #fff;
-    font-size: .75rem;
-    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;;
+    font-size: 0.75rem;
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      "Courier New",
+      monospace;
     position: absolute;
-    padding: .2rem .5rem;
+    padding: 0.2rem 0.5rem;
     bottom: -1.4rem;
     left: 50%;
     white-space: nowrap;

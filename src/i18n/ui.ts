@@ -36,6 +36,11 @@ export const ui = {
     'projects.view': '查看 {name} 專案',
     'projects.source': '查看 {name} 的原始碼',
     
+    // 時間格式
+    'date.current': '目前',
+    'date.format.year_month': '{year} 年 {month} 月',
+    'date.format.year_only': '{year} 年',
+    
     // 其他
     'loading': '載入中...',
   },
@@ -75,6 +80,11 @@ export const ui = {
     'projects.view': 'View project {name}',
     'projects.source': 'View source code of {name}',
     
+    // Date format
+    'date.current': 'Present',
+    'date.format.year_month': '{month}/{year}',
+    'date.format.year_only': '{year}',
+    
     // Other
     'loading': 'Loading...',
   },
@@ -113,6 +123,11 @@ export const ui = {
     // Project related
     'projects.view': 'Ver proyecto {name}',
     'projects.source': 'Ver código fuente de {name}',
+    
+    // Date format
+    'date.current': 'Presente',
+    'date.format.year_month': '{month}/{year}',
+    'date.format.year_only': '{year}',
     
     // Other
     'loading': 'Cargando...',
