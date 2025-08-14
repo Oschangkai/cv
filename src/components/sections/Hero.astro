@@ -33,7 +33,9 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
       <h2>{label}</h2>
       <span>
         <WorldMap />
-        {city}, {region}
+        {city}
+        {city && region && ","}
+        {region}
       </span>
       <footer class="print">
         {printInfo}
