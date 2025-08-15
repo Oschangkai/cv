@@ -93,8 +93,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
   .container {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
     gap: 1rem;
   }
 
@@ -103,6 +102,13 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     flex-direction: column;
     gap: 0.5rem;
     padding-right: 32px;
+    flex: 2;
+  }
+
+  figure {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 
   h1 {
