@@ -152,7 +152,7 @@ const availableLanguages = await getAvailableLanguages();
     transition: transform 0.2s ease;
   }
 
-  .language-dropdown.show .chevron {
+  .language-switcher:has(.language-dropdown.show) .chevron {
     transform: rotate(180deg);
   }
 
