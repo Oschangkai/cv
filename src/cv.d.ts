@@ -77,8 +77,9 @@ interface Awards {
 interface Certificates {
   name: string,
   date: DateStr,
-  issuer: string,
-  url: string
+  issuer?: string,
+  url?: string,
+  score?: string
 }
 
 interface Publications {
@@ -96,8 +97,8 @@ interface Education {
   studyType: string
   startDate: DateStr
   endDate: DateStr
-  score: string
-  courses: Array<string>
+  score?: string
+  courses?: Array<string>
   summary?: string
   highlights?: Array<{
     summary: string
