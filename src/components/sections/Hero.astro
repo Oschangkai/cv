@@ -142,20 +142,22 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     color: #555;
     font-size: 0.65rem;
     display: flex;
-    gap: 4px;
+    gap: 6px;
     margin-top: 8px;
   }
 
   footer a {
-    color: #777;
+    color: #666;
+    background-color: #ffffffed;
+    backdrop-filter: blur(2px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     padding: 4px;
     height: 32px;
     width: 32px;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: all 0.3s ease;
   }
 

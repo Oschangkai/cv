@@ -127,20 +127,21 @@ const availableLanguages = await getAvailableLanguages();
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    background: #fff;
-    border: 1px solid #eee;
+    background: #ffffffed;
+    backdrop-filter: blur(2px);
+    border: 1px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.875rem;
-    color: #333;
+    color: #444;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
     font-family: inherit;
   }
 
   .language-button:hover {
-    background: #f9f9f9;
-    border-color: #ddd;
+    background: #f9f9f9ed;
+    border-color: #aaa;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
@@ -161,8 +162,9 @@ const availableLanguages = await getAvailableLanguages();
     top: calc(100% + 0.5rem);
     right: 0;
     min-width: 180px;
-    background: #fff;
-    border: 1px solid #eee;
+    background: #ffffffed;
+    backdrop-filter: blur(2px);
+    border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     opacity: 0;
@@ -182,22 +184,27 @@ const availableLanguages = await getAvailableLanguages();
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1rem;
-    color: #333;
+    color: #444;
     text-decoration: none;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid #d2d2d2;
     transition: background-color 0.2s ease;
+  }
+
+  .language-option:first-child {
+    border-radius: 8px 8px 0 0;
   }
 
   .language-option:last-child {
     border-bottom: none;
+    border-radius: 0 0 8px 8px;
   }
 
   .language-option:hover {
-    background: #f9f9f9;
+    background: #e5e5e5b0;
   }
 
   .language-option.active {
-    background: #f0f9ff;
+    background: #f0f7ffb0;
     color: #0066cc;
   }
 
@@ -206,7 +213,7 @@ const availableLanguages = await getAvailableLanguages();
   }
 
   .lang-code {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: #666;
     font-family: Menlo, Monaco, "Lucida Console", "Courier New", monospace;
   }
