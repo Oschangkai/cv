@@ -53,6 +53,11 @@ export function formatWorkDateRange(
     return formatYearMonth(startDate, t);
   }
 
+  // if startDate and endDate are both null or empty string, return empty string
+  if (startDate == "" && endDate == "") {
+    return "";
+  }
+
   // Otherwise, show the time range
   const startFormatted = formatYearMonth(startDate, t);
   const endFormatted = formatYearMonth(endDate, t);
