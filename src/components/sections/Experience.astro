@@ -26,7 +26,7 @@ const t = useTranslation();
                 <header>
                   <div>
                     <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
+                      <a href={url} title={`${name}`} target="_blank">
                         {name}
                       </a>
                     </h3>
@@ -34,10 +34,7 @@ const t = useTranslation();
                   </div>
 
                   <div class="date-info">
-                    <time
-                      datetime={startDate}
-                      data-title={`${startDate} - ${endDate ?? "Present"}`}
-                    >
+                    <time datetime={startDate} data-title={formattedDateRange}>
                       {formattedDateRange}
                     </time>
                     <div class="duration">{`(${workDuration})`}</div>
