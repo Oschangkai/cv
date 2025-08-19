@@ -1,6 +1,10 @@
 ---
 import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
+import {
+  formatWorkDateRange,
+  formatEducationDateRange,
+} from "@/utils/date-formatter";
 
 const education = getCVSection("education");
 const t = useTranslation();
@@ -9,31 +13,95 @@ const t = useTranslation();
 <Section title={t("education.title")}>
   <ul>
     {
-      education.map(({ institution, startDate, endDate, area }) => {
-        const startYear = new Date(startDate).getFullYear();
-        const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual";
-        const years =
-          startYear === endYear ? `${startYear}` : `${startYear} - ${endYear}`;
+      education.map(
+        ({
+          institution,
+          url,
+          startDate,
+          endDate,
+          studyType,
+          area,
+          summary,
+          highlights,
+        }) => {
+          const formattedDateRange = formatEducationDateRange(
+            startDate,
+            endDate,
+            t
+          );
 
-        return (
-          <li>
-            <article>
-              <header>
-                <div>
-                  <h3>{institution}</h3>
-                </div>
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <h3>
+                      <a href={url} title={`${institution}`} target="_blank">
+                        {institution}
+                      </a>
+                    </h3>
+                    <p>
+                      {studyType} • {area}
+                    </p>
+                  </div>
 
-                <time>{years}</time>
-              </header>
+                  <time>{formattedDateRange}</time>
+                </header>
 
-              <footer>
-                <p>{area}</p>
-              </footer>
-            </article>
-          </li>
-        );
-      })
+                <footer>
+                  {summary && <p class="summary">{summary}</p>}
+                  {highlights && highlights.length > 0 && (
+                    <p class="no-print">{t("education.highlights_title")}</p>
+                    <div class="highlights-container no-print">
+                      <ul class="highlights">
+                        {highlights.map((highlight) => (
+                          <li
+                            class="highlight-item"
+                            data-title={formatWorkDateRange(
+                              highlight.startDate,
+                              highlight.endDate,
+                              t
+                            )}
+                          >
+                            {highlight.summary}
+                          </li>
+                        ))}
+                      </ul>
+                      {highlights.length > 1 && (
+                        <button
+                          type="button"
+                          class="show-more-btn"
+                          onclick="toggleHighlights(this)"
+                          data-show-more-text={t("show_more")}
+                          data-show-less-text={t("show_less")}
+                        >
+                          {t("show_more")}
+                          <svg
+                            class="toggle-icon"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 14L12 9L17 14"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      )}
+                    </div>
+                  )}
+                </footer>
+              </article>
+            </li>
+          );
+        }
+      )
     }
   </ul>
 </Section>
@@ -64,9 +132,147 @@ const t = useTranslation();
     cursor: default;
   }
 
+  .summary {
+    margin-bottom: 4px;
+  }
+
+  .highlights-container {
+    position: relative;
+  }
+
+  .highlights-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem; /* Align with the text, accounting for padding */
+    right: 0;
+    height: 1.35rem; /* Same as line-height of highlights */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 80%
+    );
+    pointer-events: none;
+  }
+
+  .highlights-container.expanded::after {
+    opacity: 0;
+  }
+
+  .highlights {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.35rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+    position: relative;
+    max-height: 1rem; /* Show about half of first item, slightly more visible */
+    overflow: hidden;
+  }
+
+  .highlights-container.expanded .highlights {
+    max-height: none;
+    margin-bottom: 0.8rem;
+    overflow: visible;
+  }
+
+  .show-more-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .show-more-btn:hover {
+    color: #444;
+  }
+
+  .toggle-icon {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+    display: inline-block;
+    margin-left: 0.2rem;
+  }
+
+  .highlights-container.expanded .toggle-icon {
+    transform: rotate(0deg);
+  }
+
+  .highlight-item {
+    cursor: default;
+  }
+
+  .highlights-container.expanded .highlight-item[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease-in-out 0.5s;
+    visibility: visible;
+  }
+
+  .highlights-container.expanded .highlight-item[data-title]:after {
+    content: attr(data-title);
+    background-color: #333;
+    color: #fff;
+    font-size: 0.75rem;
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      "Courier New",
+      monospace;
+    position: absolute;
+    padding: 0.1rem 0.3rem;
+    bottom: -0.3rem;
+    left: 50%;
+    white-space: nowrap;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    overflow: visible !important;
+    visibility: hidden;
+    border-radius: 6px;
+  }
+
+  .highlight-item[data-title] {
+    position: relative;
+  }
+
   @media (width <= 700px) {
     time {
       text-align: right;
     }
   }
 </style>
+
+<script is:inline>
+  function toggleHighlights(button) {
+    const container = button.closest(".highlights-container");
+    if (!container) return;
+
+    const isExpanded = container.classList.contains("expanded");
+    const showMoreText = button.dataset.showMoreText || "Show more";
+    const showLessText = button.dataset.showLessText || "Show less";
+
+    if (isExpanded) {
+      // Collapse - show only partial content
+      container.classList.remove("expanded");
+      // Update only the text content, not the entire innerHTML
+      const textNode = button.firstChild;
+      if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+        textNode.textContent = showMoreText;
+      }
+    } else {
+      // Expand - show all content
+      container.classList.add("expanded");
+      // Update only the text content, not the entire innerHTML
+      const textNode = button.firstChild;
+      if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+        textNode.textContent = showLessText;
+      }
+    }
+  }
+</script>

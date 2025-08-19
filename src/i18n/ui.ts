@@ -39,13 +39,19 @@ export const ui = {
     // 時間格式
     'date.current': '目前',
     'date.format.year_month': '{year} 年 {month} 月',
-    'date.format.year_only': '{year} 年',
+    'date.format.year': '{year} 年',
     
     // 時間長度
     'duration.years': '{years} 年',
     'duration.months': '{months} 個月',
     'duration.years_months': '{years} 年 {months} 個月',
     'duration.less_than_month': '不到 1 個月',
+    
+    // 顯示更多功能
+    'show_more': '顯示更多',
+    'show_less': '顯示較少',
+
+    'education.highlights_title': '經歷：',
     
     // 其他
     'loading': '載入中...',
@@ -89,13 +95,19 @@ export const ui = {
     // Date format
     'date.current': 'Present',
     'date.format.year_month': '{month}/{year}',
-    'date.format.year_only': '{year}',
+    'date.format.year': '{year}',
     
     // Duration
     'duration.years': '{years} years',
     'duration.months': '{months} months',
     'duration.years_months': '{years} years {months} months',
     'duration.less_than_month': 'Less than 1 month',
+    
+    // Show more functionality
+    'show_more': 'Show more',
+    'show_less': 'Show less',
+    
+    'education.highlights_title': 'Experience:',
     
     // Other
     'loading': 'Loading...',
@@ -139,13 +151,19 @@ export const ui = {
     // Date format
     'date.current': 'Presente',
     'date.format.year_month': '{month}/{year}',
-    'date.format.year_only': '{year}',
+    'date.format.year': '{year}',
     
     // Duration
     'duration.years': '{years} años',
     'duration.months': '{months} meses',
     'duration.years_months': '{years} años {months} meses',
     'duration.less_than_month': 'Menos de 1 mes',
+    
+    // Show more functionality
+    'show_more': 'Mostrar más',
+    'show_less': 'Mostrar menos',
+    
+    'education.highlights_title': 'Experiencia:',
     
     // Other
     'loading': 'Cargando...',

@@ -1,6 +1,23 @@
 import type { TranslationKey } from '@/i18n/ui';
 
 /**
+ * Format date string to year
+ * @param dateString ISO date string (e.g. "2021-01-01")
+ * @param t translation function
+ * @returns formatted year string
+ */
+export function formatYear(dateString: string | null, t: (key: TranslationKey, params?: Record<string, string>) => string): string {
+  if (!dateString) {
+    return t('date.current');
+  }
+
+  const date = new Date(dateString);
+  const year = date.getFullYear().toString();
+
+  return t('date.format.year', { year });
+}
+
+/**
  * Format date string to year and month
  * @param dateString ISO date string (e.g. "2021-01-01")
  * @param t translation function
@@ -16,6 +33,23 @@ export function formatYearMonth(dateString: string | null, t: (key: TranslationK
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
 
   return t('date.format.year_month', { year, month });
+}
+
+/**
+ * Check if two dates are in the same year
+ * @param startDate start date string
+ * @param endDate end date string (can be null)
+ * @returns true if the two dates are in the same year
+ */
+export function isSameYear(startDate: string, endDate: string | null): boolean {
+  if (!endDate) {
+    return false;
+  }
+
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  return start.getFullYear() === end.getFullYear();
 }
 
 /**
@@ -103,4 +137,34 @@ export function calculateWorkDuration(
       months: months.toString()
     });
   }
+}
+
+/**
+ * Format education date range specifically for education section
+ * Education dates usually show academic years, so we focus on year display
+ * @param startDate start date
+ * @param endDate end date (can be null, means current/ongoing)
+ * @param t translation function
+ * @returns formatted education date range string
+ */
+export function formatEducationDateRange(
+  startDate: string,
+  endDate: string | null,
+  t: (key: TranslationKey, params?: Record<string, string>) => string
+): string {
+  // Handle empty dates
+  if (!startDate) {
+    return "";
+  }
+
+  // If the start and end dates are in the same year, only show the year
+  if (isSameYear(startDate, endDate)) {
+    return formatYear(startDate, t);
+  }
+
+  const startFormatted = formatYear(startDate, t);
+  const endFormatted = formatYear(endDate, t);
+
+  // Different years, show range
+  return `${startFormatted} - ${endFormatted}`;
 }

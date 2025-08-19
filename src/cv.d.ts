@@ -98,6 +98,12 @@ interface Education {
   endDate: DateStr
   score: string
   courses: Array<string>
+  summary?: string
+  highlights?: Array<{
+    summary: string
+    startDate: DateStr
+    endDate: DateStr
+  }>
 }
 
 interface Languages {
