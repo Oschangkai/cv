@@ -2,7 +2,7 @@
 export const ui = {
   zh_tw: {
     // 頁面標題
-    'portfolio.title': '作品集',
+    'portfolio.title': ' ',
     
     // 區塊標題
     'about.title': '關於我',

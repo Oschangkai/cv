@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 // 語言配置
 export const i18nConfig = {
-  defaultLocale: 'en_us',
+  defaultLocale: 'zh_tw',
   // 語言顯示名稱
   languageNames: {
     'zh_tw': '繁體中文',
@@ -16,4 +16,6 @@ export const i18nConfig = {
 };
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://cv.kaiyeee.tw',
+});

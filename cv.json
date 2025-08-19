@@ -1,319 +1,109 @@
 {
   "basics": {
-    "name": "Miguel Ángel Durán",
-    "label": "Full Stack Developer with over 15 years of experience & Programming Content Creator",
+    "name": "張楷翊",
+    "label": "台科大資訊管理碩士畢業，擁有近三年的雲原生開發經驗以及 DevOps 經歷",
     "image": "/me.webp",
-    "email": "miduga@gmail.com",
-    "phone": "+34 688888888",
-    "url": "https://midu.dev",
-    "summary": "+15 years of experience as a Web Developer. Currently working as a Content Creator and Programming Educator. Based in Barcelona, Spain. I have worked in various environments: from accelerating startup development to leading teams in multinational companies.",
+    "email": "me@kaiyeee.tw",
+    "phone": "",
+    "url": "https://cv.kaiyeee.tw",
+    "summary": "",
     "location": {
       "address": "",
-      "postalCode": "08820",
-      "city": "el Prat de Llobregat",
-      "countryCode": "ES",
-      "region": "Spain"
+      "postalCode": "",
+      "city": "",
+      "countryCode": "TW",
+      "region": "臺灣"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "midudev",
-        "url": "https://linkedin.com/in/midudev"
+        "username": "KaiYi (Oscar) Chang",
+        "url": "https://linkedin.com/in/kaiyeee"
       },
       {
         "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
+        "username": "oschangkai",
+        "url": "https://x.com/oschangkai"
       },
       {
         "network": "GitHub",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "oschangkai",
+        "url": "https://github.com/oschangkai"
       }
     ]
   },
-  "work": [
-    {
-      "name": "midudev",
-      "position": "Web Programming Educator",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
-      "endDate": null,
-      "summary": "Most-watched Spanish programming streamer on Twitch. +1 million followers across all social networks. Recognized by Google, Microsoft and GitHub for my impact on the developer community.",
-      "highlights": [
-        "Started the company"
-      ]
-    },
-    {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Led technical convergence between different products and migrated from a monolithic architecture to a more flexible and optimized one. Promoted best practices and improvements in performance culture, as well as rapid value delivery to users.",
-      "highlights": [
-        "Started the company"
-      ]
-    },
-    {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Developed a geolocated news platform and API for information consumption. Scaled services to support the load of hundreds of thousands of requests per day. Cut delivery times and production deployments in half. Collaborated with Mozilla and Telefónica to develop the first app for TVs with FirefoxOS.",
-      "highlights": [
-        "Started the company"
-      ]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": [
-        "Awarded 'Volunteer of the Month'"
-      ]
-    }
-  ],
+  "work": [],
+  "volunteer": [],
   "education": [
     {
-      "institution": "Universitat Oberta de Catalunya",
-      "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Software Engineer",
-      "studyType": "Bachelor",
-      "startDate": "2003-01-01",
-      "endDate": "2009-01-01",
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
+      "institution": "國立臺灣科技大學",
+      "url": "https://www.ntust.edu.tw/",
+      "area": "資訊管理學系",
+      "studyType": "碩士",
+      "startDate": "2021-09-01",
+      "endDate": "2025-08-31",
+      "summary": "碩士論文：建構於 eBPF 技術的慢速 HTTP 攻擊偵測與緩解系統設計研究 - 以 Slowloris 攻擊為研究案例",
+      "highlights": [
+        {
+          "summary": "擔任計算機中心 TA，協助解決第一線問題",
+          "startDate": "2024-09",
+          "endDate": "2025-08"
+        },
+        {
+          "summary": "擔任課堂助教：Java 物件導向程式語言、Golang 程式語言、雲端應用安全導論、資訊安全管理。協助出題、編纂上課講義等等",
+          "startDate": "2022-01",
+          "endDate": "2023-01"
+        },
+        {
+          "summary": "整合數位服務實驗室（IDSL）實驗室網管：獨自從頭建置實驗室網路與設備。包含網路設備規劃購買、網路線佈線、MikroTik 防火牆/VPN/NAS 等硬體設定、機架式伺服器架設、實驗室 OA 及機房兩地串連區網、NAS 異地備援",
+          "startDate": "2021-09",
+          "endDate": "2025-08"
+        }
+      ]
+    },
+    {
+      "institution": "元智大學",
+      "url": "https://www.yzu.edu.tw/",
+      "area": "資訊管理學系",
+      "studyType": "學士",
+      "startDate": "2015-09-01",
+      "endDate": "2019-06-30",
+      "highlights": [
+        {
+          "summary": "資訊研究社 (ITAC)．4th 社長",
+          "startDate": "2016-08",
+          "endDate": "2017-07"
+        },
+        {
+          "summary": "資訊管理系系學會　副學術長",
+          "startDate": "2016-06",
+          "endDate": "2017-05"
+        },
+        {
+          "summary": "男二宿　網管",
+          "startDate": "2016-07",
+          "endDate": "2018-06"
+        },
+        {
+          "summary": "2017 資訊週　副總召",
+          "startDate": "2017-03",
+          "endDate": "2017-03"
+        }
       ]
     }
   ],
-  "awards": [
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
+  "awards": [],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "TOEIC",
+      "score": "730",
+      "date": "2019-03-24"
     }
   ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }
-  ],
-  "skills": [
-    {
-      "name": "HTML",
-      "level": "Master",
-      "keywords": [
-        "Web Development",
-        "Frontend"
-      ]
-    },
-    {
-      "name": "CSS",
-      "level": "Master",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "JavaScript",
-      "level": "Master",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
-    },
-    {
-      "name": "Tailwind",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "TypeScript",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Advanced",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Advanced",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Advanced",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "Spanish",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "English",
-      "fluency": "Advanced"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
-  "projects": [
-    {
-      "name": "mars.codes",
-      "isActive": true,
-      "description": "Interactive story with programming challenges to travel to Mars",
-      "highlights": [
-        "Choose your own adventure",
-        "In development"
-      ],
-      "url": "https://mars.codes"
-    },
-    {
-      "name": "AdventJS",
-      "isActive": true,
-      "description": "JavaScript programming challenges for each day of December until Christmas",
-      "highlights": [
-        "+1 million visits",
-        "Multilingual",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://adventjs.dev"
-    },
-    {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Interactive programming game with challenges and secrets",
-      "highlights": [
-        "+2000 active users",
-        "Challenges for any language"
-      ],
-      "url": "https://codember.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "HTML, CSS and JavaScript code playground for sharing",
-      "highlights": [
-        "100k visits per month",
-        "Community developed"
-      ],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Technical Tests",
-      "isActive": true,
-      "description": "List of technical tests from companies to practice programming",
-      "highlights": [
-        "100% free",
-        "+500 community solutions"
-      ],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Streaming programming conference for the Spanish-speaking community with top talks",
-      "highlights": [
-        "+15k tickets distributed",
-        "+50k live viewers"
-      ],
-      "url": "https://miduconf.com"
-    }
-  ]
+  "publications": [],
+  "skills": [],
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": []
 }
