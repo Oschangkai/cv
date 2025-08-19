@@ -1,5 +1,5 @@
 ---
-const { name, label, image, location, profiles, phone, email } =
+const { name, label, image, location, profiles, phone, email, url } =
   getCVSection("basics");
 import Section from "@/components/Section.astro";
 import Mail from "@/icons/Mail.astro";
@@ -40,6 +40,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
       <footer class="print">
         {printInfo}
       </footer>
+      {url && <footer class="print">{url}</footer>}
       <footer class="no-print">
         {
           email && (
@@ -139,6 +140,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
   }
 
   footer {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      "Courier New",
+      monospace;
     color: #555;
     font-size: 0.65rem;
     display: flex;
