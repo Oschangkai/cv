@@ -47,6 +47,7 @@ interface Work {
   endDate: DateStr | null
   summary: string
   highlights: Highlight
+  skills: Array<string>
 }
 
 type DateStr = `${string}-${string}-${string}`

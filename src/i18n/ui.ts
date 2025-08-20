@@ -35,6 +35,9 @@ export const ui = {
     // 專案相關
     'projects.view': '查看 {name} 專案',
     'projects.source': '查看 {name} 的原始碼',
+
+    // 工作經驗相關
+    'experience.skills.title': '技能：',
     
     // 時間格式
     'date.current': '目前',
@@ -91,6 +94,9 @@ export const ui = {
     // Project related
     'projects.view': 'View project {name}',
     'projects.source': 'View source code of {name}',
+
+    // Experience related
+    'experience.skills.title': 'Skills:',
     
     // Date format
     'date.current': 'Present',
@@ -147,6 +153,9 @@ export const ui = {
     // Project related
     'projects.view': 'Ver proyecto {name}',
     'projects.source': 'Ver código fuente de {name}',
+    
+    // Experience related
+    'experience.skills.title': 'Habilidades:',
     
     // Date format
     'date.current': 'Presente',
