@@ -42,7 +42,7 @@ const t = useTranslation();
                 </header>
 
                 <footer>
-                  <p>{summary}</p>
+                  {summary && <p class="summary">{summary}</p>}
                 </footer>
               </article>
             </li>
@@ -82,7 +82,7 @@ const t = useTranslation();
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   .date-info {
@@ -105,6 +105,10 @@ const t = useTranslation();
     font-style: italic;
   }
 
+  /* Preserve line breaks in summary text */
+  .summary {
+    white-space: pre-line;
+  }
   [data-title]:hover:after {
     opacity: 1;
     transition: all 0.1s ease-in-out 0.5s;
