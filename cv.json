@@ -6,7 +6,7 @@
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "",
+    "summary": "2025 畢業於台科大資管碩士班，擁有近三年的雲原生應用開發經驗以及 DevOps 經歷。除此之外也熟悉微軟相關平台（如：Azure、Azure DevOps、Microsoft 365）、容器化應用、網頁開發（Angular）、網通設備規劃與管理。",
     "location": {
       "address": "",
       "postalCode": "",
@@ -32,7 +32,81 @@
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "name": "自由業",
+      "position": "學生",
+      "startDate": "2021-09",
+      "endDate": "2025-08",
+      "summary": "碩士時期自由接案\n包含雲地基礎設施管理、開發流程自動化架設、網頁前後端開發",
+      "highlights": [],
+      "skills": [
+        "Infrastructure (Cloud & On-premise)",
+        "DevOps",
+        "Networking",
+        "Angular",
+        ".NET"
+      ]
+    },
+    {
+      "name": "鼎恒數位科技股份有限公司",
+      "position": "雲端技術工程師",
+      "url": "https://www.mayohr.com/",
+      "startDate": "2021-03",
+      "endDate": "2021-09",
+      "summary": "內部系統開發、流程改進\n串接 Azure, Azure DevOps, 以及 SendGrid API，供維運人員方便管理散落的資源",
+      "highlights": [],
+      "skills": [
+        "Azure",
+        "Azure DevOps",
+        "Infrastructure (Cloud & On-premise)"
+      ]
+    },
+    {
+      "name": "緯謙科技股份有限公司",
+      "position": "資深工程師",
+      "url": "https://www.wiadvance.com/",
+      "startDate": "2019-07",
+      "endDate": "2021-03",
+      "summary": "以 Azure 為主的雲原生應用開發、Microsoft 365 應用開發\nAzure DevOps CI/CD 架設",
+      "highlights": [],
+      "skills": [
+        "Azure",
+        "Azure DevOps",
+        "Microsoft 365",
+        "Cloud Native",
+        "Container",
+        "Angular",
+        "Power Automate"
+      ]
+    },
+    {
+      "name": "緯謙科技股份有限公司",
+      "position": "實習生",
+      "url": "https://www.wiadvance.com/",
+      "startDate": "2019-02",
+      "endDate": "2019-06",
+      "summary": "公司內部系統開發",
+      "highlights": [],
+      "skills": [
+        "AWS",
+        "Power BI"
+      ]
+    },
+    {
+      "name": "精藤股份有限公司",
+      "position": "MIS/SE 實習生",
+      "url": "https://www.accudata.com.tw/",
+      "startDate": "2018-02",
+      "endDate": "2019-02",
+      "summary": "使用者電腦環境維護與改善\n網通設備設定與架設，如 Router, Switch 的 HA 設定、區/外網路規劃，多為 Cisco, Fortinet 設備",
+      "highlights": [],
+      "skills": [
+        "Infrastructure (On-premise)",
+        "Networking"
+      ]
+    }
+  ],
   "volunteer": [],
   "education": [
     {
