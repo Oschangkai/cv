@@ -14,7 +14,16 @@ const t = useTranslation();
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({
+          name,
+          startDate,
+          endDate,
+          position,
+          summary,
+          highlights,
+          url,
+          skills,
+        }) => {
           // Use the formatWorkDateRange function to format the date range
           const formattedDateRange = formatWorkDateRange(startDate, endDate, t);
           // Calculate work duration
@@ -42,7 +51,17 @@ const t = useTranslation();
                 </header>
 
                 <footer>
-                  <p>{summary}</p>
+                  {summary && <p class="summary">{summary}</p>}
+                  {skills && skills.length > 0 && (
+                    <div class="skills">
+                      {skills.map((skill) => (
+                        <span class="skill-chip no-print">{skill}</span>
+                      ))}
+                      <p class="print">
+                        {t("experience.skills.title")} {skills.join(", ")}
+                      </p>
+                    </div>
+                  )}
                 </footer>
               </article>
             </li>
@@ -82,7 +101,7 @@ const t = useTranslation();
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   .date-info {
@@ -103,6 +122,31 @@ const t = useTranslation();
     color: #777;
     font-size: 0.75rem;
     font-style: italic;
+  }
+
+  /* Preserve line breaks in summary text */
+  .summary {
+    white-space: pre-line;
+  }
+
+  /* Skills section styling */
+  .skills {
+    display: inline-flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .skill-chip {
+    align-items: center;
+    background: #eee;
+    border-radius: 6px;
+    color: black;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
   }
 
   [data-title]:hover:after {
