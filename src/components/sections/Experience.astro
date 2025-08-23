@@ -52,6 +52,18 @@ const t = useTranslation();
 
                 <footer>
                   {summary && <p class="summary">{summary}</p>}
+                  {highlights && highlights.length > 0 && (
+                    <div class="highlights">
+                      <p class="highlights-title">
+                        {t("experience.highlights.title")}
+                      </p>
+                      <ul class="highlights-list">
+                        {highlights.map((highlight) => (
+                          <li class="highlight-item">{highlight}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   {skills && skills.length > 0 && (
                     <div class="skills">
                       {skills.map((skill) => (
@@ -127,6 +139,28 @@ const t = useTranslation();
   /* Preserve line breaks in summary text */
   .summary {
     white-space: pre-line;
+  }
+
+  /* Highlights section styling */
+  .highlights {
+    margin-top: 8px;
+  }
+
+  .highlights-title {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .highlights-list {
+    display: block;
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+    margin-bottom: 0;
   }
 
   /* Skills section styling */
