@@ -52,6 +52,13 @@ interface Work {
 
 type DateStr = `${string}-${string}-${string}`
 
+// Skill level type definition
+export type SkillLevel = 
+  | "Fundamental"
+  | "Intermediate" 
+  | "Proficient"
+  | "Expert"
+
 interface Volunteer {
   organization: string
   position: string
@@ -64,8 +71,8 @@ interface Volunteer {
 
 interface Skills {
   name: string
-  level: string
-  keywords: Array<string>
+  level?: SkillLevel
+  keywords?: Array<string>
 }
 
 interface Awards {

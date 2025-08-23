@@ -16,6 +16,8 @@ import SwiftUI from "@/icons/swiftui.astro";
 import Kotlin from "@/icons/kotlin.astro";
 import Flutter from "@/icons/flutter.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
+import { getSkillLevel } from "@/utils/skill-levels";
+import type { SkillsLevelKey } from "@/i18n/ui";
 
 const skills = getCVSection("skills");
 const t = useTranslation();
@@ -42,13 +44,74 @@ const SKILLS_ICONS: Record<string, any> = {
 <Section title={t("skills.title")}>
   <ul>
     {
-      skills.map(({ name }) => {
+      skills.map(({ name, level, keywords }) => {
         const iconName = name === "Next.js" ? "Next" : name;
         const Icon = SKILLS_ICONS[iconName];
 
+        const hasLevel = Boolean(level?.trim());
+        const hasKeywords = Boolean(keywords?.length);
+
+        const skillLevel = getSkillLevel(level!);
+
         return (
-          <li>
-            {Icon && <Icon />} <span>{name}</span>
+          <li
+            class={`skill-item ${hasKeywords ? "has-keywords" : "no-keywords"} ${hasLevel ? `has-level level-${skillLevel.toLowerCase()}` : "no-level"}`}
+          >
+            <div
+              class="skill-header"
+              {...(hasKeywords && {
+                role: "button",
+                tabindex: "0",
+                onclick: "toggleSkill(this)",
+              })}
+            >
+              {Icon && <Icon />}
+              <span
+                class="skill-name"
+                {...(hasLevel && {
+                  "data-level": t(
+                    `skills.level.${skillLevel.toLowerCase()}` as SkillsLevelKey,
+                    { level: level! }
+                  ),
+                })}
+              >
+                {name}
+              </span>
+
+              {hasLevel && (
+                <span class="skill-level no-print">
+                  {t(
+                    `skills.level.${skillLevel.toLowerCase()}` as SkillsLevelKey,
+                    { level: level! }
+                  )}
+                </span>
+              )}
+
+              {hasKeywords && (
+                <svg
+                  class="expand-indicator no-print"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M7 14L12 9L17 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              )}
+            </div>
+            {hasKeywords && keywords && (
+              <div class="skill-keywords">
+                {keywords.map((keyword) => (
+                  <span class="keyword-tag">{keyword}</span>
+                ))}
+              </div>
+            )}
           </li>
         );
       })
@@ -57,21 +120,239 @@ const SKILLS_ICONS: Record<string, any> = {
 </Section>
 
 <style>
+  /* screen style */
   ul {
     display: inline-flex;
     gap: 8px;
     flex-wrap: wrap;
+    align-items: flex-start; /* make sure items will not expand its height when other items on the same line are expanded */
   }
 
-  li {
-    align-items: center;
-    background: #eee;
+  .skill-item {
+    border: 1px solid #ddd;
     border-radius: 6px;
     color: black;
     display: flex;
+    flex-direction: column;
     font-size: 0.8rem;
     font-weight: 500;
-    gap: 4px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background: transparent;
+    position: relative;
+  }
+
+  /* skill item hover effects */
+  .skill-item:hover {
+    border-color: #999;
+    background: #f8f8f8;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-item.level-fundamental:hover {
+    border-color: var(--skill-fundamental-hover-border);
+    box-shadow: 0 2px 12px var(--skill-fundamental-hover-shadow);
+  }
+
+  .skill-item.level-intermediate:hover {
+    border-color: var(--skill-intermediate-hover-border);
+    box-shadow: 0 2px 12px var(--skill-intermediate-hover-shadow);
+  }
+
+  .skill-item.level-proficient:hover {
+    border-color: var(--skill-proficient-hover-border);
+    box-shadow: 0 2px 12px var(--skill-proficient-hover-shadow);
+  }
+
+  .skill-item.level-expert:hover {
+    border-color: var(--skill-expert-hover-border);
+    box-shadow: 0 2px 12px var(--skill-expert-hover-shadow);
+  }
+
+  .skill-item.has-keywords .skill-header {
+    cursor: pointer;
+  }
+
+  .skill-header {
+    display: flex;
+    gap: 6px;
+    align-items: center;
     padding: 0.2rem 0.6rem;
+    user-select: none;
+    min-height: 1.8rem; /* ensure consistent minimum height */
+  }
+
+  .skill-name {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  .skill-level {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: none;
+    white-space: nowrap;
+    margin-left: auto;
+    background: var(--skill-fundamental-bg);
+    color: var(--skill-fundamental-color);
+  }
+
+  .level-fundamental .skill-level {
+    background: var(--skill-fundamental-bg);
+    color: var(--skill-fundamental-color);
+  }
+  .level-intermediate .skill-level {
+    background: var(--skill-intermediate-bg);
+    color: var(--skill-intermediate-color);
+  }
+  .level-proficient .skill-level {
+    background: var(--skill-proficient-bg);
+    color: var(--skill-proficient-color);
+  }
+  .level-expert .skill-level {
+    background: var(--skill-expert-bg);
+    color: var(--skill-expert-color);
+  }
+
+  .expand-indicator {
+    width: 12px;
+    height: 12px;
+    color: #666;
+    transition: transform 0.2s ease;
+    transform: rotate(180deg);
+  }
+
+  .skill-keywords {
+    display: none;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0 0.7rem 0.5rem;
+  }
+
+  .keyword-tag {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #666;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  /* expanded state */
+
+  .skill-item.expanded .skill-level {
+    /* show level tag */
+    display: block;
+  }
+
+  .skill-item.expanded .skill-keywords {
+    display: flex;
+  }
+
+  .skill-item.expanded .expand-indicator {
+    transform: rotate(0deg);
+  }
+
+  .skill-item.expanded.level-fundamental {
+    border-color: var(--skill-fundamental-border);
+  }
+
+  .skill-item.expanded.level-intermediate {
+    border-color: var(--skill-intermediate-border);
+  }
+
+  .skill-item.expanded.level-proficient {
+    border-color: var(--skill-proficient-border);
+  }
+
+  .skill-item.expanded.level-expert {
+    border-color: var(--skill-expert-border);
+  }
+
+  /* print style */
+  @media print {
+    ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skill-item {
+      background: transparent;
+      border: none;
+      color: black;
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+      display: block;
+      break-inside: avoid;
+    }
+
+    .skill-header {
+      padding: 0;
+      background: none;
+      display: inline;
+    }
+
+    .skill-name {
+      font-weight: 600;
+    }
+
+    /* has level and has keywords */
+    .skill-name[data-level]:not([data-level=""])::after {
+      content: " (" attr(data-level) ") - ";
+    }
+
+    /* has level but no keywords */
+    .skill-item.no-keywords
+      .skill-name[data-level]:not([data-level=""])::after {
+      content: " (" attr(data-level) ")";
+    }
+
+    /* no level but has keywords */
+    .skill-item.has-keywords .skill-name:not([data-level])::after,
+    .skill-item.has-keywords .skill-name[data-level=""]::after {
+      content: " - ";
+    }
+
+    .skill-keywords {
+      display: inline !important;
+      padding: 0;
+      position: static !important;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      animation: none !important;
+    }
+
+    /* ensure all keywords are visible */
+    .skill-item .skill-keywords {
+      display: inline !important;
+    }
+
+    .keyword-tag {
+      background: none;
+      border: none;
+      color: #444;
+      font-size: 0.85rem;
+      padding: 0;
+    }
+
+    .keyword-tag:not(:last-child)::after {
+      content: ", ";
+    }
   }
 </style>
+
+<script is:inline>
+  function toggleSkill(element) {
+    const skillItem = element.closest(".skill-item");
+    // only skills with keywords can be expanded
+    if (skillItem && skillItem.classList.contains("has-keywords")) {
+      skillItem.classList.toggle("expanded");
+    }
+  }
+</script>

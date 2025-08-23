@@ -56,6 +56,13 @@ export const ui = {
 
     'education.highlights_title': '經歷：',
     
+    // 技能等級
+    'skills.level.fundamental': '基礎',
+    'skills.level.intermediate': '中等',
+    'skills.level.proficient': '熟練',
+    'skills.level.expert': '專家',
+    'skills.level.unknown': '{level}',
+
     // 其他
     'loading': '載入中...',
   },
@@ -115,6 +122,12 @@ export const ui = {
     
     'education.highlights_title': 'Experience:',
     
+    // Skill levels
+    'skills.level.fundamental': 'Fundamental',
+    'skills.level.intermediate': 'Intermediate', 
+    'skills.level.proficient': 'Proficient',
+    'skills.level.expert': 'Expert',
+    'skills.level.unknown': '{level}',
     // Other
     'loading': 'Loading...',
   },
@@ -174,6 +187,13 @@ export const ui = {
     
     'education.highlights_title': 'Experiencia:',
     
+    // Skill levels
+    'skills.level.fundamental': 'Fundamental',
+    'skills.level.intermediate': 'Intermedio',
+    'skills.level.proficient': 'Competente', 
+    'skills.level.expert': 'Experto',
+    'skills.level.unknown': '{level}',
+
     // Other
     'loading': 'Cargando...',
   }
@@ -182,3 +202,4 @@ export const ui = {
 // 匯出型別定義
 export type UiLang = keyof typeof ui;
 export type TranslationKey = keyof typeof ui[keyof typeof ui];
+export type SkillsLevelKey = Extract<TranslationKey, `skills.level.${string}`>;

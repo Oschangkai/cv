@@ -127,4 +127,31 @@ const { title, summary, image, url, currentLang } = Astro.props;
       break-inside: avoid;
     }
   }
+  :root {
+    --gray: rgb(108, 117, 125);
+    --yellow: rgb(255, 193, 7);
+    --teal: rgb(23, 162, 184);
+    --green: rgb(40, 167, 69);
+
+    --skill-fundamental-bg: var(--gray);
+    --skill-fundamental-color: #ffffff;
+    --skill-fundamental-border: var(--gray);
+    --skill-fundamental-hover-shadow: rgba(108, 117, 125, 0.25);
+    --skill-fundamental-hover-border: var(--gray);
+    --skill-intermediate-bg: var(--yellow);
+    --skill-intermediate-color: #212529;
+    --skill-intermediate-border: var(--yellow);
+    --skill-intermediate-hover-shadow: rgba(255, 193, 7, 0.25);
+    --skill-intermediate-hover-border: var(--yellow);
+    --skill-proficient-bg: var(--teal);
+    --skill-proficient-color: #ffffff;
+    --skill-proficient-border: var(--teal);
+    --skill-proficient-hover-shadow: rgba(23, 162, 184, 0.25);
+    --skill-proficient-hover-border: var(--teal);
+    --skill-expert-bg: var(--green);
+    --skill-expert-color: #ffffff;
+    --skill-expert-border: var(--green);
+    --skill-expert-hover-shadow: rgba(40, 167, 69, 0.25);
+    --skill-expert-hover-border: var(--green);
+  }
 </style>
