@@ -66,12 +66,10 @@ const t = useTranslation();
                   )}
                   {skills && skills.length > 0 && (
                     <div class="skills">
+                      <p class="print">{t("experience.skills.title")}</p>
                       {skills.map((skill) => (
-                        <span class="skill-chip no-print">{skill}</span>
+                        <span class="skill-chip">{skill}</span>
                       ))}
-                      <p class="print">
-                        {t("experience.skills.title")} {skills.join(", ")}
-                      </p>
                     </div>
                   )}
                 </footer>
@@ -100,8 +98,9 @@ const t = useTranslation();
     color: #111;
   }
 
-  article a:hover {
+  article a:hover:is([href]) {
     text-decoration: underline;
+    cursor: pointer;
   }
 
   article h4 {
@@ -171,6 +170,12 @@ const t = useTranslation();
     margin-top: 16px;
   }
 
+  .skill-title {
+    color: #666;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
   .skill-chip {
     align-items: center;
     background: #eee;
@@ -220,6 +225,19 @@ const t = useTranslation();
   @media (width <= 700px) {
     time {
       text-align: right;
+    }
+  }
+
+  @media print {
+    .skill-chip {
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 0.8rem;
+      padding: 0;
+    }
+    .skill-chip:not(:last-child)::after {
+      content: ", ";
     }
   }
 </style>
