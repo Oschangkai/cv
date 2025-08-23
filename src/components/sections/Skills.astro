@@ -1,20 +1,6 @@
 ---
 import Section from "../Section.astro";
-import HTML from "@/icons/html.astro";
-import CSS from "@/icons/css.astro";
-import JavaScript from "@/icons/javascript.astro";
-import TypeScript from "@/icons/type.astro";
-import React from "@/icons/react.astro";
-import Node from "@/icons/node.astro";
-import MySQL from "@/icons/sql.astro";
-import Git from "@/icons/git.astro";
-import GitHub from "@/icons/GitHub.astro";
-import Tailwind from "@/icons/tailwind.astro";
-import Next from "@/icons/next.astro";
-import Swift from "@/icons/swift.astro";
-import SwiftUI from "@/icons/swiftui.astro";
-import Kotlin from "@/icons/kotlin.astro";
-import Flutter from "@/icons/flutter.astro";
+import * as Icons from "@/icons";
 import { useTranslation, getCVSection } from "@/utils/language-context";
 import { getSkillLevel } from "@/utils/skill-levels";
 import type { SkillsLevelKey } from "@/i18n/ui";
@@ -23,21 +9,26 @@ const skills = getCVSection("skills");
 const t = useTranslation();
 
 const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
+  HTML: Icons.HTML,
+  CSS: Icons.CSS,
+  JavaScript: Icons.JavaScript,
+  TypeScript: Icons.TypeScript,
+  React: Icons.React,
+  Node: Icons.Node,
+  MySQL: Icons.MySQL,
+  Git: Icons.Git,
+  GitHub: Icons.GitHub,
+  "Next.js": Icons.Next,
+  Tailwind: Icons.Tailwind,
+  Swift: Icons.Swift,
+  SwiftUI: Icons.SwiftUI,
+  Kotlin: Icons.Kotlin,
+  Flutter: Icons.Flutter,
+  Cloud: Icons.Cloud,
+  DevOps: Icons.DevOps,
+  Infrastructure: Icons.Infrastructure,
+  "Web Frontend": Icons.WebFrontend,
+  Backend: Icons.Backend,
 };
 ---
 
@@ -45,8 +36,7 @@ const SKILLS_ICONS: Record<string, any> = {
   <ul>
     {
       skills.map(({ name, level, keywords }) => {
-        const iconName = name === "Next.js" ? "Next" : name;
-        const Icon = SKILLS_ICONS[iconName];
+        const Icon = SKILLS_ICONS[name];
 
         const hasLevel = Boolean(level?.trim());
         const hasKeywords = Boolean(keywords?.length);
@@ -287,14 +277,16 @@ const SKILLS_ICONS: Record<string, any> = {
       color: black;
       font-size: 0.85rem;
       margin-bottom: 0.3rem;
-      display: block;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
       break-inside: avoid;
     }
 
     .skill-header {
       padding: 0;
       background: none;
-      display: inline;
+      display: flex;
     }
 
     .skill-name {
@@ -303,19 +295,7 @@ const SKILLS_ICONS: Record<string, any> = {
 
     /* has level and has keywords */
     .skill-name[data-level]:not([data-level=""])::after {
-      content: " (" attr(data-level) ") - ";
-    }
-
-    /* has level but no keywords */
-    .skill-item.no-keywords
-      .skill-name[data-level]:not([data-level=""])::after {
       content: " (" attr(data-level) ")";
-    }
-
-    /* no level but has keywords */
-    .skill-item.has-keywords .skill-name:not([data-level])::after,
-    .skill-item.has-keywords .skill-name[data-level=""]::after {
-      content: " - ";
     }
 
     .skill-keywords {
