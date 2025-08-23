@@ -117,6 +117,7 @@ export function calculateWorkDuration(
   // Calculate the difference in years and months
   let years = end.getFullYear() - start.getFullYear();
   let months = end.getMonth() - start.getMonth();
+  let days = end.getDate() - start.getDate();
 
   // If the months are negative, adjust the years and months
   if (months < 0) {
@@ -124,10 +125,23 @@ export function calculateWorkDuration(
     months += 12;
   }
 
-  // Format the output
-  if (years === 0 && months === 0) {
+  // If the years and months are 0, and the days is provided, return less than month
+  if (years === 0 && months === 0 && days !== 0) {
     return t('duration.less_than_month');
-  } else if (years === 0) {
+  }
+
+  // Add 1 to months to count the current month
+  // This ensures proper month counting (e.g., Aug to Aug = 1 month, Aug to Sep = 2 months)
+  months += 1;
+
+  // If months exceed 12, adjust years and months
+  if (months >= 12) {
+    years += Math.floor(months / 12);
+    months = months % 12;
+  }
+
+  // Format the output
+  if (years === 0) {
     return t('duration.months', { months: months.toString() });
   } else if (months === 0) {
     return t('duration.years', { years: years.toString() });
