@@ -117,65 +117,6 @@ export const ui = {
     
     // Other
     'loading': 'Loading...',
-  },
-  es_es: {
-    // Page title
-    'portfolio.title': 'Portafolio de',
-    
-    // Section titles
-    'about.title': 'Sobre mí',
-    'experience.title': 'Experiencia Laboral',
-    'education.title': 'Educación',
-    'projects.title': 'Proyectos', 
-    'skills.title': 'Habilidades',
-    
-    // Buttons and actions
-    'language.switch': 'Cambiar Idioma',
-    'actions.print': 'Imprimir',
-    'actions.email': 'Enviar email a',
-    'actions.phone': 'Llamar',
-    'actions.visit': 'Visitar',
-    'actions.section': 'Acciones',
-    
-    // Keyboard shortcuts
-    'keyboard.hint': 'Presiona <kbd>/</kbd> para abrir la paleta de comandos',
-    'keyboard.search': 'Buscar comandos',
-    
-    // Social media
-    'social.visit': 'Visitar',
-    'social.section': 'Social',
-    
-    // Contact information
-    'contact.email.title': 'Enviar email a {name}',
-    'contact.phone.title': 'Llamar a {name}',
-    'contact.profile.title': 'Visitar perfil de {name} en {network}',
-    
-    // Project related
-    'projects.view': 'Ver proyecto {name}',
-    'projects.source': 'Ver código fuente de {name}',
-    
-    // Experience related
-    'experience.skills.title': 'Habilidades:',
-    
-    // Date format
-    'date.current': 'Presente',
-    'date.format.year_month': '{month}/{year}',
-    'date.format.year': '{year}',
-    
-    // Duration
-    'duration.years': '{years} años',
-    'duration.months': '{months} meses',
-    'duration.years_months': '{years} años {months} meses',
-    'duration.less_than_month': 'Menos de 1 mes',
-    
-    // Show more functionality
-    'show_more': 'Mostrar más',
-    'show_less': 'Mostrar menos',
-    
-    'education.highlights_title': 'Experiencia:',
-    
-    // Other
-    'loading': 'Cargando...',
   }
 } as const;
 

@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "張楷翊",
-    "label": "台科大資訊管理碩士畢業，擁有近三年的雲原生開發經驗以及 DevOps 經歷",
+    "label": "台科大資訊管理碩士畢業，擁有近三年的雲原生開發經驗以及 DevOps 工作經歷",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
@@ -39,7 +39,11 @@
       "startDate": "2021-09",
       "endDate": "2025-08",
       "summary": "碩士時期自由接案\n包含雲地基礎設施管理、開發流程自動化架設、網頁前後端開發",
-      "highlights": [],
+      "highlights": [
+        "國際物流公司 DevOps 規劃建置：使用 Jenkins 解決開發及部屬自動化，部屬至全球（地端）環境",
+        "基金會異地網路規劃建置：串接三地網路，安全存取內部資源",
+        "房仲業辦公室網路規劃建置：規劃穩定的無線環境，以及讓所有員工無感的在外地安全存取內部資源，至今 (2025/08) 已穩定運作 2.5 年"
+      ],
       "skills": [
         "Infrastructure (Cloud & On-premise)",
         "DevOps",
@@ -55,7 +59,9 @@
       "startDate": "2021-03",
       "endDate": "2021-09",
       "summary": "內部系統開發、流程改進\n串接 Azure, Azure DevOps, 以及 SendGrid API，供維運人員方便管理散落的資源",
-      "highlights": [],
+      "highlights": [
+        "內部系統開發：成功使公司非 IT/開發 背景人員也能輕鬆存取必要資源，減少部門間往返成本"
+      ],
       "skills": [
         "Azure",
         "Azure DevOps",
@@ -69,7 +75,11 @@
       "startDate": "2019-07",
       "endDate": "2021-03",
       "summary": "以 Azure 為主的雲原生應用開發、Microsoft 365 應用開發\nAzure DevOps CI/CD 架設",
-      "highlights": [],
+      "highlights": [
+        "擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發流程自動化，並能部屬至雲或地端環境",
+        "使用 Microsoft 365 API 開發許多工具，如 Teams App、Chatbot、等，成功導入公司使部分流程自動化",
+        "熟悉 Azure 雲原生應用開發，除一般應用，也開發過純 Serverless、Low Code 應用"
+      ],
       "skills": [
         "Azure",
         "Azure DevOps",
@@ -87,7 +97,9 @@
       "startDate": "2019-02",
       "endDate": "2019-06",
       "summary": "公司內部系統開發",
-      "highlights": [],
+      "highlights": [
+        "客戶帳務分析平台：使用 Azure 平台開發純 Serverless 應用，並使用 Power BI 呈現報表。平台成功導入全公司並解決許多問題，讓業務能快速分析客戶帳單"
+      ],
       "skills": [
         "AWS",
         "Power BI"
@@ -100,7 +112,11 @@
       "startDate": "2018-02",
       "endDate": "2019-02",
       "summary": "使用者電腦環境維護與改善\n網通設備設定與架設，如 Router, Switch 的 HA 設定、區/外網路規劃，多為 Cisco, Fortinet 設備",
-      "highlights": [],
+      "highlights": [
+        "曾參與：Core Switch 更換計畫、ISO 續證、新公司電腦及設備規劃",
+        "IDC 機房見習",
+        "機架式伺服器架設"
+      ],
       "skills": [
         "Infrastructure (On-premise)",
         "Networking"
@@ -116,7 +132,7 @@
       "studyType": "碩士",
       "startDate": "2021-09-01",
       "endDate": "2025-08-31",
-      "summary": "碩士論文：建構於 eBPF 技術的慢速 HTTP 攻擊偵測與緩解系統設計研究 - 以 Slowloris 攻擊為研究案例",
+      "summary": "數位整合服務實驗室 (IDSL)\n碩士論文：建構於 eBPF 技術的慢速 HTTP 攻擊偵測與緩解系統設計研究 - 以 Slowloris 攻擊為研究案例",
       "highlights": [
         {
           "summary": "擔任計算機中心 TA，協助解決第一線問題",
@@ -149,17 +165,17 @@
           "endDate": "2017-07"
         },
         {
-          "summary": "資訊管理系系學會　副學術長",
+          "summary": "資訊管理系系學會．副學術長",
           "startDate": "2016-06",
           "endDate": "2017-05"
         },
         {
-          "summary": "男二宿　網管",
+          "summary": "男二宿．網管",
           "startDate": "2016-07",
           "endDate": "2018-06"
         },
         {
-          "summary": "2017 資訊週　副總召",
+          "summary": "2017 資訊週．副總召",
           "startDate": "2017-03",
           "endDate": "2017-03"
         }
@@ -175,9 +191,122 @@
     }
   ],
   "publications": [],
-  "skills": [],
-  "languages": [],
-  "interests": [],
+  "skills": [
+    {
+      "name": "Cloud",
+      "level": "Master",
+      "keywords": [
+        "Azure",
+        "Microsoft 365",
+        "AWS"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Master",
+      "keywords": [
+        "Azure DevOps",
+        "GitHub Actions",
+        "Jenkins"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "level": "Master",
+      "keywords": [
+        "Container",
+        "Linux",
+        "ESXi",
+        "Proxmox",
+        "Ubiquiti",
+        "MikroTik",
+        "Cisco",
+        "Fortinet"
+      ]
+    },
+    {
+      "name": "Web Frontend",
+      "level": "Master",
+      "keywords": [
+        "Angular",
+        "Clarity Design"
+      ]
+    },
+    {
+      "name": "Backend",
+      "level": "Intermediate",
+      "keywords": [
+        ".NET",
+        "Node.js",
+        "Java"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "英文",
+      "fluency": "中等"
+    },
+    {
+      "language": "中文",
+      "fluency": "母語"
+    }
+  ],
+  "interests": [
+    {
+      "name": "HomeLab",
+      "summary": "架設 12 台實體伺服器叢集，以 ESXi 和 Proxmox 為基底建構運算資源，一台 NAS 作為儲存池",
+      "highlights": [
+        "使用 IaC 工具管理運算資源",
+        "服務以容器化方式執行在 Container OS 上",
+        "除了地端機器外，也管理 3 個 Microsoft 365 tenant 並使用 Azure AD 進行單一登入"
+      ],
+      "keywords": [
+        "Ansible",
+        "Terraform",
+        "Container",
+        "Microsoft 365"
+      ]
+    }
+  ],
   "references": [],
-  "projects": []
+  "projects": [
+    {
+      "name": "台科大管院國際認證網站 - 前端",
+      "startDate": "2022-07",
+      "endDate": "2023-10",
+      "description": "網站旨在讓行政人員能輕鬆的選取不固定的時間區段，並產生認證所需的所有報表，方便應對認證當天所需的所有情況。",
+      "highlights": [
+        "使用 Angular 搭配 Clarity Design 框架開發",
+        "使用 GitHub Actions CI/CD 自動部屬至校內地端機器",
+        "成功協助完成 2023 AACSB 以及 2024 EQUIS 認證"
+      ],
+      "url": "https://github.com/Oschangkai/aacsb-web",
+      "github": "https://github.com/Oschangkai/aacsb-web"
+    },
+    {
+      "name": "台科大管院國際認證網站 - 後端",
+      "startDate": "2022-07",
+      "endDate": "2023-10",
+      "description": "此專案藉由自動化的方式撈取校內外多個系統的資料，並產生認證所需的所有報表。",
+      "highlights": [
+        "使用 .NET Core 6 搭配 MSSQL 資料庫",
+        "撰寫 SQL View 及 Function 計算報表，在受限資源下 80ms 內完成計算"
+      ],
+      "url": "https://github.com/Oschangkai/aacsb-api",
+      "github": "https://github.com/Oschangkai/aacsb-api"
+    },
+    {
+      "name": "開門機器人",
+      "startDate": "2024-01",
+      "endDate": "2024-01",
+      "description": "智慧家居的開門機器人，使用樹莓派搭配繼電器控制電鎖開關，以 HTTP API 方式供 Home Assistant 串接。",
+      "highlights": [
+        "使用 .NET 8 AoT 最小化資源使用",
+        "穩定執行至今 20 個月無任何斷線或重開"
+      ],
+      "url": "https://github.com/Oschangkai/rpi-dotnet-minimal-api",
+      "github": "https://github.com/Oschangkai/rpi-dotnet-minimal-api"
+    }
+  ]
 }
