@@ -6,7 +6,7 @@
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "2025 畢業於台科大資管碩士班，擁有近三年的雲原生應用開發經驗以及 DevOps 經歷。除此之外也熟悉微軟相關平台（如：Azure、Azure DevOps、Microsoft 365）、容器化應用、網頁開發（Angular）、網通設備規劃與管理。",
+    "summary": "2025 畢業於台科大資管碩士班，擁有近三年的雲原生應用開發經驗以及 DevOps 經歷。熟悉微軟相關平台、容器化應用、網頁開發、網通設備規劃與管理。",
     "location": {
       "address": "",
       "postalCode": "",
@@ -58,9 +58,9 @@
       "url": "https://www.mayohr.com/",
       "startDate": "2021-03",
       "endDate": "2021-09",
-      "summary": "內部系統開發、流程改進\n串接 Azure, Azure DevOps, 以及 SendGrid API，供維運人員方便管理散落的資源",
+      "summary": "內部系統開發、流程改進\n串接 Azure, Azure DevOps, 以及 SendGrid API，供人員方便管理散落的資源",
       "highlights": [
-        "內部系統開發：成功使公司非 IT/開發 背景人員也能輕鬆存取必要資源，減少部門間往返成本"
+        "內部系統開發：成功使公司非 IT / 開發背景人員也能輕鬆存取必要資源，減少部門間往返成本"
       ],
       "skills": [
         "Azure",
@@ -74,7 +74,7 @@
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
-      "summary": "以 Azure 為主的雲原生應用開發、Microsoft 365 應用開發\nAzure DevOps CI/CD 架設",
+      "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\n協助部門 CI/CD 導入",
       "highlights": [
         "擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發流程自動化，並能部屬至雲或地端環境",
         "使用 Microsoft 365 API 開發許多工具，如 Teams App、Chatbot、等，成功導入公司使部分流程自動化",
@@ -98,7 +98,7 @@
       "endDate": "2019-06",
       "summary": "公司內部系統開發",
       "highlights": [
-        "客戶帳務分析平台：使用 Azure 平台開發純 Serverless 應用，並使用 Power BI 呈現報表。平台成功導入全公司並解決許多問題，讓業務能快速分析客戶帳單"
+        "客戶帳務分析平台：使用 Azure 平台開發純 Serverless 應用、Power BI 呈現報表。平台導入全公司，並成功協助業務解決帳務問題"
       ],
       "skills": [
         "AWS",
@@ -111,7 +111,7 @@
       "url": "https://www.accudata.com.tw/",
       "startDate": "2018-02",
       "endDate": "2019-02",
-      "summary": "使用者電腦環境維護與改善\n網通設備設定與架設，如 Router, Switch 的 HA 設定、區/外網路規劃，多為 Cisco, Fortinet 設備",
+      "summary": "終端電腦環境維護與改善、網通設備設定與架設",
       "highlights": [
         "曾參與：Core Switch 更換計畫、ISO 續證、新公司電腦及設備規劃",
         "IDC 機房見習",
@@ -255,11 +255,11 @@
   "interests": [
     {
       "name": "HomeLab",
-      "summary": "架設 12 台實體伺服器叢集，以 ESXi 和 Proxmox 為基底建構運算資源，一台 NAS 作為儲存池",
+      "summary": "架設 12 台實體伺服器叢集",
       "highlights": [
         "使用 IaC 工具管理運算資源",
-        "服務以容器化方式執行在 Container OS 上",
-        "除了地端機器外，也管理 3 個 Microsoft 365 tenant 並使用 Azure AD 進行單一登入"
+        "以 ESXi 和 Proxmox 為基底建構運算資源，服務以容器化方式執行於 Container OS",
+        "管理 3 個 Microsoft 365 tenant 並使用 Azure AD 進行單一登入"
       ],
       "keywords": [
         "Ansible",
@@ -275,11 +275,11 @@
       "name": "台科大管院國際認證網站 - 前端",
       "startDate": "2022-07",
       "endDate": "2023-10",
-      "description": "網站旨在讓行政人員能輕鬆的選取不固定的時間區段，並產生認證所需的所有報表，方便應對認證當天所需的所有情況。",
+      "description": "讓行政人員能輕鬆的選取不固定時間區段，產生認證的所有報表，方便應對認證當天的所有情況",
       "highlights": [
         "使用 Angular 搭配 Clarity Design 框架開發",
-        "使用 GitHub Actions CI/CD 自動部屬至校內地端機器",
-        "成功協助完成 2023 AACSB 以及 2024 EQUIS 認證"
+        "使用 GitHub Actions CI/CD 自動部屬至校內機器",
+        "成功完成 2023 AACSB 以及 2024 EQUIS 認證"
       ],
       "url": "https://github.com/Oschangkai/aacsb-web",
       "github": "https://github.com/Oschangkai/aacsb-web"
@@ -288,10 +288,10 @@
       "name": "台科大管院國際認證網站 - 後端",
       "startDate": "2022-07",
       "endDate": "2023-10",
-      "description": "此專案藉由自動化的方式撈取校內外多個系統的資料，並產生認證所需的所有報表。",
+      "description": "此專案藉由自動化的方式撈取校內外多個系統資料，並產生認證的所有報表",
       "highlights": [
         "使用 .NET Core 6 搭配 MSSQL 資料庫",
-        "撰寫 SQL View 及 Function 計算報表，在受限資源下 80ms 內完成計算"
+        "撰寫 SQL View 及 Function 計算報表，在受限資源下 150ms 內完成計算"
       ],
       "url": "https://github.com/Oschangkai/aacsb-api",
       "github": "https://github.com/Oschangkai/aacsb-api"
@@ -300,7 +300,7 @@
       "name": "開門機器人",
       "startDate": "2024-01",
       "endDate": "2024-01",
-      "description": "智慧家居的開門機器人，使用樹莓派搭配繼電器控制電鎖開關，以 HTTP API 方式供 Home Assistant 串接。",
+      "description": "智慧家居的開門機器人，使用樹莓派搭配繼電器控制電鎖開關，以 HTTP API 方式供 Home Assistant 串接",
       "highlights": [
         "使用 .NET 8 AoT 最小化資源使用",
         "穩定執行至今 20 個月無任何斷線或重開"
