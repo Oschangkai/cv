@@ -16,5 +16,7 @@ export function getSectionVisibility(cvData: CV) {
     education: Array.isArray(cvData.education) && cvData.education.length > 0,
     projects: Array.isArray(cvData.projects) && cvData.projects.length > 0,
     skills: Array.isArray(cvData.skills) && cvData.skills.length > 0,
+    certificates: Array.isArray(cvData.certificates) && cvData.certificates.length > 0,
+    interests: Array.isArray(cvData.interests) && cvData.interests.length > 0,
   };
 }

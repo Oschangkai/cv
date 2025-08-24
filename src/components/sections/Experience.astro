@@ -52,14 +52,23 @@ const t = useTranslation();
 
                 <footer>
                   {summary && <p class="summary">{summary}</p>}
+                  {highlights && highlights.length > 0 && (
+                    <div class="highlights">
+                      <p class="highlights-title">
+                        {t("experience.highlights.title")}
+                      </p>
+                      <ul class="highlights-list">
+                        {highlights.map((highlight) => (
+                          <li class="highlight-item">{highlight}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   {skills && skills.length > 0 && (
                     <div class="skills">
                       {skills.map((skill) => (
-                        <span class="skill-chip no-print">{skill}</span>
+                        <span class="skill-chip">{skill}</span>
                       ))}
-                      <p class="print">
-                        {t("experience.skills.title")} {skills.join(", ")}
-                      </p>
                     </div>
                   )}
                 </footer>
@@ -88,8 +97,9 @@ const t = useTranslation();
     color: #111;
   }
 
-  article a:hover {
+  article a:hover:is([href]) {
     text-decoration: underline;
+    cursor: pointer;
   }
 
   article h4 {
@@ -129,12 +139,40 @@ const t = useTranslation();
     white-space: pre-line;
   }
 
+  /* Highlights section styling */
+  .highlights {
+    margin-top: 8px;
+  }
+
+  .highlights-title {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .highlights-list {
+    display: block;
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+    margin-bottom: 0;
+  }
+
   /* Skills section styling */
   .skills {
     display: inline-flex;
     gap: 6px;
     flex-wrap: wrap;
     margin-top: 16px;
+  }
+
+  .skill-title {
+    color: #666;
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 
   .skill-chip {
@@ -186,6 +224,25 @@ const t = useTranslation();
   @media (width <= 700px) {
     time {
       text-align: right;
+    }
+
+    .skills {
+      gap: 6px;
+    }
+
+    .skill-chip {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+    }
+  }
+
+  @media print {
+    .skill-chip {
+      background: none;
+      border: 1px solid #666;
+      color: #333;
+      font-size: 0.75rem;
+      padding: 2px 6px;
     }
   }
 </style>

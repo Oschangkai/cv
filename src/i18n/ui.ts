@@ -10,6 +10,8 @@ export const ui = {
     'education.title': '教育背景', 
     'projects.title': '專案作品',
     'skills.title': '技能',
+    'certificates.title': '證書與認證',
+    'interests.title': '興趣愛好',
     
     // 按鈕與動作
     'language.switch': '切換語言',
@@ -31,6 +33,10 @@ export const ui = {
     'contact.email.title': '發送電子郵件給 {name}',
     'contact.phone.title': '致電給 {name}',
     'contact.profile.title': '前往 {name} 在 {network} 的個人檔案',
+
+    // 證書相關
+    'certificates.score': '分數：',
+    'certificates.view': '查看 {name} 證書',
     
     // 專案相關
     'projects.view': '查看 {name} 專案',
@@ -38,9 +44,11 @@ export const ui = {
 
     // 工作經驗相關
     'experience.skills.title': '技能：',
+    'experience.highlights.title': '主要貢獻：',
     
     // 時間格式
     'date.current': '目前',
+    'date.format.year_month_day': '{year} 年 {month} 月 {day} 日',
     'date.format.year_month': '{year} 年 {month} 月',
     'date.format.year': '{year} 年',
     
@@ -54,8 +62,16 @@ export const ui = {
     'show_more': '顯示更多',
     'show_less': '顯示較少',
 
+    // 教育背景相關
     'education.highlights_title': '經歷：',
     
+    // 技能等級
+    'skills.level.fundamental': '基礎',
+    'skills.level.intermediate': '中等',
+    'skills.level.proficient': '熟練',
+    'skills.level.expert': '專家',
+    'skills.level.unknown': '{level}',
+
     // 其他
     'loading': '載入中...',
   },
@@ -69,6 +85,8 @@ export const ui = {
     'education.title': 'Education',
     'projects.title': 'Projects', 
     'skills.title': 'Skills',
+    'certificates.title': 'Certificates',
+    'interests.title': 'Interests',
     
     // Buttons and actions
     'language.switch': 'Switch Language',
@@ -95,11 +113,17 @@ export const ui = {
     'projects.view': 'View project {name}',
     'projects.source': 'View source code of {name}',
 
+    // Certificates related
+    'certificates.score': 'Score:',
+    'certificates.view': 'View {name} certificate',
+
     // Experience related
     'experience.skills.title': 'Skills:',
+    'experience.highlights.title': 'Key Achievements:',
     
     // Date format
     'date.current': 'Present',
+    'date.format.year_month_day': '{month}/{day}/{year}',
     'date.format.year_month': '{month}/{year}',
     'date.format.year': '{year}',
     
@@ -115,6 +139,12 @@ export const ui = {
     
     'education.highlights_title': 'Experience:',
     
+    // Skill levels
+    'skills.level.fundamental': 'Fundamental',
+    'skills.level.intermediate': 'Intermediate', 
+    'skills.level.proficient': 'Proficient',
+    'skills.level.expert': 'Expert',
+    'skills.level.unknown': '{level}',
     // Other
     'loading': 'Loading...',
   }
@@ -123,3 +153,4 @@ export const ui = {
 // 匯出型別定義
 export type UiLang = keyof typeof ui;
 export type TranslationKey = keyof typeof ui[keyof typeof ui];
+export type SkillsLevelKey = Extract<TranslationKey, `skills.level.${string}`>;

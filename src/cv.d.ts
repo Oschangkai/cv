@@ -47,10 +47,17 @@ interface Work {
   endDate: DateStr | null
   summary: string
   highlights: Highlight
-  skills: Array<string>
+  skills?: Array<string>
 }
 
 type DateStr = `${string}-${string}-${string}`
+
+// Skill level type definition
+export type SkillLevel = 
+  | "Fundamental"
+  | "Intermediate" 
+  | "Proficient"
+  | "Expert"
 
 interface Volunteer {
   organization: string
@@ -64,8 +71,8 @@ interface Volunteer {
 
 interface Skills {
   name: string
-  level: string
-  keywords: Array<string>
+  level?: SkillLevel
+  keywords?: Array<string>
 }
 
 interface Awards {
@@ -133,16 +140,20 @@ type Language =
 
 interface Projects {
   name: string
-  isActive: boolean
+  isActive?: boolean
   description: string
-  highlights: Highlight
+  highlights?: Highlight
   url: string
   github?: string
+  startDate?: DateStr
+  endDate?: DateStr | null
 }
 
 interface Interests {
   name: string
-  keywords: Array<string>
+  keywords?: Array<string>
+  summary?: string
+  highlights?: Array<string>
 }
 
 interface References {

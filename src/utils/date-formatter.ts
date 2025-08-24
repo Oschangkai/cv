@@ -18,6 +18,26 @@ export function formatYear(dateString: string | null, t: (key: TranslationKey, p
 }
 
 /**
+ * Format date string to year and month and day
+ * @param dateString ISO date string (e.g. "2021-01-01")
+ * @param t translation function
+ * @returns formatted year and month and day string
+ */
+
+export function formatYearMonthDay(dateString: string | null, t: (key: TranslationKey, params?: Record<string, string>) => string): string {
+  if (!dateString) {
+    return t('date.current');
+  }
+
+  const date = new Date(dateString);
+  const year = date.getFullYear().toString();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+
+  return t('date.format.year_month_day', { year, month, day });
+}
+
+/**
  * Format date string to year and month
  * @param dateString ISO date string (e.g. "2021-01-01")
  * @param t translation function
@@ -117,6 +137,7 @@ export function calculateWorkDuration(
   // Calculate the difference in years and months
   let years = end.getFullYear() - start.getFullYear();
   let months = end.getMonth() - start.getMonth();
+  let days = end.getDate() - start.getDate();
 
   // If the months are negative, adjust the years and months
   if (months < 0) {
@@ -124,10 +145,23 @@ export function calculateWorkDuration(
     months += 12;
   }
 
-  // Format the output
-  if (years === 0 && months === 0) {
+  // If the years and months are 0, and the days is provided, return less than month
+  if (years === 0 && months === 0 && days !== 0) {
     return t('duration.less_than_month');
-  } else if (years === 0) {
+  }
+
+  // Add 1 to months to count the current month
+  // This ensures proper month counting (e.g., Aug to Aug = 1 month, Aug to Sep = 2 months)
+  months += 1;
+
+  // If months exceed 12, adjust years and months
+  if (months >= 12) {
+    years += Math.floor(months / 12);
+    months = months % 12;
+  }
+
+  // Format the output
+  if (years === 0) {
     return t('duration.months', { months: months.toString() });
   } else if (months === 0) {
     return t('duration.years', { years: years.toString() });
