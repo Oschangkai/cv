@@ -194,7 +194,7 @@
   "skills": [
     {
       "name": "Cloud",
-      "level": "Master",
+      "level": "Proficient",
       "keywords": [
         "Azure",
         "Microsoft 365",
@@ -203,7 +203,7 @@
     },
     {
       "name": "DevOps",
-      "level": "Master",
+      "level": "Proficient",
       "keywords": [
         "Azure DevOps",
         "GitHub Actions",
@@ -212,7 +212,7 @@
     },
     {
       "name": "Infrastructure",
-      "level": "Master",
+      "level": "Proficient",
       "keywords": [
         "Container",
         "Linux",
@@ -226,7 +226,7 @@
     },
     {
       "name": "Web Frontend",
-      "level": "Master",
+      "level": "Intermediate",
       "keywords": [
         "Angular",
         "Clarity Design"
@@ -234,7 +234,7 @@
     },
     {
       "name": "Backend",
-      "level": "Intermediate",
+      "level": "Fundamental",
       "keywords": [
         ".NET",
         "Node.js",
