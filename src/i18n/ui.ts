@@ -10,6 +10,7 @@ export const ui = {
     'education.title': '教育背景', 
     'projects.title': '專案作品',
     'skills.title': '技能',
+    'certificates.title': '證書與認證',
     
     // 按鈕與動作
     'language.switch': '切換語言',
@@ -31,6 +32,10 @@ export const ui = {
     'contact.email.title': '發送電子郵件給 {name}',
     'contact.phone.title': '致電給 {name}',
     'contact.profile.title': '前往 {name} 在 {network} 的個人檔案',
+
+    // 證書相關
+    'certificates.score': '分數：',
+    'certificates.view': '查看 {name} 證書',
     
     // 專案相關
     'projects.view': '查看 {name} 專案',
@@ -42,6 +47,7 @@ export const ui = {
     
     // 時間格式
     'date.current': '目前',
+    'date.format.year_month_day': '{year} 年 {month} 月 {day} 日',
     'date.format.year_month': '{year} 年 {month} 月',
     'date.format.year': '{year} 年',
     
@@ -55,6 +61,7 @@ export const ui = {
     'show_more': '顯示更多',
     'show_less': '顯示較少',
 
+    // 教育背景相關
     'education.highlights_title': '經歷：',
     
     // 技能等級
@@ -77,6 +84,7 @@ export const ui = {
     'education.title': 'Education',
     'projects.title': 'Projects', 
     'skills.title': 'Skills',
+    'certificates.title': 'Certificates',
     
     // Buttons and actions
     'language.switch': 'Switch Language',
@@ -103,12 +111,17 @@ export const ui = {
     'projects.view': 'View project {name}',
     'projects.source': 'View source code of {name}',
 
+    // Certificates related
+    'certificates.score': 'Score:',
+    'certificates.view': 'View {name} certificate',
+
     // Experience related
     'experience.skills.title': 'Skills:',
     'experience.highlights.title': 'Key Achievements:',
     
     // Date format
     'date.current': 'Present',
+    'date.format.year_month_day': '{month}/{day}/{year}',
     'date.format.year_month': '{month}/{year}',
     'date.format.year': '{year}',
     
@@ -143,6 +156,7 @@ export const ui = {
     'education.title': 'Educación',
     'projects.title': 'Proyectos', 
     'skills.title': 'Habilidades',
+    'certificates.title': 'Certificados',
     
     // Buttons and actions
     'language.switch': 'Cambiar Idioma',
@@ -169,12 +183,17 @@ export const ui = {
     'projects.view': 'Ver proyecto {name}',
     'projects.source': 'Ver código fuente de {name}',
     
+    // Certificates related
+    'certificates.score': 'Puntaje:',
+    'certificates.view': 'Ver certificado de {name}',
+
     // Experience related
     'experience.skills.title': 'Habilidades:',
     'experience.highlights.title': 'Logros Principales:',
     
     // Date format
     'date.current': 'Presente',
+    'date.format.year_month_day': '{day}/{month}/{year}',
     'date.format.year_month': '{month}/{year}',
     'date.format.year': '{year}',
     

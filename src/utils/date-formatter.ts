@@ -18,6 +18,26 @@ export function formatYear(dateString: string | null, t: (key: TranslationKey, p
 }
 
 /**
+ * Format date string to year and month and day
+ * @param dateString ISO date string (e.g. "2021-01-01")
+ * @param t translation function
+ * @returns formatted year and month and day string
+ */
+
+export function formatYearMonthDay(dateString: string | null, t: (key: TranslationKey, params?: Record<string, string>) => string): string {
+  if (!dateString) {
+    return t('date.current');
+  }
+
+  const date = new Date(dateString);
+  const year = date.getFullYear().toString();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+
+  return t('date.format.year_month_day', { year, month, day });
+}
+
+/**
  * Format date string to year and month
  * @param dateString ISO date string (e.g. "2021-01-01")
  * @param t translation function
