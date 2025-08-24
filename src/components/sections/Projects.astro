@@ -39,7 +39,7 @@ const t = useTranslation();
                   <p>{description}</p>
                 </header>
                 <footer>
-                  {highlights.map((highlight) => {
+                  {highlights?.map((highlight) => {
                     return <span>{highlight}</span>;
                   })}
                 </footer>

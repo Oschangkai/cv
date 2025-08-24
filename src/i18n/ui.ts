@@ -11,6 +11,7 @@ export const ui = {
     'projects.title': '專案作品',
     'skills.title': '技能',
     'certificates.title': '證書與認證',
+    'interests.title': '興趣愛好',
     
     // 按鈕與動作
     'language.switch': '切換語言',
@@ -85,6 +86,7 @@ export const ui = {
     'projects.title': 'Projects', 
     'skills.title': 'Skills',
     'certificates.title': 'Certificates',
+    'interests.title': 'Interests',
     
     // Buttons and actions
     'language.switch': 'Switch Language',
@@ -157,6 +159,7 @@ export const ui = {
     'projects.title': 'Proyectos', 
     'skills.title': 'Habilidades',
     'certificates.title': 'Certificados',
+    'interests.title': 'Intereses',
     
     // Buttons and actions
     'language.switch': 'Cambiar Idioma',
