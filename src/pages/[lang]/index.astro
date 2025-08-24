@@ -72,9 +72,21 @@ const sectionVisibility = getSectionVisibility(cvData);
     box-sizing: border-box;
   }
 
+  @media (width >= 1460px) {
+    main {
+      padding: 4rem 2rem;
+    }
+  }
+
   @media (width <= 700px) {
     main {
       padding: 2rem;
+    }
+  }
+
+  @media print {
+    main {
+      padding: 0;
     }
   }
 </style>

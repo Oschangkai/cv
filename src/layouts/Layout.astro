@@ -126,6 +126,11 @@ const { title, summary, image, url, currentLang } = Astro.props;
     article {
       break-inside: avoid;
     }
+
+    @page {
+      size: A4;
+      margin: 15mm 20mm;
+    }
   }
   :root {
     --gray: rgb(108, 117, 125);
