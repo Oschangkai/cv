@@ -17,7 +17,7 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "KaiYi (Oscar) Chang",
+        "username": "kaiyeee",
         "url": "https://linkedin.com/in/kaiyeee"
       },
       {
@@ -58,9 +58,9 @@
       "url": "https://www.mayohr.com/",
       "startDate": "2021-03",
       "endDate": "2021-09",
-      "summary": "內部系統開發、流程改進\n串接 Azure, Azure DevOps, 以及 SendGrid API，供人員方便管理散落的資源",
+      "summary": "內部系統開發、流程改進\n整合雲端資源，供人員方便管理散落的資源",
       "highlights": [
-        "內部系統開發：成功使公司非 IT / 開發背景人員也能輕鬆存取必要資源，減少部門間往返成本"
+        "內部系統開發：成功使公司非 IT / 開發部門人員也能在受限權限下存取資源，減少部門間往返成本"
       ],
       "skills": [
         "Azure",
@@ -76,8 +76,8 @@
       "endDate": "2021-03",
       "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\n協助部門 CI/CD 導入",
       "highlights": [
-        "擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發流程自動化，並能部屬至雲或地端環境",
-        "使用 Microsoft 365 API 開發許多工具，如 Teams App、Chatbot、等，成功導入公司使部分流程自動化",
+        "擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發及部屬流程自動化，至雲或地端環境",
+        "於 Microsoft 365 平台上開發工具，如 Teams App、Chatbot、等",
         "熟悉 Azure 雲原生應用開發，除一般應用，也開發過純 Serverless、Low Code 應用"
       ],
       "skills": [
@@ -92,11 +92,11 @@
     },
     {
       "name": "緯謙科技股份有限公司",
-      "position": "實習生",
+      "position": "實習工程師",
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-02",
       "endDate": "2019-06",
-      "summary": "公司內部系統開發",
+      "summary": "內部系統開發",
       "highlights": [
         "客戶帳務分析平台：使用 Azure 平台開發純 Serverless 應用、Power BI 呈現報表。平台導入全公司，並成功協助業務解決帳務問題"
       ],
@@ -107,7 +107,7 @@
     },
     {
       "name": "精藤股份有限公司",
-      "position": "MIS/SE 實習生",
+      "position": "實習 MIS/SE",
       "url": "https://www.accudata.com.tw/",
       "startDate": "2018-02",
       "endDate": "2019-02",
@@ -275,7 +275,7 @@
       "name": "台科大管院國際認證網站 - 前端",
       "startDate": "2022-07",
       "endDate": "2023-10",
-      "description": "讓行政人員能輕鬆的選取不固定時間區段，產生認證的所有報表，方便應對認證當天的所有情況",
+      "description": "讓行政人員能輕鬆匯出不固定時間區段的報表，應對認證當天所有問題",
       "highlights": [
         "使用 Angular 搭配 Clarity Design 框架開發",
         "使用 GitHub Actions CI/CD 自動部屬至校內機器",
@@ -303,7 +303,7 @@
       "description": "智慧家居的開門機器人，使用樹莓派搭配繼電器控制電鎖開關，以 HTTP API 方式供 Home Assistant 串接",
       "highlights": [
         "使用 .NET 8 AoT 最小化資源使用",
-        "穩定執行至今 20 個月無任何斷線或重開"
+        "穩定運作超過 20 個月無任何斷線或重開"
       ],
       "url": "https://github.com/Oschangkai/rpi-dotnet-minimal-api",
       "github": "https://github.com/Oschangkai/rpi-dotnet-minimal-api"

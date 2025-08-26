@@ -1,0 +1,312 @@
+{
+  "basics": {
+    "name": "KaiYi (Oscar) Chang",
+    "label": "Master’s degree in Information Management from NTUST (2025), with nearly 3 years of experience in cloud-native application development and DevOps.",
+    "image": "/me.webp",
+    "email": "me@kaiyeee.tw",
+    "phone": "",
+    "url": "https://cv.kaiyeee.tw",
+    "summary": "Graduated with a Master's degree in Information Management from NTUST in 2025, with nearly three years of cloud-native application development experience and DevOps background. Proficient in Microsoft-related platforms, containerized applications, web development, networking equipment planning and management.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "TW",
+      "region": "Taiwan"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "kaiyeee",
+        "url": "https://linkedin.com/in/kaiyeee"
+      },
+      {
+        "network": "X",
+        "username": "oschangkai",
+        "url": "https://x.com/oschangkai"
+      },
+      {
+        "network": "GitHub",
+        "username": "oschangkai",
+        "url": "https://github.com/oschangkai"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelancer",
+      "position": "Student",
+      "startDate": "2021-09",
+      "endDate": "2025-08",
+      "summary": "Freelance projects during master's studies\nIncluding cloud infrastructure management, development process automation setup, web frontend, and backend development",
+      "highlights": [
+        "Planning and implement DevOps flow for international logistics company: Used Jenkins to solve development and deployment automation, deployed to global (on-premise) environments.",
+        "Cross-site network planning and implementation for foundation: Connecting networks across three locations for secure access to internal resources.",
+        "Office network planning and implementation for real estate company: Planned stable wireless environment and seamless secure remote access to internal resources for all employees, running stably for 2.5 years as of 2025/08."
+      ],
+      "skills": [
+        "Infrastructure (Cloud & On-premise)",
+        "DevOps",
+        "Networking",
+        "Angular",
+        ".NET"
+      ]
+    },
+    {
+      "name": "MAYO Human Capital",
+      "position": "Cloud Technical Engineer",
+      "url": "https://www.mayohr.com/",
+      "startDate": "2021-03",
+      "endDate": "2021-09",
+      "summary": "Internal system development, process improvement\nIntegrated cloud resources for convenient management of scattered resources",
+      "highlights": [
+        "Internal system development: Successfully enabled non-IT/development staff to easily access resources with limited permissions, reducing inter-departmental communication costs."
+      ],
+      "skills": [
+        "Azure",
+        "Azure DevOps",
+        "Infrastructure (Cloud & On-premise)"
+      ]
+    },
+    {
+      "name": "WiAdvance Technology Co., Ltd.",
+      "position": "Senior Engineer",
+      "url": "https://www.wiadvance.com/",
+      "startDate": "2019-07",
+      "endDate": "2021-03",
+      "summary": "Azure cloud-native application development, Microsoft 365 application development\nAssisted in departmental CI/CD implementation",
+      "highlights": [
+        "Served as the main DevOps role in the department: Used Azure DevOps for dev/deploy automation (to cloud or on-premise environments).",
+        "Developed several projects based on Microsoft 365, such as Teams Apps, Chatbots, etc.",
+        "Proficient in Azure cloud-native application development, including general applications as well as pure Serverless and Low Code applications."
+      ],
+      "skills": [
+        "Azure",
+        "Azure DevOps",
+        "Microsoft 365",
+        "Cloud Native",
+        "Container",
+        "Angular",
+        "Power Automate"
+      ]
+    },
+    {
+      "name": "WiAdvance Technology Co., Ltd.",
+      "position": "SWE Intern",
+      "url": "https://www.wiadvance.com/",
+      "startDate": "2019-02",
+      "endDate": "2019-06",
+      "summary": "Internal system development",
+      "highlights": [
+        "Customer billing analysis platform: Developed a fully serverless application on Azure and presented reports using Power BI. The platform was introduced company-wide and successfully assisted the sales team in resolving billing issues."
+      ],
+      "skills": [
+        "AWS",
+        "Power BI"
+      ]
+    },
+    {
+      "name": "Accudata Research Institute Inc.",
+      "position": "MIS/SE Intern",
+      "url": "https://www.accudata.com.tw/",
+      "startDate": "2018-02",
+      "endDate": "2019-02",
+      "summary": "Terminal computer environment maintenance and improvement, network equipment configuration and setup",
+      "highlights": [
+        "Participated in: Core Switch replacement project, ISO certification renewal, new company computer and equipment planning",
+        "IDC data center internship",
+        "Rack server setup"
+      ],
+      "skills": [
+        "Infrastructure (On-premise)",
+        "Networking"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "National Taiwan University of Science and Technology",
+      "url": "https://www.ntust.edu.tw/",
+      "area": "Information Management",
+      "studyType": "Master's",
+      "startDate": "2021-09-01",
+      "endDate": "2025-08-31",
+      "summary": "Integrated Digital Service Laboratory (IDSL)\nMaster's Thesis: On the Design of an eBPF-based Detection and Mitigation System for Slow HTTP Attacks - Using Slowloris Attacks as a Study Case",
+      "highlights": [
+        {
+          "summary": "Served as Teaching Assistant at NTUST Computer Center, helping resolve front-line issues",
+          "startDate": "2024-09",
+          "endDate": "2025-08"
+        },
+        {
+          "summary": "Served as course teaching assistant for: Java Object-Oriented Programming Language, Golang Programming Language, Introduction to Cloud Application Security, Information Security Management. Assisted with exam preparation, course material compilation, etc.",
+          "startDate": "2022-01",
+          "endDate": "2023-01"
+        },
+        {
+          "summary": "IDSL Network Administrator: Independently built laboratory network and equipment from scratch. Including network equipment planning, network cable wiring, firewall/VPN/NAS hardware configuration, rack server setup, laboratory OA and server room inter-connection, NAS offsite backup.",
+          "startDate": "2021-09",
+          "endDate": "2025-08"
+        }
+      ]
+    },
+    {
+      "institution": "Yuan Ze University",
+      "url": "https://www.yzu.edu.tw/",
+      "area": "Information Management",
+      "studyType": "Bachelor's",
+      "startDate": "2015-09-01",
+      "endDate": "2019-06-30",
+      "highlights": [
+        {
+          "summary": "Information Technology Association Club (ITAC) - 4th President",
+          "startDate": "2016-08",
+          "endDate": "2017-07"
+        },
+        {
+          "summary": "Information Management Department Student Association - Vice Academic Director",
+          "startDate": "2016-06",
+          "endDate": "2017-05"
+        },
+        {
+          "summary": "Male Dormitory 2 - Network Administrator",
+          "startDate": "2016-07",
+          "endDate": "2018-06"
+        },
+        {
+          "summary": "2017 Information Week - Vice General Coordinator",
+          "startDate": "2017-03",
+          "endDate": "2017-03"
+        }
+      ]
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "TOEIC",
+      "score": "730",
+      "date": "2019-03-24"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Cloud",
+      "level": "Proficient",
+      "keywords": [
+        "Azure",
+        "Microsoft 365",
+        "AWS"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Proficient",
+      "keywords": [
+        "Azure DevOps",
+        "GitHub Actions",
+        "Jenkins"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "level": "Proficient",
+      "keywords": [
+        "Container",
+        "Linux",
+        "ESXi",
+        "Proxmox",
+        "Ubiquiti",
+        "MikroTik",
+        "Cisco",
+        "Fortinet"
+      ]
+    },
+    {
+      "name": "Web Frontend",
+      "level": "Intermediate",
+      "keywords": [
+        "Angular",
+        "Clarity Design"
+      ]
+    },
+    {
+      "name": "Backend",
+      "level": "Fundamental",
+      "keywords": [
+        ".NET",
+        "Node.js",
+        "Java"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Native"
+    }
+  ],
+  "interests": [
+    {
+      "name": "HomeLab",
+      "summary": "Built a 12-server physical cluster",
+      "highlights": [
+        "Using IaC tools to manage computing resources",
+        "Built computing resources based on ESXi and Proxmox, with services running in containerized form on Container OS",
+        "Managing 3 Microsoft 365 tenants and using Azure AD for single sign-on"
+      ],
+      "keywords": [
+        "Ansible",
+        "Terraform",
+        "Container",
+        "Microsoft 365"
+      ]
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "NTUST SoM International Accreditation Website - Frontend",
+      "startDate": "2022-07",
+      "endDate": "2023-10",
+      "description": "Enables administrative staff to easily generate reports for different time periods.",
+      "highlights": [
+        "Developed using Angular with Clarity Design framework",
+        "Using GitHub Actions for CI/CD pipeline (automatic deployment to local machines)",
+        "Successfully completed 2023 AACSB and 2024 EQUIS accreditations"
+      ],
+      "url": "https://github.com/Oschangkai/aacsb-web",
+      "github": "https://github.com/Oschangkai/aacsb-web"
+    },
+    {
+      "name": "NTUST SoM International Accreditation Website - Backend",
+      "startDate": "2022-07",
+      "endDate": "2023-10",
+      "description": "This project automatically retrieves data from multiple internal and external systems and generates all accreditation reports",
+      "highlights": [
+        ".NET Core 6 with MSSQL database",
+        "Using SQL Views and Functions to calculate reports, completing calculations within 150ms under limited resources"
+      ],
+      "url": "https://github.com/Oschangkai/aacsb-api",
+      "github": "https://github.com/Oschangkai/aacsb-api"
+    },
+    {
+      "name": "Door Opening Robot",
+      "startDate": "2024-01",
+      "endDate": "2024-01",
+      "description": "Smart home door opening robot using Raspberry Pi with relay to control electric lock, providing HTTP API interface for Home Assistant integration",
+      "highlights": [
+        "Used .NET 8 AoT to minimize resource usage",
+        "Running stably for over 20 months without any restarts or connections lost"
+      ],
+      "url": "https://github.com/Oschangkai/rpi-dotnet-minimal-api",
+      "github": "https://github.com/Oschangkai/rpi-dotnet-minimal-api"
+    }
+  ]
+}
