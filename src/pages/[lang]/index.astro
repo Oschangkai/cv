@@ -45,12 +45,12 @@ const sectionVisibility = getSectionVisibility(cvData);
   <main>
     <Hero />
     {sectionVisibility.about && <About />}
+    {sectionVisibility.skills && <Skills />}
     {sectionVisibility.experience && <Experience />}
     {sectionVisibility.education && <Education />}
-    {sectionVisibility.projects && <Projects />}
-    {sectionVisibility.skills && <Skills />}
-    {sectionVisibility.certificates && <Certificates />}
     {sectionVisibility.interests && <Interests />}
+    {sectionVisibility.projects && <Projects />}
+    {sectionVisibility.certificates && <Certificates />}
   </main>
 
   <KeyboardManager />
