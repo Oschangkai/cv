@@ -7,7 +7,7 @@ const projects = getCVSection("projects");
 const t = useTranslation();
 ---
 
-<Section title={t("projects.title")}>
+<Section title={t("projects.title")} breakInside={false}>
   <ul>
     {
       projects.map(

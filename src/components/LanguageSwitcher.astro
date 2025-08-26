@@ -1,5 +1,6 @@
 ---
 import { i18nConfig } from "@astro.config";
+import { WorldMap } from "@/icons";
 import {
   useTranslation,
   getSelectedLang,
@@ -21,6 +22,7 @@ const availableLanguages = await getAvailableLanguages();
     aria-label={t("language.switch")}
     title={t("language.switch")}
   >
+    <WorldMap />
     <span class="current-lang"
       >{
         i18nConfig.languageNames[
@@ -116,45 +118,66 @@ const availableLanguages = await getAvailableLanguages();
 
 <style>
   .language-switcher {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
+    position: relative;
   }
 
   .language-button {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
+    justify-content: center;
+    padding: 0.1rem 0.3rem;
     background: #ffffffed;
     backdrop-filter: blur(2px);
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     color: #444;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
     font-family: inherit;
   }
 
   .language-button:hover {
-    background: #f9f9f9ed;
-    border-color: #aaa;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    gap: 0.35rem;
+    background: #f8f8f8ed;
+    border-color: var(--gray);
   }
 
   .current-lang {
     font-weight: 500;
+    margin-left: 0.35rem;
+    transition: all 0.2s ease;
+  }
+
+  .language-button:hover .current-lang {
+    margin-left: 0;
   }
 
   .chevron {
-    transition: transform 0.2s ease;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
   }
 
+  .language-button:hover .chevron {
+    opacity: 1;
+    width: 12px;
+  }
+
+  /* when the dropdown is shown, the chevron should be rotated and the gap should be 0.3rem */
   .language-switcher:has(.language-dropdown.show) .chevron {
+    opacity: 1;
+    width: 12px;
     transform: rotate(180deg);
+  }
+
+  .language-switcher:has(.language-dropdown.show) .language-button {
+    gap: 0.35rem;
+  }
+
+  .language-switcher:has(.language-dropdown.show) .current-lang {
+    margin-left: 0;
   }
 
   .language-dropdown {
@@ -166,7 +189,6 @@ const availableLanguages = await getAvailableLanguages();
     backdrop-filter: blur(2px);
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
@@ -222,13 +244,7 @@ const availableLanguages = await getAvailableLanguages();
     color: #0066cc;
   }
 
-  /* Mobile style */
   @media (max-width: 600px) {
-    .language-switcher {
-      top: 0.5rem;
-      right: 10px;
-    }
-
     .language-button {
       padding: 0.5rem;
       font-size: 0.8rem;
@@ -236,11 +252,6 @@ const availableLanguages = await getAvailableLanguages();
 
     .current-lang {
       display: none;
-    }
-
-    .language-button::before {
-      content: "🌐";
-      font-size: 1.2rem;
     }
 
     .language-dropdown {

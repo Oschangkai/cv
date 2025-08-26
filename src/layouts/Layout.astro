@@ -163,7 +163,11 @@ const { title, summary, image, url, currentLang } = Astro.props;
 
     @page {
       size: A4;
-      margin: 15mm 20mm;
+      margin: 12mm 16mm;
+    }
+
+    :root {
+      font-size: 14px;
     }
   }
   :root {
@@ -172,25 +176,29 @@ const { title, summary, image, url, currentLang } = Astro.props;
     --teal: rgb(23, 162, 184);
     --green: rgb(40, 167, 69);
 
+    /* Fundamental */
     --skill-fundamental-bg: var(--gray);
     --skill-fundamental-color: #ffffff;
     --skill-fundamental-border: var(--gray);
     --skill-fundamental-hover-shadow: rgba(108, 117, 125, 0.25);
     --skill-fundamental-hover-border: var(--gray);
-    --skill-intermediate-bg: var(--yellow);
-    --skill-intermediate-color: #212529;
-    --skill-intermediate-border: var(--yellow);
-    --skill-intermediate-hover-shadow: rgba(255, 193, 7, 0.25);
-    --skill-intermediate-hover-border: var(--yellow);
-    --skill-proficient-bg: var(--teal);
+    /* Intermediate */
+    --skill-intermediate-bg: var(--teal);
+    --skill-intermediate-color: #ffffff;
+    --skill-intermediate-border: var(--teal);
+    --skill-intermediate-hover-shadow: rgba(23, 162, 184, 0.25);
+    --skill-intermediate-hover-border: var(--teal);
+    /* Proficient */
+    --skill-proficient-bg: var(--green);
     --skill-proficient-color: #ffffff;
-    --skill-proficient-border: var(--teal);
-    --skill-proficient-hover-shadow: rgba(23, 162, 184, 0.25);
-    --skill-proficient-hover-border: var(--teal);
-    --skill-expert-bg: var(--green);
-    --skill-expert-color: #ffffff;
-    --skill-expert-border: var(--green);
-    --skill-expert-hover-shadow: rgba(40, 167, 69, 0.25);
-    --skill-expert-hover-border: var(--green);
+    --skill-proficient-border: var(--green);
+    --skill-proficient-hover-shadow: rgba(40, 167, 69, 0.25);
+    --skill-proficient-hover-border: var(--green);
+    /* Expert */
+    --skill-expert-bg: var(--yellow);
+    --skill-expert-color: #212529;
+    --skill-expert-border: var(--yellow);
+    --skill-expert-hover-shadow: rgba(255, 193, 7, 0.25);
+    --skill-expert-hover-border: var(--yellow);
   }
 </style>
