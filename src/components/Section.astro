@@ -28,6 +28,12 @@ const { title, breakInside = true } = Astro.props;
     }
   }
 
+  @media print {
+    section {
+      margin-bottom: 32px;
+    }
+  }
+
   h2 {
     margin-bottom: 8px;
     font-weight: 700;
