@@ -32,7 +32,7 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 ---
 
-<Section title={t("skills.title")}>
+<Section title={t("skills.title")} breakInside={false}>
   <ul>
     {
       skills.map(({ name, level, keywords }) => {
