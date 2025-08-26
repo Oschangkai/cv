@@ -116,10 +116,7 @@ const availableLanguages = await getAvailableLanguages();
 
 <style>
   .language-switcher {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
+    position: relative;
   }
 
   .language-button {
@@ -222,13 +219,7 @@ const availableLanguages = await getAvailableLanguages();
     color: #0066cc;
   }
 
-  /* Mobile style */
   @media (max-width: 600px) {
-    .language-switcher {
-      top: 0.5rem;
-      right: 10px;
-    }
-
     .language-button {
       padding: 0.5rem;
       font-size: 0.8rem;

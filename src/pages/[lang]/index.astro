@@ -19,7 +19,7 @@ import Skills from "@/components/sections/Skills.astro";
 import Certificates from "@/components/sections/Certificates.astro";
 import Interests from "@/components/sections/Interests.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
-import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import HeaderActions from "@/components/HeaderActions.astro";
 import { initializeLanguageContext } from "@/utils/language-context";
 import { getSectionVisibility } from "@/utils/section-utils";
 
@@ -41,7 +41,7 @@ const sectionVisibility = getSectionVisibility(cvData);
   url={url}
   currentLang={selectedLang}
 >
-  <LanguageSwitcher />
+  <HeaderActions />
   <main>
     <Hero />
     {sectionVisibility.about && <About />}

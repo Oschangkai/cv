@@ -1,0 +1,29 @@
+---
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+---
+
+<div class="header-actions no-print">
+  <LanguageSwitcher />
+</div>
+
+<style>
+  .header-actions {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 600px) {
+    .header-actions {
+      top: 0.5rem;
+      right: 10px;
+      gap: 0.5rem;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+</style>
