@@ -1,5 +1,6 @@
 ---
 import { i18nConfig } from "@astro.config";
+import { WorldMap } from "@/icons";
 import {
   useTranslation,
   getSelectedLang,
@@ -21,6 +22,7 @@ const availableLanguages = await getAvailableLanguages();
     aria-label={t("language.switch")}
     title={t("language.switch")}
   >
+    <WorldMap />
     <span class="current-lang"
       >{
         i18nConfig.languageNames[
@@ -136,13 +138,19 @@ const availableLanguages = await getAvailableLanguages();
   }
 
   .language-button:hover {
-    gap: 0.3rem;
+    gap: 0.35rem;
     background: #f8f8f8ed;
     border-color: var(--gray);
   }
 
   .current-lang {
     font-weight: 500;
+    margin-left: 0.35rem;
+    transition: all 0.2s ease;
+  }
+
+  .language-button:hover .current-lang {
+    margin-left: 0;
   }
 
   .chevron {
@@ -165,7 +173,11 @@ const availableLanguages = await getAvailableLanguages();
   }
 
   .language-switcher:has(.language-dropdown.show) .language-button {
-    gap: 0.3rem;
+    gap: 0.35rem;
+  }
+
+  .language-switcher:has(.language-dropdown.show) .current-lang {
+    margin-left: 0;
   }
 
   .language-dropdown {
@@ -240,11 +252,6 @@ const availableLanguages = await getAvailableLanguages();
 
     .current-lang {
       display: none;
-    }
-
-    .language-button::before {
-      content: "🌐";
-      font-size: 1.2rem;
     }
 
     .language-dropdown {
