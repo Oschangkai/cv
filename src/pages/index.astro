@@ -1,6 +1,9 @@
 ---
 import { i18nConfig } from "@astro.config";
+import { getAvailableLanguages } from "@/utils/language-context";
+
 const defaultLang = i18nConfig.defaultLocale;
+const availableLanguages = await getAvailableLanguages();
 ---
 
 <!doctype html>
@@ -8,12 +11,48 @@ const defaultLang = i18nConfig.defaultLocale;
   <head>
     <meta charset="UTF-8" />
     <title>Loading...</title>
-    <script define:vars={{ defaultLang }}>
-      var storedLang = localStorage.getItem("preferred-language");
-      var targetLang = storedLang || defaultLang;
+    <script define:vars={{ defaultLang, availableLanguages }}>
+      // Execute language determination and redirect
+      // 1. Check if the user has a stored language preference
+      // 2. If not, check if the browser has a preferred language
+      // 3. If not, fallback to the default language
 
-      // Immediately redirect, without waiting
-      window.location.replace("/" + targetLang);
+      // Priority 1: Use stored language preference if available
+      var storedLang = localStorage.getItem("preferred-language");
+      if (storedLang) {
+        window.location.replace("/" + storedLang);
+        return;
+      }
+
+      // Priority 2: Try to match browser language
+      var browserLanguages = navigator.languages
+        ? Array.from(navigator.languages).map((lang) =>
+            lang.toLowerCase().replace("-", "_")
+          )
+        : [];
+
+      if (browserLanguages.length > 0) {
+        for (const browserLang of browserLanguages) {
+          // Try exact match first
+          if (availableLanguages.includes(browserLang)) {
+            window.location.replace("/" + browserLang);
+            return;
+          }
+
+          // Try language code without region (e.g., 'zh' from 'zh_tw')
+          const langCode = browserLang.split("_")[0];
+          const matchingLang = availableLanguages.find((lang) =>
+            lang.startsWith(langCode)
+          );
+          if (matchingLang) {
+            window.location.replace("/" + matchingLang);
+            return;
+          }
+        }
+      }
+
+      // Priority 3: Fallback to default language
+      window.location.replace("/" + defaultLang);
     </script>
     <!-- Backup redirect, if JavaScript fails -->
     <meta http-equiv="refresh" content=`2;url=/${defaultLang}` />
