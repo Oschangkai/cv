@@ -30,3 +30,11 @@ export { default as Mail } from "./Mail.astro";
 export { default as Phone } from "./Phone.astro";
 export { default as WorldMap } from "./WorldMap.astro";
 export { default as X } from "./X.astro";
+
+// Theme icons
+export { default as LightTheme } from "./LightTheme.astro";
+export { default as DarkTheme } from "./DarkTheme.astro";
+export { default as AutoTheme } from "./AutoTheme.astro";
+
+// Action icons
+export { default as Print } from "./Print.astro";

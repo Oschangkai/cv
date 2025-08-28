@@ -54,9 +54,13 @@ const { title, summary, image, url, currentLang } = Astro.props;
       "Courier New",
       Courier,
       monospace;
-    background: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
     letter-spacing: -0.025rem;
     overflow-x: hidden;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
   }
 
   html:lang(zh_tw) {
@@ -133,7 +137,7 @@ const { title, summary, image, url, currentLang } = Astro.props;
   }
 
   p {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.35;
     margin: 0;
@@ -166,8 +170,84 @@ const { title, summary, image, url, currentLang } = Astro.props;
       margin: 12mm 16mm;
     }
 
-    :root {
+    /* Force light theme for printing - override any dark theme variables */
+    :root,
+    .dark-theme {
+      /* Base colors forced to light theme */
+      --bg-color: #ffffff !important;
+      --text-color: #444 !important;
+      --text-secondary: #666 !important;
+      --border-color: #ddd !important;
+      --shadow-color: rgba(0, 0, 0, 0.1) !important;
+
+      /* Component backgrounds forced to light theme */
+      --component-bg: #ffffff !important;
+      --component-hover-bg: #f8f8f8 !important;
+      --component-dropdown-bg: #ffffff !important;
+      --component-dropdown-border: #ccc !important;
+      --component-dropdown-current-bg: #e5e5e5b0 !important;
+      --component-dropdown-option-hover-bg: #f0f7ffb0 !important;
+      --component-dropdown-active-color: #0066cc !important;
+
+      /* Content elements forced to light theme */
+      --heading-primary: #111 !important;
+      --heading-secondary: #222 !important;
+      --heading-tertiary: #444 !important;
+
+      /* Link colors */
+      --link-color: #111 !important;
+      --link-hover-color: #111 !important;
+      --time-color: #555 !important;
+      --duration-color: #777 !important;
+      --highlight-color: #666 !important;
+
+      /* Skill chip colors */
+      --skill-chip-bg: #eee !important;
+      --skill-chip-color: black !important;
+      --skill-chip-border: #ddd !important;
+
+      /* Keyword tag colors */
+      --keyword-tag-bg: #f5f5f5 !important;
+      --keyword-tag-color: #666 !important;
+      --keyword-tag-border: #ddd !important;
+
+      /* Expand indicator color */
+      --expand-indicator-color: #666 !important;
+      --project-border: #f2f2f2 !important;
+      --project-active-color: rgb(0, 188, 47) !important;
+
+      /* Tooltip colors */
+      --tooltip-bg: #333 !important;
+      --tooltip-color: #fff !important;
+      --tooltip-border: #111111 !important;
+
+      /* Social link colors */
+      --social-link-bg: #ffffff !important;
+      --social-link-hover-bg: #eee !important;
+      --social-link-border: #ddd !important;
+      --social-link-color: #666 !important;
+
+      /* Certificate colors */
+      --certificate-border: #e5e7eb !important;
+      --certificate-active-border: #9ca3af !important;
+
+      /* Keyboard colors */
+      --keyboard-footer-bg: #fdfdfd !important;
+      --keyboard-footer-hover-bg: #f5f5f5 !important;
+      --keyboard-footer-border: #eee !important;
+      --keyboard-button-bg: #fff !important;
+      --keyboard-button-border: #eee !important;
+      --keyboard-kbd-bg: #eee !important;
+      --keyboard-stroke-color: #777 !important;
+
       font-size: 14px;
+    }
+
+    /* Ensure html and body use light theme colors */
+    html,
+    body {
+      background: #ffffff !important;
+      color: #444 !important;
     }
   }
   :root {
@@ -175,6 +255,73 @@ const { title, summary, image, url, currentLang } = Astro.props;
     --yellow: rgb(255, 193, 7);
     --teal: rgb(23, 162, 184);
     --green: rgb(40, 167, 69);
+
+    /* Light theme colors */
+    --bg-color: #ffffff;
+    --text-color: #444;
+    --text-secondary: #666;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Component backgrounds */
+    --component-bg: #ffffffed;
+    --component-hover-bg: #f8f8f8ed;
+    --component-dropdown-bg: #ffffffed;
+    --component-dropdown-border: #ccc;
+    --component-dropdown-current-bg: #e5e5e5b0;
+    --component-dropdown-option-hover-bg: #f0f7ffb0;
+    --component-dropdown-active-color: #0066cc;
+
+    /* Heading colors */
+    --heading-primary: #111;
+    --heading-secondary: #222;
+    --heading-tertiary: #444;
+
+    /* Link colors */
+    --link-color: #111;
+    --link-hover-color: #111;
+    --time-color: #555;
+    --duration-color: #777;
+    --highlight-color: #666;
+
+    /* Skill chip colors */
+    --skill-chip-bg: #eee;
+    --skill-chip-color: black;
+    --skill-chip-border: #ddd;
+
+    /* Keyword tag colors */
+    --keyword-tag-bg: #f5f5f5;
+    --keyword-tag-color: #666;
+    --keyword-tag-border: #ddd;
+
+    /* Expand indicator color */
+    --expand-indicator-color: #666;
+    --project-border: #f2f2f2;
+    --project-active-color: rgb(0, 188, 47);
+
+    /* Tooltip colors */
+    --tooltip-bg: #333;
+    --tooltip-color: #fff;
+    --tooltip-border: #111111;
+
+    /* Social link colors */
+    --social-link-bg: #ffffffed;
+    --social-link-hover-bg: #eee;
+    --social-link-border: #ddd;
+    --social-link-color: #666;
+
+    /* Certificate colors */
+    --certificate-border: #e5e7eb;
+    --certificate-active-border: #9ca3af;
+
+    /* Keyboard colors */
+    --keyboard-footer-bg: #fdfdfd;
+    --keyboard-footer-hover-bg: #f5f5f5;
+    --keyboard-footer-border: #eee;
+    --keyboard-button-bg: #fff;
+    --keyboard-button-border: #eee;
+    --keyboard-kbd-bg: #eee;
+    --keyboard-stroke-color: #777;
 
     /* Fundamental */
     --skill-fundamental-bg: var(--gray);
@@ -200,5 +347,81 @@ const { title, summary, image, url, currentLang } = Astro.props;
     --skill-expert-border: var(--yellow);
     --skill-expert-hover-shadow: rgba(255, 193, 7, 0.25);
     --skill-expert-hover-border: var(--yellow);
+  }
+
+  /* Dark theme variables */
+  .dark-theme {
+    /* Base colors with proper contrast ratios */
+    --bg-color: #121212;
+    --text-color: #e8e8e8;
+    --text-secondary: #b0b0b0;
+    --border-color: #3a3a3a;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+
+    /* Component backgrounds for dark theme */
+    --component-bg: #1e1e1eed;
+    --component-hover-bg: #2a2a2aed;
+    --component-dropdown-bg: #1e1e1eed;
+    --component-dropdown-border: #3a3a3a;
+    --component-dropdown-current-bg: #333333b0;
+    --component-dropdown-option-hover-bg: #2a2a2ab0;
+    --component-dropdown-active-color: #4da6ff;
+
+    /* Heading colors */
+    --heading-primary: #ffffff;
+    --heading-secondary: #e0e0e0;
+    --heading-tertiary: #d0d0d0;
+
+    /* Link colors */
+    --link-color: #ffffff;
+    --link-hover-color: #e0e0e0;
+    --time-color: #a0a0a0;
+    --duration-color: #888888;
+    --highlight-color: #a0a0a0;
+
+    /* Skill chip colors */
+    --skill-chip-bg: #2a2a2a;
+    --skill-chip-color: #e8e8e8;
+    --skill-chip-border: #3a3a3a;
+
+    /* Keyword tag colors */
+    --keyword-tag-bg: #2a2a2a;
+    --keyword-tag-color: #b0b0b0;
+    --keyword-tag-border: #3a3a3a;
+
+    /* Expand indicator color */
+    --expand-indicator-color: #a0a0a0;
+    --project-border: #2a2a2a;
+    --project-active-color: #00bc2f;
+
+    /* Tooltip colors */
+    --tooltip-bg: #2a2a2a;
+    --tooltip-color: #e8e8e8;
+    --tooltip-border: #3a3a3a;
+
+    /* Social link colors */
+    --social-link-bg: #1e1e1eed;
+    --social-link-hover-bg: #2a2a2a;
+    --social-link-border: #3a3a3a;
+    --social-link-color: #b0b0b0;
+
+    /* Certificate colors */
+    --certificate-border: #3a3a3a;
+    --certificate-active-border: #505050;
+
+    /* Keyboard colors */
+    --keyboard-footer-bg: #1e1e1e;
+    --keyboard-footer-hover-bg: #2a2a2a;
+    --keyboard-footer-border: #3a3a3a;
+    --keyboard-button-bg: #1e1e1e;
+    --keyboard-button-border: #3a3a3a;
+    --keyboard-kbd-bg: #2a2a2a;
+    --keyboard-stroke-color: #a0a0a0;
+
+    /* Skill level colors remain vibrant but adjust shadows for dark theme */
+    --skill-fundamental-hover-shadow: rgba(108, 117, 125, 0.6);
+    --skill-intermediate-hover-shadow: rgba(23, 162, 184, 0.6);
+    --skill-proficient-hover-shadow: rgba(40, 167, 69, 0.6);
+    --skill-expert-hover-shadow: rgba(255, 193, 7, 0.6);
   }
 </style>

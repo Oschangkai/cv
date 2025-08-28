@@ -58,11 +58,11 @@ const t = useTranslation();
 
   article h3 {
     font-weight: 500;
-    color: #111;
+    color: var(--heading-primary);
   }
 
   article a {
-    color: #111;
+    color: var(--link-color);
   }
 
   article a:hover:is([href]) {
@@ -71,7 +71,7 @@ const t = useTranslation();
   }
 
   article h4 {
-    color: #222;
+    color: var(--heading-secondary);
     font-weight: 400;
   }
 
@@ -91,7 +91,7 @@ const t = useTranslation();
 
   .highlights-list {
     display: block;
-    color: #666;
+    color: var(--highlight-color);
     font-size: 0.85rem;
     line-height: 1.4rem;
     padding-left: 1rem;
@@ -108,9 +108,9 @@ const t = useTranslation();
 
   .keyword-tag {
     align-items: center;
-    background: #eee;
+    background: var(--skill-chip-bg);
     border-radius: 6px;
-    color: black;
+    color: var(--skill-chip-color);
     display: flex;
     font-size: 0.8rem;
     font-weight: 500;
@@ -165,8 +165,8 @@ const t = useTranslation();
 
     .keyword-tag {
       background: none;
-      border: 1px solid #666;
-      color: #333;
+      border: 1px solid var(--skill-chip-border);
+      color: var(--skill-chip-color);
       font-size: 0.75rem;
       padding: 2px 6px;
     }
