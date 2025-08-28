@@ -56,18 +56,18 @@ const t = useTranslation();
   }
 
   article {
-    border-left: 3px solid #e5e7eb;
+    border-left: 3px solid var(--certificate-border);
     padding-left: 16px;
     transition: border-color 0.2s ease;
   }
 
   article:hover {
-    border-left-color: #9ca3af;
+    border-left-color: var(--certificate-active-border);
   }
 
   article h3 {
     font-weight: 500;
-    color: #111;
+    color: var(--heading-primary);
     margin-bottom: 4px;
   }
 
@@ -84,13 +84,13 @@ const t = useTranslation();
   }
 
   .issuer {
-    color: #666;
+    color: var(--highlight-color);
     font-size: 0.9rem;
     margin: 0;
   }
 
   time {
-    color: #555;
+    color: var(--time-color);
     font-size: 0.85rem;
     min-width: fit-content;
     cursor: default;
@@ -108,8 +108,8 @@ const t = useTranslation();
 
   [data-title]:after {
     content: attr(data-title);
-    background-color: #333;
-    color: #fff;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-color);
     font-size: 0.75rem;
     font-family:
       Menlo,
@@ -122,16 +122,16 @@ const t = useTranslation();
     bottom: -1.4rem;
     left: 50%;
     white-space: nowrap;
-    box-shadow: 1px 1px 1px #222222;
+    box-shadow: 1px 1px 1px var(--tooltip-border);
     opacity: 0;
-    border: 1px solid #111111;
+    border: 1px solid var(--tooltip-border);
     z-index: 99999;
     visibility: hidden;
     border-radius: 6px;
   }
 
   .score {
-    color: #666;
+    color: var(--highlight-color);
     font-size: 0.9rem;
     font-weight: 500;
     margin: 0;

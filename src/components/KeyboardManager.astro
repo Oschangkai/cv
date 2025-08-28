@@ -69,7 +69,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
     height="32"
     viewBox="0 0 24 24"
     stroke-width="1.5"
-    stroke="#777"
+    stroke="var(--keyboard-stroke-color)"
     fill="none"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -194,9 +194,9 @@ const profilesInfo = profiles.map(({ network, url }) => {
     }
 
     #footer-button {
-      background: #fff;
+      background: var(--keyboard-button-bg);
       position: fixed;
-      border: 1px solid #eee;
+      border: 1px solid var(--keyboard-button-border);
       right: 10px;
       bottom: 10px;
       width: 50px;
@@ -210,8 +210,8 @@ const profilesInfo = profiles.map(({ network, url }) => {
   }
 
   footer {
-    background: #fdfdfd;
-    border-top: 1px solid #eee;
+    background: var(--keyboard-footer-bg);
+    border-top: 1px solid var(--keyboard-footer-border);
     position: fixed;
     bottom: 0px;
     width: 100%;
@@ -230,12 +230,12 @@ const profilesInfo = profiles.map(({ network, url }) => {
   }
 
   footer:hover {
-    background: #f5f5f5;
+    background: var(--keyboard-footer-hover-bg);
     cursor: pointer;
   }
 
   kbd {
-    background: #eee;
+    background: var(--keyboard-kbd-bg);
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 12px;

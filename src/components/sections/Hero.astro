@@ -117,7 +117,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
   }
 
   h2 {
-    color: #444;
+    color: var(--heading-tertiary);
     font-weight: 500;
     font-size: 1.1rem;
     text-wrap: balance;
@@ -131,7 +131,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
   }
 
   span {
-    color: #666;
+    color: var(--text-secondary);
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -146,7 +146,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
       Lucida Console,
       "Courier New",
       monospace;
-    color: #555;
+    color: var(--time-color);
     font-size: 0.65rem;
     display: flex;
     gap: 6px;
@@ -157,23 +157,23 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
   }
 
   footer a {
-    color: #666;
-    background-color: #ffffffed;
+    color: var(--social-link-color);
+    background-color: var(--social-link-bg);
     backdrop-filter: blur(2px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ddd;
+    border: 1px solid var(--social-link-border);
     padding: 4px;
     height: 32px;
     width: 32px;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
 
   footer a:hover {
-    background: #eee;
-    border: 1px solid #ddd;
+    background: var(--social-link-hover-bg);
+    border: 1px solid var(--social-link-border);
   }
 
   @media (width <= 700px) {

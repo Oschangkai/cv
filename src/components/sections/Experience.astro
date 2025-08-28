@@ -90,11 +90,11 @@ const t = useTranslation();
 
   article h3 {
     font-weight: 500;
-    color: #111;
+    color: var(--heading-primary);
   }
 
   article a {
-    color: #111;
+    color: var(--link-color);
   }
 
   article a:hover:is([href]) {
@@ -103,7 +103,7 @@ const t = useTranslation();
   }
 
   article h4 {
-    color: #222;
+    color: var(--heading-secondary);
     font-weight: 400;
   }
 
@@ -122,14 +122,14 @@ const t = useTranslation();
   }
 
   time {
-    color: #555;
+    color: var(--time-color);
     font-size: 0.85rem;
     min-width: fit-content;
     cursor: default;
   }
 
   .duration {
-    color: #777;
+    color: var(--duration-color);
     font-size: 0.75rem;
     font-style: italic;
   }
@@ -145,7 +145,7 @@ const t = useTranslation();
   }
 
   .highlights-title {
-    color: #666;
+    color: var(--highlight-color);
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 6px;
@@ -153,7 +153,7 @@ const t = useTranslation();
 
   .highlights-list {
     display: block;
-    color: #666;
+    color: var(--highlight-color);
     font-size: 0.85rem;
     line-height: 1.4rem;
     padding-left: 1rem;
@@ -170,16 +170,16 @@ const t = useTranslation();
   }
 
   .skill-title {
-    color: #666;
+    color: var(--highlight-color);
     font-size: 0.8rem;
     font-weight: 500;
   }
 
   .skill-chip {
     align-items: center;
-    background: #eee;
+    background: var(--skill-chip-bg);
     border-radius: 6px;
-    color: black;
+    color: var(--skill-chip-color);
     display: flex;
     font-size: 0.8rem;
     font-weight: 500;
@@ -195,8 +195,8 @@ const t = useTranslation();
 
   [data-title]:after {
     content: attr(data-title);
-    background-color: #333;
-    color: #fff;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-color);
     font-size: 0.75rem;
     font-family:
       Menlo,
@@ -209,9 +209,9 @@ const t = useTranslation();
     bottom: -1.4rem;
     left: 50%;
     white-space: nowrap;
-    box-shadow: 1px 1px 1px #222222;
+    box-shadow: 1px 1px 1px var(--tooltip-border);
     opacity: 0;
-    border: 1px solid #111111;
+    border: 1px solid var(--tooltip-border);
     z-index: 99999;
     visibility: hidden;
     border-radius: 6px;
@@ -243,8 +243,8 @@ const t = useTranslation();
 
     .skill-chip {
       background: none;
-      border: 1px solid #666;
-      color: #333;
+      border: 1px solid var(--skill-chip-border);
+      color: var(--skill-chip-color);
       font-size: 0.75rem;
       padding: 2px 6px;
     }

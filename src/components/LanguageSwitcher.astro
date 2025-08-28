@@ -126,20 +126,20 @@ const availableLanguages = await getAvailableLanguages();
     align-items: center;
     justify-content: center;
     padding: 0.1rem 0.3rem;
-    background: #ffffffed;
+    background: var(--component-bg);
     backdrop-filter: blur(2px);
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.9rem;
-    color: #444;
+    color: var(--text-color);
     transition: all 0.2s ease;
     font-family: inherit;
   }
 
   .language-button:hover {
     gap: 0.35rem;
-    background: #f8f8f8ed;
+    background: var(--component-hover-bg);
     border-color: var(--gray);
   }
 
@@ -185,9 +185,9 @@ const availableLanguages = await getAvailableLanguages();
     top: calc(100% + 0.5rem);
     right: 0;
     min-width: 180px;
-    background: #ffffffed;
+    background: var(--component-dropdown-bg);
     backdrop-filter: blur(2px);
-    border: 1px solid #ccc;
+    border: 1px solid var(--component-dropdown-border);
     border-radius: 8px;
     opacity: 0;
     visibility: hidden;
@@ -206,9 +206,9 @@ const availableLanguages = await getAvailableLanguages();
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1rem;
-    color: #444;
+    color: var(--text-color);
     text-decoration: none;
-    border-bottom: 1px solid #d2d2d2;
+    border-bottom: 1px solid var(--border-color);
     transition: background-color 0.2s ease;
   }
 
@@ -222,12 +222,12 @@ const availableLanguages = await getAvailableLanguages();
   }
 
   .language-option:hover {
-    background: #e5e5e5b0;
+    background: var(--component-dropdown-current-bg);
   }
 
   .language-option.active {
-    background: #f0f7ffb0;
-    color: #0066cc;
+    background: var(--component-dropdown-option-hover-bg);
+    color: var(--component-dropdown-active-color);
   }
 
   .lang-name {
@@ -236,12 +236,12 @@ const availableLanguages = await getAvailableLanguages();
 
   .lang-code {
     font-size: 0.65rem;
-    color: #666;
+    color: var(--text-secondary);
     font-family: Menlo, Monaco, "Lucida Console", "Courier New", monospace;
   }
 
   .language-option.active .lang-code {
-    color: #0066cc;
+    color: var(--component-dropdown-active-color);
   }
 
   @media (max-width: 600px) {
