@@ -22,7 +22,9 @@ const availableLanguages = await getAvailableLanguages();
     aria-label={t("language.switch")}
     title={t("language.switch")}
   >
-    <WorldMap />
+    <span class="language-icon">
+      <WorldMap />
+    </span>
     <span class="current-lang"
       >{
         i18nConfig.languageNames[
@@ -119,6 +121,14 @@ const availableLanguages = await getAvailableLanguages();
 <style>
   .language-switcher {
     position: relative;
+  }
+
+  .language-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
   }
 
   .language-button {
