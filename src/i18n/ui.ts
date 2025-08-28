@@ -15,6 +15,10 @@ export const ui = {
     
     // 按鈕與動作
     'language.switch': '切換語言',
+    'theme.toggle': '切換主題',
+    'theme.light': '淺色',
+    'theme.dark': '深色',
+    'theme.auto': '自動',
     'actions.print': '列印',
     'actions.email': '發送電子郵件給',
     'actions.phone': '致電',
@@ -90,6 +94,10 @@ export const ui = {
     
     // Buttons and actions
     'language.switch': 'Switch Language',
+    'theme.toggle': 'Toggle Theme',
+    'theme.light': 'Light',
+    'theme.dark': 'Dark',
+    'theme.auto': 'Auto',
     'actions.print': 'Print',
     'actions.email': 'Send email to',
     'actions.phone': 'Call',
@@ -163,6 +171,10 @@ export const ui = {
     
     // Buttons and actions
     'language.switch': 'Cambiar Idioma',
+    'theme.toggle': 'Cambiar Tema',
+    'theme.light': 'Claro',
+    'theme.dark': 'Oscuro',
+    'theme.auto': 'Automático',
     'actions.print': 'Imprimir',
     'actions.email': 'Enviar email a',
     'actions.phone': 'Llamar',

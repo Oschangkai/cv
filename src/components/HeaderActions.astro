@@ -1,9 +1,11 @@
 ---
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 ---
 
 <div class="header-actions no-print">
   <LanguageSwitcher />
+  <ThemeSwitcher />
 </div>
 
 <style>
@@ -15,6 +17,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
+    color: var(--text-color);
   }
 
   @media (max-width: 600px) {
