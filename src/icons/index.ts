@@ -35,3 +35,6 @@ export { default as X } from "./X.astro";
 export { default as LightTheme } from "./LightTheme.astro";
 export { default as DarkTheme } from "./DarkTheme.astro";
 export { default as AutoTheme } from "./AutoTheme.astro";
+
+// Action icons
+export { default as Print } from "./Print.astro";

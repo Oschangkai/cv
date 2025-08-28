@@ -1,0 +1,138 @@
+---
+import { Print } from "@/icons";
+import { useTranslation } from "@/utils/language-context";
+
+const t = useTranslation();
+---
+
+<div class="print-button-container no-print">
+  <button
+    id="print-button"
+    class="print-button"
+    aria-label={t("actions.print") || "Print"}
+    title={t("actions.print") || "Print"}
+  >
+    <span class="print-icon">
+      <Print />
+    </span>
+    <span class="print-label">{t("actions.print") || "Print"}</span>
+  </button>
+</div>
+
+<script>
+  // Print functionality
+  function handlePrint() {
+    // Use the browser's native print dialog
+    // This will allow users to save as PDF or print to a physical printer
+    window.print();
+  }
+
+  // Initialize print button when page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    const printButton = document.getElementById("print-button");
+
+    if (!printButton) return;
+
+    // Add click event listener
+    printButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      handlePrint();
+    });
+
+    // Add keyboard accessibility (Enter and Space)
+    printButton.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        handlePrint();
+      }
+    });
+  });
+</script>
+
+<style>
+  .print-button-container {
+    position: relative;
+  }
+
+  .print-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 0.3rem;
+    background: var(--component-bg);
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    font-family: inherit;
+    gap: 0;
+  }
+
+  .print-button:hover {
+    gap: 0.35rem;
+    background: var(--component-hover-bg);
+    border-color: var(--gray);
+  }
+
+  .print-button:focus {
+    outline: 2px solid var(--focus-color, #3b82f6);
+    outline-offset: 2px;
+  }
+
+  .print-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .print-label {
+    font-weight: 500;
+    transition: all 0.2s ease;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .print-button:hover .print-label {
+    /* Show text on hover */
+    opacity: 1;
+    width: auto;
+  }
+
+  /* Hide when printing - don't show the print button in the mobile version */
+  @media (max-width: 600px) {
+    .print-button-container {
+      display: none;
+    }
+  }
+
+  /* Hide when printing - don't show the print button in the printed version */
+  @media print {
+    .print-button-container {
+      display: none !important;
+    }
+  }
+
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .print-button,
+    .print-label,
+    .print-icon {
+      transition: none;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .print-button {
+      border-width: 2px;
+    }
+  }
+</style>

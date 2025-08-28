@@ -1,10 +1,13 @@
 ---
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
+import PrintButton from "@/components/PrintButton.astro";
 ---
 
 <div class="header-actions no-print">
+  <PrintButton />
   <LanguageSwitcher />
+  <span class="separator"></span>
   <ThemeSwitcher />
 </div>
 
@@ -16,8 +19,14 @@ import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
     z-index: 1000;
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 0.5rem;
     color: var(--text-color);
+  }
+
+  .separator {
+    width: 1px;
+    height: 16px;
+    /* background-color: var(--text-color); */
   }
 
   @media (max-width: 600px) {
@@ -27,6 +36,9 @@ import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
       gap: 0.5rem;
       flex-direction: column;
       align-items: flex-end;
+    }
+    .separator {
+      display: none;
     }
   }
 </style>
