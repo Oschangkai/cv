@@ -4,6 +4,8 @@
 
 A minimalist CV/portfolio built with Astro and enhanced with multilingual support, theme system, and some features.
 
+![screenshot of the page](portada.png)
+
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
