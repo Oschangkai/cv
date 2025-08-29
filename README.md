@@ -2,18 +2,19 @@
 
 > **Forked from [midudev/minimalist-portfolio-json](https://github.com/midudev/minimalist-portfolio-json)**
 
-A minimalist CV/portfolio built with Astro and enhanced with multilingual support and some features.
+A minimalist CV/portfolio built with Astro and enhanced with multilingual support, theme system, and some features.
 
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## ✨ Features
 
-- **🌍 Multi-language Support** - With automatic language detection
-- **⌨️ Smart Keyboard Shortcuts** - Press `/` to open command palette, print with `Cmd+P`
-- **📱 Language Switcher** - Dynamic language switching with localStorage persistence
 - **🎨 Clean Design** - Based on Bartosz Jarocki's elegant design
 - **📄 Print Optimized** - Perfect for both web viewing and PDF generation
+- **🌍 Multi-language Support** - Automatic detection with browser preference integration
+- **🎨 Theme System** - Light, dark, and auto modes with system theme following
+- **📱 Mobile Responsive** - Optimized for all screen sizes with touch-friendly controls
+- **🔧 Conditional Rendering** - Sections auto-hide when no content is available
 
 ## 🛠️ Tech Stack
 
@@ -36,17 +37,19 @@ bun i
 
 ### 2. Add Your Content
 
-Create your CV data files for each supported language:
+Create your main CV data file and language-specific CV data files for each supported language:
+
+- `cv.json` - Main CV data file
 - `cv.en_us.json` - English version
 - `cv.zh_tw.json` - Traditional Chinese version
 - ...etc
 
-Use the [JSON Resume schema](https://jsonresume.org/schema/) format.
+Use the [JSON Resume schema](https://jsonresume.org/schema/) format for your CV data files, and some extended fields are defined in `src/cv.d.ts` file.
 
 ### 3. Start Development
 
 ```bash
-pnpm dev
+bun start
 ```
 
 Open [http://localhost:4321](http://localhost:4321) to see your CV.
@@ -95,7 +98,8 @@ The system automatically detects available CV files and UI translations, falling
 - Supports parameter interpolation (e.g., `{name}`, `{network}`)
 
 **2. CV Data Files**
-- Format: `cv.{language_code}.json` (e.g., `cv.en_us.json`, `cv.zh_tw.json`)
+- Main CV data file: `cv.json` (must have)
+- Language-specific CV data file: `cv.{language_code}.json` (e.g., `cv.en_us.json`, `cv.zh_tw.json`)
 - Place in project root directory
 - Follow [JSON Resume schema](https://jsonresume.org/schema/) format
 
@@ -116,12 +120,12 @@ languageNames: {
 
 ## 🎯 Key Enhancements
 
-1. **Dynamic Language Detection** - Scans available CV files automatically
-2. **Smart Date Formatting** - Displays work duration in natural language
-3. **Conditional Section Rendering** - Hides empty sections for cleaner layouts
-4. **Enhanced Keyboard UX** - Multiple shortcuts including `/` for quick access
-5. **Language Persistence** - Remembers user's language choice
-6. **Graceful Fallbacks** - Handles missing translations and CV data elegantly
+1. **Multi-language Support** - Automatic detection with browser preference integration and persistence
+2. **Theme System** - Complete dark mode with automatic system detection and persistence
+3. **Interactive Skills** - Expandable cards with level indicators, keywords, and category icons
+4. **Rich CV Sections** - Certificates, interests, education highlights, and work experience with skills, with conditional rendering that hides sections when no content is available
+5. **Enhanced Print Support for Resume** - Built-in window.print() with optimized A4 layouts and page breaks
+6. **Smart Date Formatting** - Displays work duration in natural language and i18n support
 
 ## 📄 License
 
