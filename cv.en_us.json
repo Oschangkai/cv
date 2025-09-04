@@ -55,6 +55,8 @@
     {
       "name": "MAYO Human Capital",
       "position": "Cloud Technical Engineer",
+      "department": "Cloud Services Department",
+      "location": "Xinyi Dist., TPE",
       "url": "https://www.mayohr.com/",
       "startDate": "2021-03",
       "endDate": "2021-09",
@@ -71,19 +73,22 @@
     {
       "name": "WiAdvance Technology Co., Ltd.",
       "position": "Senior Engineer",
+      "department": "Innovated Solution Department",
+      "location": "Xizhi Dist., NWT",
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
       "summary": "Azure cloud-native application development, Microsoft 365 application development\nAssisted in departmental CI/CD implementation",
       "highlights": [
         "Served as the main DevOps role in the department: Used Azure DevOps for dev/deploy automation (to cloud or on-premise environments).",
-        "Developed several projects based on Microsoft 365, such as Teams Apps, Chatbots, etc.",
+        "Developed several projects based on Azure and Microsoft 365 platforms and integrate with Azure AD single sign-on, such as Teams Apps, Chatbots, etc.",
         "Proficient in Azure cloud-native application development, including general applications as well as pure Serverless and Low Code applications."
       ],
       "skills": [
         "Azure",
         "Azure DevOps",
         "Microsoft 365",
+        "Graph API",
         "Cloud Native",
         "Container",
         "Angular",
@@ -93,6 +98,8 @@
     {
       "name": "WiAdvance Technology Co., Ltd.",
       "position": "SWE Intern",
+      "department": "Innovated Solution Department",
+      "location": "Xizhi Dist., NWT",
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-02",
       "endDate": "2019-06",
@@ -108,6 +115,8 @@
     {
       "name": "Accudata Research Institute Inc.",
       "position": "MIS/SE Intern",
+      "department": "MIS Department",
+      "location": "Zhongshan Dist., TPE",
       "url": "https://www.accudata.com.tw/",
       "startDate": "2018-02",
       "endDate": "2019-02",
@@ -202,15 +211,6 @@
       ]
     },
     {
-      "name": "DevOps",
-      "level": "Proficient",
-      "keywords": [
-        "Azure DevOps",
-        "GitHub Actions",
-        "Jenkins"
-      ]
-    },
-    {
       "name": "Infrastructure",
       "level": "Proficient",
       "keywords": [
@@ -222,6 +222,17 @@
         "MikroTik",
         "Cisco",
         "Fortinet"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Proficient",
+      "keywords": [
+        "Azure DevOps",
+        "GitHub Actions",
+        "Jenkins",
+        "Ansible",
+        "Terraform"
       ]
     },
     {

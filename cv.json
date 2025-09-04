@@ -55,6 +55,8 @@
     {
       "name": "鼎恒數位科技股份有限公司",
       "position": "雲端技術工程師",
+      "department": "雲端服務部",
+      "location": "臺北市信義區",
       "url": "https://www.mayohr.com/",
       "startDate": "2021-03",
       "endDate": "2021-09",
@@ -71,19 +73,22 @@
     {
       "name": "緯謙科技股份有限公司",
       "position": "資深工程師",
+      "department": "前瞻技術開發部",
+      "location": "新北市汐止區",
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
       "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\n協助部門 CI/CD 導入",
       "highlights": [
         "擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發及部屬流程自動化，至雲或地端環境",
-        "於 Microsoft 365 平台上開發工具，如 Teams App、Chatbot、等",
+        "於 Azure 和 Microsoft 365 平台上開發工具並串接 Azure AD 單一登入，如 Teams App、Chatbot 等等",
         "熟悉 Azure 雲原生應用開發，除一般應用，也開發過純 Serverless、Low Code 應用"
       ],
       "skills": [
         "Azure",
         "Azure DevOps",
         "Microsoft 365",
+        "Graph API",
         "Cloud Native",
         "Container",
         "Angular",
@@ -93,6 +98,8 @@
     {
       "name": "緯謙科技股份有限公司",
       "position": "實習工程師",
+      "department": "前瞻技術開發部",
+      "location": "新北市汐止區",
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-02",
       "endDate": "2019-06",
@@ -108,6 +115,8 @@
     {
       "name": "精藤股份有限公司",
       "position": "實習 MIS/SE",
+      "department": "運用服務部",
+      "location": "臺北市中山區",
       "url": "https://www.accudata.com.tw/",
       "startDate": "2018-02",
       "endDate": "2019-02",
@@ -202,15 +211,6 @@
       ]
     },
     {
-      "name": "DevOps",
-      "level": "Proficient",
-      "keywords": [
-        "Azure DevOps",
-        "GitHub Actions",
-        "Jenkins"
-      ]
-    },
-    {
       "name": "Infrastructure",
       "level": "Proficient",
       "keywords": [
@@ -222,6 +222,17 @@
         "MikroTik",
         "Cisco",
         "Fortinet"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Proficient",
+      "keywords": [
+        "Azure DevOps",
+        "GitHub Actions",
+        "Jenkins",
+        "Ansible",
+        "Terraform"
       ]
     },
     {
