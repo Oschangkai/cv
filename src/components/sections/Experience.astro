@@ -46,7 +46,11 @@ const t = useTranslation();
                     <time datetime={startDate} data-title={formattedDateRange}>
                       {formattedDateRange}
                     </time>
-                    <div class="duration">{`(${workDuration})`}</div>
+                    <div class="duration">
+                      {`(${workDuration})`}
+                      {/* It's a hack to avoid text being cut in print mode */}
+                      <span class="print">&nbsp;</span>
+                    </div>
                   </div>
                 </header>
 
