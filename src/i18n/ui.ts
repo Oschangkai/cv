@@ -49,6 +49,7 @@ export const ui = {
     // 工作經驗相關
     'experience.skills.title': '技能：',
     'experience.highlights.title': '主要貢獻：',
+    'experience.details.title': '詳細內容：',
     
     // 時間格式
     'date.current': '目前',
@@ -128,6 +129,7 @@ export const ui = {
     // Experience related
     'experience.skills.title': 'Skills:',
     'experience.highlights.title': 'Key Achievements:',
+    'experience.details.title': 'Details:',
     
     // Date format
     'date.current': 'Present',

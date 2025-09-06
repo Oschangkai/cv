@@ -1,0 +1,22 @@
+---
+export interface Props {
+  class?: Array<string>; // CSS classes
+}
+
+const { class: className = [] } = Astro.props;
+---
+
+<svg
+  width="12"
+  height="12"
+  viewBox="0 0 24 24"
+  fill="none"
+  class:list={[...className]}
+>
+  <path
+    d="M7 14L12 9L17 14"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"></path>
+</svg>

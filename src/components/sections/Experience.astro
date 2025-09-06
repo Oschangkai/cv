@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
+import { Pin, Department, Arrow } from "@/icons";
 import {
   formatWorkDateRange,
   calculateWorkDuration,
@@ -19,10 +20,13 @@ const t = useTranslation();
           startDate,
           endDate,
           position,
+          department,
           summary,
           highlights,
+          details,
           url,
           skills,
+          location,
         }) => {
           // Use the formatWorkDateRange function to format the date range
           const formattedDateRange = formatWorkDateRange(startDate, endDate, t);
@@ -38,15 +42,37 @@ const t = useTranslation();
                       <a href={url} title={`${name}`} target="_blank">
                         {name}
                       </a>
+                      {location && (
+                        <span class="location no-print desktop">
+                          <span class="location-icon">
+                            <Pin />
+                          </span>
+                          {location}
+                        </span>
+                      )}
                     </h3>
-                    <h4>{position}</h4>
+                    <h4>
+                      {position}
+                      {department && (
+                        <span class="department desktop">
+                          <span class="department-icon">
+                            <Department />
+                          </span>
+                          {department}
+                        </span>
+                      )}
+                    </h4>
                   </div>
 
                   <div class="date-info">
                     <time datetime={startDate} data-title={formattedDateRange}>
                       {formattedDateRange}
                     </time>
-                    <div class="duration">{`(${workDuration})`}</div>
+                    <div class="duration">
+                      {`(${workDuration})`}
+                      {/* It's a hack to avoid text being cut in print mode */}
+                      <span class="print">&nbsp;</span>
+                    </div>
                   </div>
                 </header>
 
@@ -62,6 +88,22 @@ const t = useTranslation();
                           <li class="highlight-item">{highlight}</li>
                         ))}
                       </ul>
+                    </div>
+                  )}
+                  {details && details.length > 0 && (
+                    <div class="details no-print">
+                      <p class="details-title">
+                        {t("experience.details.title")}
+                      </p>
+                      <ul class="details-list">
+                        {details.map((detail) => (
+                          <li class="highlight-item">{detail}</li>
+                        ))}
+                      </ul>
+                      {/* prettier-ignore */}
+                      <button type="button" class="show-more-btn" onclick="toggleDetails(this)" data-show-more-text={t("show_more")} data-show-less-text={t("show_less")}>
+                        {t("show_more")}<Arrow class={["toggle-icon"]} />
+                      </button>
                     </div>
                   )}
                   {skills && skills.length > 0 && (
@@ -91,6 +133,9 @@ const t = useTranslation();
   article h3 {
     font-weight: 500;
     color: var(--heading-primary);
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
   }
 
   article a {
@@ -102,9 +147,64 @@ const t = useTranslation();
     cursor: pointer;
   }
 
+  .location {
+    color: var(--duration-color);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      visibility 0s,
+      opacity 0.7s ease;
+  }
+
+  .location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.3rem;
+  }
+
+  article:hover .location {
+    visibility: visible;
+    opacity: 1;
+  }
+
   article h4 {
     color: var(--heading-secondary);
     font-weight: 400;
+    display: flex;
+    align-items: baseline;
+    gap: 1.1rem;
+  }
+
+  .department {
+    color: var(--duration-color);
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      visibility 0s,
+      opacity 0.7s ease;
+  }
+  .department-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 0.3rem;
+  }
+
+  article:hover .department {
+    visibility: visible;
+    opacity: 1;
   }
 
   header {
@@ -159,6 +259,82 @@ const t = useTranslation();
     padding-left: 1rem;
     list-style-type: disc;
     margin-bottom: 0;
+  }
+
+  /* Details section styling */
+  .details {
+    margin-top: 8px;
+    position: relative;
+    max-height: 0.675; /* Show about half of title height, slightly more visible */
+  }
+
+  .details::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; /* Align with the text, accounting for padding */
+    right: 0;
+    height: 1.35rem; /* Same as line-height of highlights */
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-color) 80%);
+    pointer-events: none;
+  }
+
+  .details-title {
+    color: var(--highlight-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .details-list {
+    display: block;
+    color: var(--highlight-color);
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+    position: relative;
+    max-height: 0rem;
+    overflow: hidden;
+  }
+
+  .show-more-btn {
+    background: none;
+    border: none;
+    color: var(--highlight-color);
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .show-more-btn:hover {
+    color: var(--text-color);
+  }
+
+  :global(.toggle-icon) {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s ease;
+    transform: rotate(180deg);
+    display: inline-block;
+    margin-left: 0.2rem;
+  }
+
+  .details.expanded::after {
+    opacity: 0;
+  }
+
+  .details.expanded .details-title {
+    margin-bottom: 6px;
+  }
+
+  .details.expanded .details-list {
+    max-height: none;
+    margin-bottom: 0.8rem;
+    overflow: visible;
+  }
+
+  .details.expanded :global(.toggle-icon) {
+    transform: rotate(0deg);
   }
 
   /* Skills section styling */
@@ -258,3 +434,26 @@ const t = useTranslation();
     }
   }
 </style>
+<script is:inline>
+  function toggleDetails(button) {
+    const container = button.closest(".details");
+    if (!container) return;
+
+    const isExpanded = container.classList.contains("expanded");
+    const showMoreText = button.dataset.showMoreText || "Show more";
+    const showLessText = button.dataset.showLessText || "Show less";
+
+    // Toggle the expanded class
+    container.classList.toggle("expanded");
+
+    // Update only the text content, not the entire innerHTML
+    const textNode = button.firstChild;
+    if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+      if (isExpanded) {
+        textNode.textContent = showMoreText;
+      } else {
+        textNode.textContent = showLessText;
+      }
+    }
+  }
+</script>
