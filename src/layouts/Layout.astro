@@ -114,6 +114,12 @@ const { title, summary, image, url, currentLang } = Astro.props;
     display: none !important;
   }
 
+  @media (width <= 700px) {
+    .desktop {
+      display: none !important;
+    }
+  }
+
   @media print {
     .no-print {
       display: none !important;

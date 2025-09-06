@@ -38,3 +38,6 @@ export { default as AutoTheme } from "./AutoTheme.astro";
 
 // Action icons
 export { default as Print } from "./Print.astro";
+export { default as Pin } from "./pin.astro";
+export { default as Department } from "./department.astro";
+export { default as Arrow } from "./arrow.astro";
