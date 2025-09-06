@@ -1,10 +1,8 @@
 ---
 import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
-import {
-  formatWorkDateRange,
-  formatEducationDateRange,
-} from "@/utils/date-formatter";
+import { formatWorkDateRange, formatEducationDateRange } from "@/utils/date-formatter";
+import { Arrow } from "@/icons";
 
 const education = getCVSection("education");
 const t = useTranslation();
@@ -70,30 +68,13 @@ const t = useTranslation();
                         ))}
                       </ul>
                       {highlights.length > 1 && (
-                        <button
-                          type="button"
-                          class="show-more-btn"
-                          onclick="toggleHighlights(this)"
-                          data-show-more-text={t("show_more")}
+                        <button type="button" 
+                          class="show-more-btn" 
+                          onclick="toggleHighlights(this)" 
+                          data-show-more-text={t("show_more")} 
                           data-show-less-text={t("show_less")}
                         >
-                          {t("show_more")}
-                          <svg
-                            class="toggle-icon"
-                            width="12"
-                            height="12"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M7 14L12 9L17 14"
-                              stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
+                          {t("show_more")}<Arrow class={["toggle-icon"]} />
                         </button>
                       )}
                     </div>
@@ -206,7 +187,7 @@ const t = useTranslation();
     color: var(--text-color);
   }
 
-  .toggle-icon {
+  :global(.toggle-icon) {
     width: 12px;
     height: 12px;
     transition: transform 0.2s ease;
@@ -215,7 +196,7 @@ const t = useTranslation();
     margin-left: 0.2rem;
   }
 
-  .highlights-container.expanded .toggle-icon {
+  .highlights-container.expanded :global(.toggle-icon) {
     transform: rotate(0deg);
   }
 
@@ -279,20 +260,15 @@ const t = useTranslation();
     const showMoreText = button.dataset.showMoreText || "Show more";
     const showLessText = button.dataset.showLessText || "Show less";
 
-    if (isExpanded) {
-      // Collapse - show only partial content
-      container.classList.remove("expanded");
-      // Update only the text content, not the entire innerHTML
-      const textNode = button.firstChild;
-      if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+    // Toggle the expanded class
+    container.classList.toggle("expanded");
+
+    // Update only the text content, not the entire innerHTML
+    const textNode = button.firstChild;
+    if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+      if (isExpanded) {
         textNode.textContent = showMoreText;
-      }
-    } else {
-      // Expand - show all content
-      container.classList.add("expanded");
-      // Update only the text content, not the entire innerHTML
-      const textNode = button.firstChild;
-      if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+      } else {
         textNode.textContent = showLessText;
       }
     }

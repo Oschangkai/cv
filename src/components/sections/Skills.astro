@@ -78,21 +78,7 @@ const SKILLS_ICONS: Record<string, any> = {
               )}
 
               {hasKeywords && (
-                <svg
-                  class="expand-indicator no-print"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M7 14L12 9L17 14"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Icons.Arrow class={["expand-indicator no-print"]} />
               )}
             </div>
             {hasKeywords && keywords && (
@@ -207,7 +193,7 @@ const SKILLS_ICONS: Record<string, any> = {
     color: var(--skill-expert-color);
   }
 
-  .expand-indicator {
+  :global(.expand-indicator) {
     width: 12px;
     height: 12px;
     color: var(--expand-indicator-color);
@@ -242,7 +228,7 @@ const SKILLS_ICONS: Record<string, any> = {
     display: flex;
   }
 
-  .skill-item.expanded .expand-indicator {
+  .skill-item.expanded :global(.expand-indicator) {
     transform: rotate(0deg);
   }
 
