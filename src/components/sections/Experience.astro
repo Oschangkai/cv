@@ -54,7 +54,7 @@ const t = useTranslation();
                     <h4>
                       {position}
                       {department && (
-                        <span class="department desktop">
+                        <span class="department no-print desktop">
                           <span class="department-icon">
                             <Department />
                           </span>
@@ -68,11 +68,7 @@ const t = useTranslation();
                     <time datetime={startDate} data-title={formattedDateRange}>
                       {formattedDateRange}
                     </time>
-                    <div class="duration">
-                      {`(${workDuration})`}
-                      {/* It's a hack to avoid text being cut in print mode */}
-                      <span class="print">&nbsp;</span>
-                    </div>
+                    <div class="duration">{`(${workDuration})`}</div>
                   </div>
                 </header>
 
@@ -161,11 +157,9 @@ const t = useTranslation();
   }
 
   .location-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex;
     width: 0.6rem;
-    height: 0.6rem;
+    height: 0.8rem;
     margin-right: 0.3rem;
   }
 
@@ -185,7 +179,7 @@ const t = useTranslation();
   .department {
     color: var(--duration-color);
     display: flex;
-    align-items: center;
+    align-items: self-end;
     font-size: 0.7rem;
     visibility: hidden;
     opacity: 0;
@@ -194,11 +188,8 @@ const t = useTranslation();
       opacity 0.7s ease;
   }
   .department-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     width: 0.7rem;
-    height: 0.7rem;
     margin-right: 0.3rem;
   }
 
@@ -431,6 +422,11 @@ const t = useTranslation();
 
     .highlights-title {
       margin-bottom: 4px;
+    }
+
+    .duration {
+      /* It's a hack to avoid text being cut in print mode by adding a small padding */
+      padding-right: 1px;
     }
   }
 </style>
