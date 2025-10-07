@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "KaiYi (Oscar) Chang",
-    "label": "Master’s degree in Information Management from NTUST (2025), with nearly 3 years of experience in cloud-native application development and DevOps.",
+    "label": "Master's degree in Information Management from NTUST (2025), with nearly 3 years of experience in cloud-native application development and DevOps, with hands-on experience in observability and IaC.",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "Graduated with a Master's degree in Information Management from NTUST in 2025, with nearly three years of cloud-native application development experience and DevOps background. Proficient in Microsoft-related platforms, containerized applications, web development, networking equipment planning and management.",
+    "summary": "Graduated with a Master's degree in Information Management from NTUST in 2025, with nearly three years of cloud-native application development experience and DevOps background. Proficient in Microsoft-related platforms, containerized applications, networking equipment planning and management, with hands-on experience in observability and IaC.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -41,8 +41,8 @@
       "summary": "Freelance projects during master's studies\nIncluding cloud infrastructure management, development process automation setup, web frontend, and backend development",
       "highlights": [
         "Planning and implement DevOps flow for international logistics company: Used Jenkins to solve development and deployment automation, deployed to global (on-premise) environments.",
-        "Cross-site network planning and implementation for foundation: Connecting networks across three locations for secure access to internal resources.",
-        "Office network planning and implementation for real estate company: Planned stable wireless environment and seamless secure remote access to internal resources for all employees, running stably for 2.5 years as of 2025/08."
+        "Cross-site network planning and implementation for foundation: Connecting networks across three locations for secure access to internal resources, running stably for nearly 6 months as of 2025/09.",
+        "Office network planning and implementation for real estate company: Planned stable wireless environment and seamless secure remote access to internal resources for all employees, running stably for over 2.5 years as of 2025/09."
       ],
       "skills": [
         "Infrastructure (Cloud & On-premise)",
@@ -211,6 +211,15 @@
       ]
     },
     {
+      "name": "Observability",
+      "level": "Fundamental",
+      "keywords": [
+        "Prometheus",
+        "Grafana",
+        "ELK"
+      ]
+    },
+    {
       "name": "Infrastructure",
       "level": "Proficient",
       "keywords": [
@@ -228,11 +237,11 @@
       "name": "DevOps",
       "level": "Proficient",
       "keywords": [
+        "Ansible",
+        "Terraform",
         "Azure DevOps",
         "GitHub Actions",
-        "Jenkins",
-        "Ansible",
-        "Terraform"
+        "Jenkins"
       ]
     },
     {
@@ -266,15 +275,17 @@
   "interests": [
     {
       "name": "HomeLab",
-      "summary": "Built a 12-server physical cluster",
+      "summary": "Built a 12-server physical cluster, running for 21 months (2023/12 - 2025/09)",
       "highlights": [
-        "Using IaC tools to manage computing resources",
+        "Using IaC tools to manage computing resources with monitoring and automated alerting mechanisms",
         "Built computing resources based on ESXi and Proxmox, with services running in containerized form on Container OS",
         "Managing 3 Microsoft 365 tenants and using Azure AD for single sign-on"
       ],
       "keywords": [
         "Ansible",
         "Terraform",
+        "Prometheus",
+        "Grafana",
         "Container",
         "Microsoft 365"
       ]

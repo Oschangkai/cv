@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "張楷翊",
-    "label": "台科大資訊管理碩士畢業，擁有近三年的雲原生開發經驗以及 DevOps 工作經歷",
+    "label": "台科大資管碩士畢業，擁有近三年的雲原生開發及 DevOps 工作經歷，並具有可觀測性、IaC 的 hands-on 經驗",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "2025 畢業於台科大資管碩士班，擁有近三年的雲原生應用開發經驗以及 DevOps 經歷。熟悉微軟相關平台、容器化應用、網頁開發、網通設備規劃與管理。",
+    "summary": "2025 畢業於台科大資訊管理碩士班，擁有近三年的雲原生應用開發經驗以及 DevOps 經歷。熟悉微軟平台、容器化應用、網通設備規劃管理，並具有可觀測性、IaC 的 hands-on 經驗。",
     "location": {
       "address": "",
       "postalCode": "",
@@ -41,8 +41,8 @@
       "summary": "碩士時期自由接案\n包含雲地基礎設施管理、開發流程自動化架設、網頁前後端開發",
       "highlights": [
         "國際物流公司 DevOps 規劃建置：使用 Jenkins 解決開發及部屬自動化，部屬至全球（地端）環境",
-        "基金會異地網路規劃建置：串接三地網路，安全存取內部資源",
-        "房仲業辦公室網路規劃建置：規劃穩定的無線環境，以及讓所有員工無感的在外地安全存取內部資源，至今 (2025/08) 已穩定運作 2.5 年"
+        "基金會異地網路規劃建置：串接三地網路，安全存取內部資源，至今 (2025/09) 已穩定運作接近半年",
+        "房仲業辦公室網路規劃建置：規劃穩定的無線環境，以及讓所有員工無感的在外地安全存取內部資源，至今 (2025/09) 已穩定運作超過 2.5 年"
       ],
       "skills": [
         "Infrastructure (Cloud & On-premise)",
@@ -211,6 +211,15 @@
       ]
     },
     {
+      "name": "Observability",
+      "level": "Fundamental",
+      "keywords": [
+        "Prometheus",
+        "Grafana",
+        "ELK"
+      ]
+    },
+    {
       "name": "Infrastructure",
       "level": "Proficient",
       "keywords": [
@@ -228,11 +237,11 @@
       "name": "DevOps",
       "level": "Proficient",
       "keywords": [
+        "Ansible",
+        "Terraform",
         "Azure DevOps",
         "GitHub Actions",
-        "Jenkins",
-        "Ansible",
-        "Terraform"
+        "Jenkins"
       ]
     },
     {
@@ -266,15 +275,17 @@
   "interests": [
     {
       "name": "HomeLab",
-      "summary": "架設 12 台實體伺服器叢集",
+      "summary": "架設 12 台實體伺服器叢集，已運作 21 個月 (2023/12 - 2025/09)",
       "highlights": [
-        "使用 IaC 工具管理運算資源",
+        "使用 IaC 工具管理運算資源，並設有監控與自動告警機制",
         "以 ESXi 和 Proxmox 為基底建構運算資源，服務以容器化方式執行於 Container OS",
         "管理 3 個 Microsoft 365 tenant 並使用 Azure AD 進行單一登入"
       ],
       "keywords": [
         "Ansible",
         "Terraform",
+        "Prometheus",
+        "Grafana",
         "Container",
         "Microsoft 365"
       ]
