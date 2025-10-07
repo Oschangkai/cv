@@ -29,6 +29,7 @@ const SKILLS_ICONS: Record<string, any> = {
   Infrastructure: Icons.Infrastructure,
   "Web Frontend": Icons.WebFrontend,
   Backend: Icons.Backend,
+  Observability: Icons.Telescope,
 };
 ---
 
@@ -55,7 +56,7 @@ const SKILLS_ICONS: Record<string, any> = {
                 onclick: "toggleSkill(this)",
               })}
             >
-              {Icon && <Icon />}
+              {Icon && <Icon class={["skill-icon"]} />}
               <span
                 class="skill-name"
                 {...(hasLevel && {
@@ -156,6 +157,10 @@ const SKILLS_ICONS: Record<string, any> = {
     padding: 0.2rem 0.6rem;
     user-select: none;
     min-height: 1.8rem; /* ensure consistent minimum height */
+  }
+
+  .skill-header > :global(svg:first-of-type) {
+    width: 16px;
   }
 
   .skill-name {

@@ -23,6 +23,7 @@ export { default as DevOps } from "./devops.astro";
 export { default as Infrastructure } from "./infrastructure.astro";
 export { default as WebFrontend } from "./web-frontend.astro";
 export { default as Backend } from "./backend.astro";
+export { default as Telescope } from "./telescope.astro";
 
 // Additional icons that might be used elsewhere
 export { default as LinkedIn } from "./LinkedIn.astro";
