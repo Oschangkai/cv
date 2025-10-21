@@ -6,7 +6,7 @@
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "2025 畢業於台科大資訊管理碩士班，擁有近三年的雲原生應用開發經驗以及 DevOps 經歷。熟悉微軟平台、容器化應用、網通設備規劃管理，並具有可觀測性、IaC 的 hands-on 經驗。",
+    "summary": "2025 畢業於台科大資訊管理碩士班，擁有近三年的工作經驗於雲原生應用開發以及 DevOps。熟悉微軟平台、容器化應用、網通設備規劃管理，並具有可觀測性、IaC 的 hands-on 經驗。",
     "location": {
       "address": "",
       "postalCode": "",
@@ -80,7 +80,7 @@
       "endDate": "2021-03",
       "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\n協助部門 CI/CD 導入",
       "highlights": [
-        "擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發及部屬流程自動化，至雲或地端環境",
+        "導入 CI/CD 並擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發及部屬流程自動化，至雲或地端環境",
         "於 Azure 和 Microsoft 365 平台上開發工具並串接 Azure AD 單一登入，如 Teams App、Chatbot 等等",
         "熟悉 Azure 雲原生應用開發，除一般應用，也開發過純 Serverless、Low Code 應用"
       ],

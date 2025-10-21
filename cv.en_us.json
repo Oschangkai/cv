@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "KaiYi (Oscar) Chang",
-    "label": "Master's degree in Information Management from NTUST (2025), with nearly 3 years of experience in cloud-native application development and DevOps, with hands-on experience in observability and IaC.",
+    "label": "Master's degree in Information Management from NTUST (2025), with nearly 3 years of work experience in cloud-native application development and DevOps, with hands-on experience in observability and IaC.",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "Graduated with a Master's degree in Information Management from NTUST in 2025, with nearly three years of cloud-native application development experience and DevOps background. Proficient in Microsoft-related platforms, containerized applications, networking equipment planning and management, with hands-on experience in observability and IaC.",
+    "summary": "Graduated with a Master's degree in Information Management from NTUST in 2025, with nearly three years of work experience in cloud-native application development and DevOps. Proficient in Microsoft-related platforms, containerized applications, networking equipment planning and management, with hands-on experience in observability and IaC.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -80,7 +80,7 @@
       "endDate": "2021-03",
       "summary": "Azure cloud-native application development, Microsoft 365 application development\nAssisted in departmental CI/CD implementation",
       "highlights": [
-        "Served as the main DevOps role in the department: Used Azure DevOps for dev/deploy automation (to cloud or on-premise environments).",
+        "Introduced CI/CD flow and served as the main DevOps role in the department: Use Azure DevOps for dev/deploy automation (to cloud or on-premise environments).",
         "Developed several projects based on Azure and Microsoft 365 platforms and integrate with Azure AD single sign-on, such as Teams Apps, Chatbots, etc.",
         "Proficient in Azure cloud-native application development, including general applications as well as pure Serverless and Low Code applications."
       ],
