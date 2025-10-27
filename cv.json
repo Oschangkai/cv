@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "張楷翊",
-    "label": "台科大資管碩士畢業，擁有近三年的雲原生開發及 DevOps 工作經歷，並具有可觀測性、IaC 的 hands-on 經驗",
+    "label": "台科大資管碩士畢業，擁有近三年的雲原生開發及 DevOps 工作經歷，並具有可觀測性、IaC、網通設備管理的 hands-on 經驗",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "2025 畢業於台科大資訊管理碩士班，擁有近三年的工作經驗於雲原生應用開發以及 DevOps。熟悉微軟平台、容器化應用、網通設備規劃管理，並具有可觀測性、IaC 的 hands-on 經驗。",
+    "summary": "張楷翊 2025 畢業於台科大資訊管理碩士班，擁有將近三年的工作經驗於雲原生應用開發以及 DevOps，熟悉微軟平台、容器化應用。除了雲端外，碩士期間有接案經驗，多為網路規劃、開發流程自動化，平時在家也有架設 HomeLab，具有可觀測性、IaC、網通設備管理的動手經驗。",
     "location": {
       "address": "",
       "postalCode": "",

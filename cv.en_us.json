@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "KaiYi (Oscar) Chang",
-    "label": "Master's degree in Information Management from NTUST (2025), with nearly 3 years of work experience in cloud-native application development and DevOps, with hands-on experience in observability and IaC.",
+    "label": "Master's degree in Information Management from NTUST (2025), with nearly 3 years of work experience in cloud-native application development and DevOps, with hands-on experience in observability, IaC, and networking equipment management.",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "Graduated with a Master's degree in Information Management from NTUST in 2025, with nearly three years of work experience in cloud-native application development and DevOps. Proficient in Microsoft-related platforms, containerized applications, networking equipment planning and management, with hands-on experience in observability and IaC.",
+    "summary": "KaiYi Chang graduated with a Master's degree in Information Management from NTUST in 2025, with nearly three years of work experience in cloud-native application development and DevOps, proficient in Microsoft platforms and containerized applications. In addition to cloud work, during master's studies took on freelance projects, mostly network planning and development workflow automation. Also runs a HomeLab at home, with hands-on experience in observability, IaC, and networking equipment management.",
     "location": {
       "address": "",
       "postalCode": "",
