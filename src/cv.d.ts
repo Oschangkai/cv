@@ -11,6 +11,9 @@ export interface CV {
   interests: Array<Interests>;
   references: Array<References>;
   projects: Array<Projects>;
+  print?: {
+    [key: string]: boolean;
+  };
 }
 
 interface Basics {
