@@ -5,6 +5,7 @@ import { formatWorkDateRange, formatEducationDateRange } from "@/utils/date-form
 import { Arrow } from "@/icons";
 
 const education = getCVSection("education");
+const print = getCVSection("print");
 const t = useTranslation();
 ---
 
@@ -49,10 +50,10 @@ const t = useTranslation();
                 <footer>
                   {summary && <p class="summary">{summary}</p>}
                   {highlights && highlights.length > 0 && (
-                    <p class="highlights-title no-print">
+                    <p class:list={["highlights-title", !print?.["education.highlights"] && "no-print"]}>
                       {t("education.highlights_title")}
                     </p>
-                    <div class="highlights-container no-print">
+                    <div class:list={["highlights-container", !print?.["education.highlights"] && "no-print"]}>
                       <ul class="highlights">
                         {highlights.map((highlight) => (
                           <li
@@ -69,7 +70,7 @@ const t = useTranslation();
                       </ul>
                       {highlights.length > 1 && (
                         <button type="button" 
-                          class="show-more-btn" 
+                          class="show-more-btn no-print" 
                           onclick="toggleHighlights(this)" 
                           data-show-more-text={t("show_more")} 
                           data-show-less-text={t("show_less")}
@@ -247,6 +248,14 @@ const t = useTranslation();
   @media print {
     ul {
       gap: 28px;
+    }
+    .highlights-container::after {
+      opacity: 0;
+    }
+    .highlights-container .highlights {
+      max-height: none;
+      margin-bottom: 0;
+      overflow: visible;
     }
   }
 </style>
