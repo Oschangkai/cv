@@ -41,8 +41,16 @@
       "summary": "碩士時期自由接案\n包含雲地基礎設施管理、開發流程自動化架設、網頁前後端開發",
       "highlights": [
         "國際物流公司 DevOps 規劃建置：使用 Jenkins 解決開發及部屬自動化，部屬至全球（地端）環境",
-        "基金會異地網路規劃建置：串接三地網路，安全存取內部資源，至今 (2025/09) 已穩定運作接近半年",
-        "房仲業辦公室網路規劃建置：規劃穩定的無線環境，以及讓所有員工無感的在外地安全存取內部資源，至今 (2025/09) 已穩定運作超過 2.5 年"
+        "基金會異地網路規劃建置：串接三異地網路，安全存取內部資源，至今 (2025/10) 已穩定運作半年",
+        "房仲業辦公室網路規劃建置：規劃穩定的無線環境，以及讓所有員工無感的在外地安全存取內部資源，至今 (2025/10) 已穩定運作超過 2.5 年",
+        "台科大管院國際認證網站：前後端分別使用 Angular 及 .NET Core 6，並以 GitHub Actions CI/CD 自動部屬至校內機器，成功完成 2023 AACSB 以及 2024 EQUIS 認證"
+      ],
+      "details": [
+        "基金會異地網路規劃建置：串接三個異地網路，使得員工能在各分支中安全的存取異地內部資源。 (2025/06 ~ 2025/07)",
+        "金融公司雲基礎設施管理：協助盤點及管理 AWS 資源，如運算資源、網頁憑證，並提供建置建議。(2024/12 ~ 2025/01)",
+        "房仲業辦公室網路規劃建置：兩層樓的辦公室資訊設備規劃，包含無線網點部屬、訪客網路與防火牆設置、NAS 建置，並且讓所有員工無感的在外地安全存取內部資源。(2023/04 ~ 2023/05)",
+        "台科大管理學院 AASCB 認證網＆AoL 學習評估網：前端使用 Angular 16 搭配 Clarity Design 快速生成 dashboard，並且能將部分功能寫成共用元件，重複使用減少程式碼生成。後端使用 .NET Core 6 搭配 MSSQL 資料庫，撰寫 SQL View 及 Function 計算報表。(2022/07 ~ 2025/01)",
+        "國際物流公司自動部屬平台規劃與建置：依照需求，使用 Jenkins 建置客戶的自動部屬平台，包含程式碼測試 (test) 以及建置 (build)，環境涵蓋開發區、測試區與正式區，最後部屬至全球各站。(2021/09 ~ 2022/01)"
       ],
       "skills": [
         "Infrastructure (Cloud & On-premise)",
@@ -62,11 +70,19 @@
       "endDate": "2021-09",
       "summary": "內部系統開發、流程改進\n整合雲端資源，供人員方便管理散落的資源",
       "highlights": [
-        "內部系統開發：成功使公司非 IT / 開發部門人員也能在受限權限下存取資源，減少部門間往返成本"
+        "內部系統開發：成功使公司非 IT / 開發部門人員也能在受限權限下存取資源，減少部門間往返成本，同時達到更細緻的權限控管和比 Azure Portal 更詳細的監控資料。使用 Angular 撰寫前端頁面，串接 Azure, SendGrid 等 API，最後使用 Azure DevOps 部屬至 Azure App Service 等地"
+      ],
+      "details": [
+        "系統技術：後端使用 .NET Core 3 建立 RESTful API，串接 Azure 上的服務；前端使用 Angular 12，讓使用者使用單一入口操作雲端資源，免除學習多套介面的成本。",
+        "系統功能：使用公司 AAD 帳號做 SSO，幫助 MIS 部門能有比 Azure Portal 詳細的雲端資源服務監控資訊、告警資訊，並且幫助非技術部門自助取用雲端資源，達到比 Azure 平台更細緻的權限控管。",
+        "系統開發：獨自開發，並且設有 Azure DevOps 自動部屬至 Azure App Service，以及使用 Application Insights 監控系統狀態與使用情形。",
+        "參與新辦公室網路設定、無線網路規劃"
       ],
       "skills": [
         "Azure",
         "Azure DevOps",
+        "Angular",
+        ".NET",
         "Infrastructure (Cloud & On-premise)"
       ]
     },
@@ -78,11 +94,23 @@
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
-      "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\n協助部門 CI/CD 導入",
+      "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\n為部門導入 CI/CD、企業內部黑客松講師",
       "highlights": [
         "導入 CI/CD 並擔任部門主要的 DevOps 角色：使用 Azure DevOps 開發及部屬流程自動化，至雲或地端環境",
         "於 Azure 和 Microsoft 365 平台上開發工具並串接 Azure AD 單一登入，如 Teams App、Chatbot 等等",
-        "熟悉 Azure 雲原生應用開發，除一般應用，也開發過純 Serverless、Low Code 應用"
+        "熟悉 Azure 雲原生應用開發，除一般應用，也開發過純 Serverless、Low Code 應用。大量使用技術：Azure Functions、App Services、Logic Apps、Azure Container Registry、Azure SQL "
+      ],
+      "details": [
+        "(網頁開發) ETL System & Report: 大量的圖表、自定義元件，呈現企業的資料 (Vue.js)",
+        "(網頁開發) Dynamic Form Designer: 設計直覺的拖拉介面，供企業製作自己的表單，達到電子化表單 (Vue.js)",
+        "(網頁開發) Construction Site Inspection App: 使用 PWA 完成跨平台 App 製作，可達成離線操作、上線同步資料，適用於網路收訊不好的工地區域 (Angular)",
+        "(DevOps) Manufacturing Monitor System: 一個部屬在雲地兩端的純容器化系統，應用了 App Service, Azure Container Registry, Azure SQL ... 等，並且使用 Azure DevOps 自動部屬。",
+        "(DevOps) ETL System: 在 Azure Cloud 上架構可靠的系統，並使用 Azure DevOps 自動建置、部屬容器化服務。",
+        "(Azure & Microsoft 365) Time Sheet Data ETL System: 利用 Azure Data Factory 撈取並處理 MS365 上的資料，並使用 Azure Functions 做複雜的批次資料轉換，達成 (半) 自動化工時填表系統。",
+        "(Azure & Microsoft 365) Licensing Key Management & Release: 使用 Azure，架構純 Serverless 的系統，其中使用到了 Logic Apps, Storage Account, API Management, Azure CDN, Azure Functions, Key Vault, Azure SQL. (Angular)",
+        "(Microsoft 365) 科技防疫 Power BI：協助政府部門完成防疫即時監控報表。",
+        "(Azure & Microsoft 365) Teams App: 連接 Teams & MS365 API 製作 Teams Bot, Teams Tab 等應用如：Teams Bot 打卡紀錄蒐集、Teams Tab (使用 Teams API 自動登入) 結合 Planner 計劃管理。",
+        "曾擔任遠傳、啟碁黑客松助教，緯創、非營利組織的 Power Platform 入門課程講師。\n連結：https://news.microsoft.com/zh-tw/ai-ft-hackson/、https://www.wiadvance.com/highlights/4、https://news.microsoft.com/zh-tw/npo-power-platform/"
       ],
       "skills": [
         "Azure",
@@ -110,6 +138,10 @@
       "skills": [
         "AWS",
         "Power BI"
+      ],
+      "details": [
+        "Customer Billing ETL & Data Visualization: 使用 Azure Data Factory 做 CSP 資料撈取、轉換、計算，後續再利用 Power BI 呈現客戶的用量圖表，成功的導入全公司，讓業務更方便地協助客戶查帳，找出用量問題並提供建議",
+        "編纂 AWS IoT Core 平台教學文件"
       ]
     },
     {
@@ -275,7 +307,7 @@
   "interests": [
     {
       "name": "HomeLab",
-      "summary": "架設 12 台實體伺服器叢集，已運作 21 個月 (2023/12 - 2025/09)",
+      "summary": "架設 12 台實體伺服器叢集，已運作 22 個月 (2023/12 - 2025/10)",
       "highlights": [
         "使用 IaC 工具管理運算資源，並設有監控與自動告警機制",
         "以 ESXi 和 Proxmox 為基底建構運算資源，服務以容器化方式執行於 Container OS",

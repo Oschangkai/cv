@@ -41,8 +41,16 @@
       "summary": "Freelance projects during master's studies\nIncluding cloud infrastructure management, development process automation setup, web frontend, and backend development",
       "highlights": [
         "Planning and implement DevOps flow for international logistics company: Used Jenkins to solve development and deployment automation, deployed to global (on-premise) environments.",
-        "Cross-site network planning and implementation for foundation: Connecting networks across three locations for secure access to internal resources, running stably for nearly 6 months as of 2025/09.",
-        "Office network planning and implementation for real estate company: Planned stable wireless environment and seamless secure remote access to internal resources for all employees, running stably for over 2.5 years as of 2025/09."
+        "Cross-site network planning and implementation for foundation: Connecting networks across three locations for secure access to internal resources, running stably for 6 months as of 2025/10.",
+        "Office network planning and implementation for real estate company: Planned stable wireless environment and seamless secure remote access to internal resources for all employees, running stably for over 2.5 years as of 2025/10.",
+        "NTUST School of Management International Accreditation Website: Frontend and backend developed using Angular and .NET Core 6 respectively, with GitHub Actions CI/CD for automatic deployment to on-campus machines."
+      ],
+      "details": [
+        "Cross-site network planning and implementation for foundation: Connected three remote networks, enabling employees to securely access internal resources across branches. (2025/06 ~ 2025/07)",
+        "Financial company cloud infrastructure management: Assisted in inventory and management of AWS resources, such as computing resources and web certificates, and provided implementation recommendations. (2024/12 ~ 2025/01)",
+        "Office network planning and implementation for real estate company: Two-floor office IT equipment planning, including wireless access point deployment, guest network and firewall setup, NAS implementation, and seamless secure remote access to internal resources for all employees. (2023/04 ~ 2023/05)",
+        "NTUST School of Management AACSB Accreditation & AoL Assessment Website: Frontend using Angular 16 with Clarity Design to quickly generate dashboards, with reusable shared components to reduce code duplication. Backend using .NET Core 6 with MSSQL database, writing SQL Views and Functions to calculate reports. (2022/07 ~ 2025/01)",
+        "International logistics company automated deployment platform planning and implementation: According to requirements, used Jenkins to build the client's automated deployment platform, including code testing and building, covering development, testing, and production environments, finally deploying to sites globally. (2021/09 ~ 2022/01)"
       ],
       "skills": [
         "Infrastructure (Cloud & On-premise)",
@@ -62,11 +70,19 @@
       "endDate": "2021-09",
       "summary": "Internal system development, process improvement\nIntegrated cloud resources for convenient management of scattered resources",
       "highlights": [
-        "Internal system development: Successfully enabled non-IT/development staff to easily access resources with limited permissions, reducing inter-departmental communication costs."
+        "Internal system development: Successfully enabled non-IT/development staff to access resources with limited permissions, reducing inter-departmental communication costs, while achieving more granular permission control and more detailed monitoring data than Azure Portal. Used Angular for frontend, integrated with Azure, SendGrid and other APIs, deployed to Azure App Service using Azure DevOps"
+      ],
+      "details": [
+        "System Tech Stack: Backend built with .NET Core 3 to create RESTful API, integrating with Azure services; frontend built with Angular 12, allowing users to operate cloud resources through a single portal, eliminating the cost of learning multiple interfaces.",
+        "System Features: Using company AAD account for SSO, helping MIS department to have more detailed cloud resource service monitoring information and alert rules than Azure Portal, and helping non-technical departments to self-serve cloud resources, achieving more granular permission control than Azure Portal.",
+        "System Development: Developed independently, with Azure DevOps automatic deployment to Azure App Service, and using Application Insights to monitor system status and usage.",
+        "Participated in new office network setup and wireless network planning"
       ],
       "skills": [
         "Azure",
         "Azure DevOps",
+        "Angular",
+        ".NET",
         "Infrastructure (Cloud & On-premise)"
       ]
     },
@@ -78,11 +94,23 @@
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
-      "summary": "Azure cloud-native application development, Microsoft 365 application development\nAssisted in departmental CI/CD implementation",
+      "summary": "Azure cloud-native application development, Microsoft 365 application development\nIntroduced CI/CD to the department, instructor for internal corporate hackathons",
       "highlights": [
-        "Introduced CI/CD flow and served as the main DevOps role in the department: Use Azure DevOps for dev/deploy automation (to cloud or on-premise environments).",
+        "Introduced CI/CD flow and served as the main DevOps role in the department: Used Azure DevOps for dev/deploy automation (to cloud or on-premise environments).",
         "Developed several projects based on Azure and Microsoft 365 platforms and integrate with Azure AD single sign-on, such as Teams Apps, Chatbots, etc.",
-        "Proficient in Azure cloud-native application development, including general applications as well as pure Serverless and Low Code applications."
+        "Proficient in Azure cloud-native application development, including general applications as well as pure Serverless and Low Code applications. Extensively used technologies: Azure Functions, App Services, Logic Apps, Azure Container Registry, Azure SQL"
+      ],
+      "details": [
+        "(Web Development) ETL System & Report: Extensive charts and custom components to present enterprise data (Vue.js)",
+        "(Web Development) Dynamic Form Designer: Designed intuitive drag-and-drop interface for enterprises to create their own forms, achieving digitized forms (Vue.js)",
+        "(Web Development) Construction Site Inspection App: Used PWA to complete cross-platform App development, enabling offline operation and online data synchronization, suitable for construction site areas with poor network reception (Angular)",
+        "(DevOps) Manufacturing Monitor System: A pure containerized system that can deploy services into cloud service (App Service, Azure Container Registry, Azure SQL ... etc.) and local machines using Azure DevOps.",
+        "(DevOps) ETL System: Architect a reliable system on Azure Cloud and use Azure DevOps to build & deploy containerized services.",
+        "(Azure & Microsoft 365) Time Sheet Data ETL System: Used Azure Data Factory to retrieve and process data from MS365, and used Azure Functions for complex batch data transformation, achieving (semi) automated timesheet system.",
+        "(Azure & Microsoft 365) Licensing Key Management & Release: Used Azure to architect a pure Serverless system, utilizing Logic Apps, Storage Account, API Management, Azure CDN, Azure Functions, Key Vault, Azure SQL. (Angular)",
+        "(Microsoft 365) Pandemic Prevention Power BI: Assisted government departments in completing real-time pandemic monitoring reports.",
+        "(Azure & Microsoft 365) Teams App: Connected Teams & MS365 API to create Teams Bot, Teams Tab and other applications such as: Teams Bot for attendance record collection, Teams Tab (using Teams API for automatic login) combined with Planner for project management.",
+        "Served as assistant instructor for Far EasTone, Wistron hackathons, and Power Platform introductory courses for Wistron and non-profit organizations.\nLinks: https://news.microsoft.com/zh-tw/ai-ft-hackson/, https://www.wiadvance.com/highlights/4, https://news.microsoft.com/zh-tw/npo-power-platform/"
       ],
       "skills": [
         "Azure",
@@ -106,6 +134,10 @@
       "summary": "Internal system development",
       "highlights": [
         "Customer billing analysis platform: Developed a fully serverless application on Azure and presented reports using Power BI. The platform was introduced company-wide and successfully assisted the sales team in resolving billing issues."
+      ],
+      "details": [
+        "Customer Billing ETL & Data Visualization: Used Azure Data Factory for CSP data extraction, transformation, and calculation, then used Power BI to present customer usage charts. Successfully introduced company-wide, allowing sales team to more conveniently assist customers with billing inquiries, identify usage issues, and provide recommendations.",
+        "Compiled AWS IoT Core platform tutorial documentation"
       ],
       "skills": [
         "AWS",
@@ -275,7 +307,7 @@
   "interests": [
     {
       "name": "HomeLab",
-      "summary": "Built a 12-server physical cluster, running for 21 months (2023/12 - 2025/09)",
+      "summary": "Built a 12-server physical cluster, running for 22 months (2023/12 - 2025/10)",
       "highlights": [
         "Using IaC tools to manage computing resources with monitoring and automated alerting mechanisms",
         "Built computing resources based on ESXi and Proxmox, with services running in containerized form on Container OS",
