@@ -362,5 +362,8 @@
       "url": "https://github.com/Oschangkai/rpi-dotnet-minimal-api",
       "github": "https://github.com/Oschangkai/rpi-dotnet-minimal-api"
     }
-  ]
+  ],
+  "print": {
+    "education.highlights": true
+  }
 }
