@@ -5,6 +5,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.10.0] - 2025-11-03
+
+### Added
+- **HTML Markup Support** - Rich text formatting in CV content with underline tags (4d3a1f5)
+- **Text Autospace** - CSS text-autospace for better typography (31e3f86)
+
+### Changed
+- **Dependencies** - Updated Astro to 5.15.3 and @astrojs/check to 0.9.5 (63aafa1)
+
+## [1.9.0] - 2025-10-31
+
+### Added
+- **Print Configuration** - Configurable print display for education highlights (70ef2a9)
+
+## [1.8.0] - 2025-10-07
+
+### Added
+- **Telescope Icon** - Observability skill category icon (32db097)
+
+### Changed
+- **Icon Sizing** - Centralized control via CSS (16px skills, 12px departments/location) (32db097)
+
+## [1.7.0] - 2025-09-10
+
+### Fixed
+- **Safari Compatibility** - Resolved icon display issues in Experience section (13ddb9f)
+
+### Changed
+- **Icon Optimization** - Simplified and standardized skill category icons (d6f353b)
+
+## [1.6.0] - 2025-09-05
+
+### Added
+- **Work Experience Enhancements** - Location, department, and expandable details section (adf35df)
+- **Arrow Component** - Reusable arrow icon for Education and Skills sections (3d194b5)
+
+### Fixed
+- **Theme Switcher Layout** - Fixed spacing and margin issues (8253935)
+
 ## [1.5.0] - 2025-08-28
 
 ### Added

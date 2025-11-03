@@ -12,9 +12,11 @@ A minimalist CV/portfolio built with Astro and enhanced with multilingual suppor
 ## ✨ Features
 
 - **🎨 Clean Design** - Based on Bartosz Jarocki's elegant design
-- **📄 Print Optimized** - Perfect for both web viewing and PDF generation
+- **📄 Print Optimized** - Perfect for both web viewing and PDF generation with A4 formatting
 - **🌍 Multi-language Support** - Automatic detection with browser preference integration
 - **🎨 Theme System** - Light, dark, and auto modes with system theme following
+- **📝 Rich Text Formatting** - HTML markup support in CV content
+- **💼 Enhanced Experience** - Location, department, and expandable details section
 - **📱 Mobile Responsive** - Optimized for all screen sizes with touch-friendly controls
 - **🔧 Conditional Rendering** - Sections auto-hide when no content is available
 
@@ -120,14 +122,16 @@ languageNames: {
 }
 ```
 
-## 🎯 Key Enhancements
+## 🎯 Enhancements
 
 1. **Multi-language Support** - Automatic detection with browser preference integration and persistence
-2. **Theme System** - Complete dark mode with automatic system detection and persistence
-3. **Interactive Skills** - Expandable cards with level indicators, keywords, and category icons
-4. **Rich CV Sections** - Certificates, interests, education highlights, and work experience with skills, with conditional rendering that hides sections when no content is available
-5. **Enhanced Print Support for Resume** - Built-in window.print() with optimized A4 layouts and page breaks
-6. **Smart Date Formatting** - Displays work duration in natural language and i18n support
+2. **Rich Text Formatting** - HTML markup support for enhanced CV content styling
+3. **Work Experience Enhancements** - Location, department, and expandable details sections
+4. **Theme System** - Complete dark mode with automatic system detection and persistence
+5. **Interactive Skills** - Expandable cards with level indicators, keywords, and category icons
+6. **Rich CV Sections** - Certificates, interests, education highlights with conditional rendering
+7. **Native Print Support** - Built-in window.print() with optimized A4 layouts and page breaks
+8. **Smart Date Formatting** - Displays work duration in natural language and i18n support
 
 ## 📄 License
 
