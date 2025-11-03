@@ -61,6 +61,7 @@ const { title, summary, image, url, currentLang } = Astro.props;
     transition:
       background-color 0.2s ease,
       color 0.2s ease;
+    text-autospace: normal;
   }
 
   html:lang(zh_tw) {
@@ -87,6 +88,13 @@ const { title, summary, image, url, currentLang } = Astro.props;
 
   a {
     text-decoration: none;
+  }
+
+  u {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--text-color);
+    -webkit-text-stroke: 0.4px var(--text-color);
   }
 
   ul {

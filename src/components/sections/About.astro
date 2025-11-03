@@ -7,7 +7,5 @@ const t = useTranslation();
 ---
 
 <Section title={t("about.title")}>
-  <p>
-    {summary}
-  </p>
+  <p set:html={summary} />
 </Section>

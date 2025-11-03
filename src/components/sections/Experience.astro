@@ -73,7 +73,7 @@ const t = useTranslation();
                 </header>
 
                 <footer>
-                  {summary && <p class="summary">{summary}</p>}
+                  {summary && <p class="summary" set:html={summary} />}
                   {highlights && highlights.length > 0 && (
                     <div class="highlights">
                       <p class="highlights-title">
@@ -81,7 +81,7 @@ const t = useTranslation();
                       </p>
                       <ul class="highlights-list">
                         {highlights.map((highlight) => (
-                          <li class="highlight-item">{highlight}</li>
+                          <li class="highlight-item" set:html={highlight} />
                         ))}
                       </ul>
                     </div>
@@ -93,7 +93,7 @@ const t = useTranslation();
                       </p>
                       <ul class="details-list">
                         {details.map((detail) => (
-                          <li class="highlight-item">{detail}</li>
+                          <li class="highlight-item" set:html={detail} />
                         ))}
                       </ul>
                       {/* prettier-ignore */}
