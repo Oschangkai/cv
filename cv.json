@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "張楷翊",
-    "label": "台科大資管碩士畢業，擁有近三年的雲原生開發及 DevOps 工作經歷，並具有可觀測性、IaC、網通設備管理的 hands-on 經驗",
+    "label": "台科大資管碩士畢業，擁有近三年的雲原生開發工作經歷，並具有可觀測性、IaC、網通設備管理的 hands-on 經驗",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "張楷翊 2025 畢業於台科大資訊管理碩士班，擁有<u>將近三年的工作經驗</u>於<u>雲原生應用開發</u>以及<u>DevOps</u>，熟悉<u>微軟平台</u>、<u>容器化應用</u>。除了雲端外，碩士期間有接案經驗，多為<u>網路規劃</u>、<u>開發流程自動化</u>。平時在家也有架設<u>HomeLab</u>，具有<u>可觀測性</u>、<u>IaC</u>、<u>網通設備管理</u>的動手經驗。",
+    "summary": "張楷翊 2025 畢業於台科大資訊管理碩士班，擁有<u>將近三年的工作經驗</u>於<u>雲原生應用開發</u>，熟悉<u>微軟平台</u>、<u>容器化應用</u>。除了雲端外，碩士期間有接案經驗，多為<u>網路規劃</u>、<u>開發流程自動化</u>。平時在家也有架設<u>HomeLab</u>，具有<u>可觀測性</u>、<u>IaC</u>、<u>網通設備管理</u>的動手經驗。",
     "location": {
       "address": "",
       "postalCode": "",
@@ -94,7 +94,7 @@
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
-      "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\n為部門導入 CI/CD、企業內部黑客松講師",
+      "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發、PoC 專案開發\n為部門導入 CI/CD、企業內部黑客松講師",
       "highlights": [
         "<u>導入 CI/CD</u> 並<u>擔任部門主要的 DevOps 角色</u>：使用 <u>Azure DevOps</u> 開發及部屬流程自動化，至<u>雲或地端環境</u>",
         "於 <u>Azure</u> 和 <u>Microsoft 365</u> 平台上開發工具並串接 <u>Azure AD 單一登入</u>，如 Teams App、Chatbot 等等",

@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "KaiYi (Oscar) Chang",
-    "label": "Master's degree in Information Management from NTUST (2025), with nearly 3 years of work experience in cloud-native application development and DevOps, with hands-on experience in observability, IaC, and networking equipment management.",
+    "label": "Master's degree in Information Management from NTUST (2025), with nearly 3 years of work experience in cloud-native application development, with hands-on experience in observability, IaC, and networking equipment management.",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "KaiYi Chang graduated with a Master's degree in Information Management from NTUST in 2025, with <u>nearly three years of work experience</u> in <u>cloud-native application development</u> and <u>DevOps</u>, proficient in <u>Microsoft platforms</u> and <u>containerized applications</u>. In addition to cloud work, during master's studies took on freelance projects, mostly <u>network planning</u> and <u>development workflow automation</u>. Also runs a <u>HomeLab</u> at home, with hands-on experience in <u>observability</u>, <u>IaC</u>, and <u>networking equipment management</u>.",
+    "summary": "KaiYi Chang graduated with a Master's degree in Information Management from NTUST in 2025, with <u>nearly three years of work experience</u> in <u>cloud-native application development</u>, proficient in <u>Microsoft platforms</u> and <u>containerized applications</u>. In addition to cloud work, during master's studies took on freelance projects, mostly <u>network planning</u> and <u>development workflow automation</u>. Also runs a <u>HomeLab</u> at home, with hands-on experience in <u>observability</u>, <u>IaC</u>, and <u>networking equipment management</u>.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -94,7 +94,7 @@
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
-      "summary": "Azure cloud-native application development, Microsoft 365 application development\nIntroduced CI/CD to the department, instructor for internal corporate hackathons",
+      "summary": "Azure cloud-native application development, Microsoft 365 application development, PoC project development\nIntroduced CI/CD to the department, instructor for internal corporate hackathons",
       "highlights": [
         "<u>Introduced CI/CD flow</u> and <u>served as the main DevOps role</u> in the department: Used <u>Azure DevOps</u> for dev/deploy automation (to <u>cloud or on-premise environments</u>).",
         "Developed several projects based on <u>Azure</u> and <u>Microsoft 365</u> platforms and integrate with <u>Azure AD single sign-on</u>, such as Teams Apps, Chatbots, etc.",
