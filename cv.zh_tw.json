@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Miguel Ángel Durán",
-    "label": "擁有超過15年經驗的全端開發者 & 程式設計內容創作者",
+    "label": "擁有超過15年經驗的全端開發者 & 程式設計內容創作者\n⚠️ 本履歷所有內容皆為 AI 生成",
     "image": "/me.webp",
     "email": "miduga@gmail.com",
     "phone": "+34 688888888",
     "url": "https://midu.dev",
-    "summary": "擁有超過15年的網頁開發經驗。目前擔任內容創作者和程式設計教育者。居住在西班牙巴塞隆納。我曾在不同環境中工作：從加速新創公司發展到領導跨國企業團隊。",
+    "summary": "擁有超過15年的網頁開發經驗。目前擔任內容創作者和程式設計教育者。居住在西班牙巴塞隆納。我曾在不同環境中工作：從加速新創公司發展到領導跨國企業團隊。\n\n⚠️ 重要提示：本履歷所有內容，包括工作經驗、教育背景、技能和專案，完全由 AI 生成。",
     "location": {
       "address": "",
       "postalCode": "08820",
@@ -36,33 +36,74 @@
     {
       "name": "midudev",
       "position": "網頁程式設計教育者",
+      "department": "教育與內容",
+      "location": "巴塞隆納，西班牙",
       "url": "https://twitch.tv/midudev",
       "startDate": "2021-01-01",
       "endDate": null,
-      "summary": "Twitch 上最多人觀看的西班牙語程式設計實況主。在所有社交網路上擁有超過100萬追蹤者。因對開發者社群的影響力而獲得 Google、Microsoft 和 GitHub 的認可。",
+      "summary": "Twitch 上最多人觀看的西班牙語程式設計實況主。在所有社交網路上擁有<u>超過100萬追蹤者</u>。因對開發者社群的影響力而獲得 <u>Google、Microsoft 和 GitHub</u> 的認可。",
       "highlights": [
-        "創辦公司"
+        "創辦公司",
+        "創建觸及數百萬開發者的教育內容"
+      ],
+      "details": [
+        "管理超過1萬名同時觀看者的直播程式設計課程",
+        "製作現代網頁開發的技術教學和課程",
+        "透過互動式學習體驗建立開發者社群"
+      ],
+      "skills": [
+        "內容創作",
+        "社群建立",
+        "技術教育"
       ]
     },
     {
       "name": "Adevinta",
       "position": "首席前端架構師",
+      "department": "工程部門",
+      "location": "巴塞隆納，西班牙",
       "url": "https://twitch.tv/midudev",
       "startDate": "2016-06-01",
       "endDate": "2022-09-01",
-      "summary": "領導不同產品間的技術整合，並將單體架構遷移到更靈活和優化的架構。推廣最佳實踐並改善效能文化，以及快速向用戶交付價值。",
+      "summary": "領導不同產品間的技術整合，並將<u>單體架構</u>遷移到更靈活和優化的架構。推廣最佳實踐並改善效能文化，以及快速向用戶交付價值。",
       "highlights": [
-        "創辦公司"
+        "設計從單體到微服務的遷移架構",
+        "透過效能優化將頁面載入時間減少40%"
+      ],
+      "details": [
+        "領導跨多個產品的15名以上前端開發者團隊",
+        "建立編碼標準和架構模式",
+        "實施 CI/CD 流程，將部署時間減少60%"
+      ],
+      "skills": [
+        "React",
+        "TypeScript",
+        "架構設計",
+        "團隊領導"
       ]
     },
     {
       "name": "Hubii",
       "position": "資深前端開發者",
+      "department": "產品開發",
+      "location": "奧斯陸，挪威",
       "startDate": "2011-03-01",
       "endDate": "2016-05-01",
-      "summary": "開發了地理定位新聞平台和資訊消費 API。擴展服務以支援每日數十萬次請求的負載。將交付時間和生產部署時間縮短一半。與 Mozilla 和 Telefónica 合作開發了首個 FirefoxOS 電視應用程式。",
+      "summary": "開發了地理定位新聞平台和資訊消費 API。擴展服務以支援每日<u>數十萬次請求</u>的負載。將交付時間和生產部署時間縮短一半。與 Mozilla 和 Telefónica 合作開發了首個 FirefoxOS 電視應用程式。",
       "highlights": [
-        "創辦公司"
+        "建立可擴展的新聞聚合平台",
+        "與 Mozilla 合作開發 FirefoxOS 電視應用程式"
+      ],
+      "details": [
+        "設計並實施每日服務50萬次以上請求的 RESTful API",
+        "優化資料庫查詢，將響應時間改善50%",
+        "與設計團隊密切合作，實現響應式 UI/UX"
+      ],
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "API 設計",
+        "FirefoxOS"
       ]
     }
   ],
@@ -90,6 +131,24 @@
       "score": "4.0",
       "courses": [
         "DB1101 - 基礎 SQL"
+      ],
+      "summary": "全面的軟體工程學位，涵蓋<u>演算法、資料結構和軟體架構</u>。專精於網頁開發和分散式系統。",
+      "highlights": [
+        {
+          "summary": "學士論文專案：<u>分散式新聞聚合系統</u> - 建立用於收集和分類多來源新聞的可擴展平台",
+          "startDate": "2008-01-01",
+          "endDate": "2009-01-01"
+        },
+        {
+          "summary": "畢業專案：<u>即時協作編輯器</u> - 開發具有操作轉換功能的網頁編輯器，支援並發編輯",
+          "startDate": "2007-09-01",
+          "endDate": "2008-06-01"
+        },
+        {
+          "summary": "資料庫系統課程專案 - 設計並實現具有複雜查詢和優化技術的關聯式資料庫",
+          "startDate": "2006-09-01",
+          "endDate": "2007-01-01"
+        }
       ]
     }
   ],
@@ -121,7 +180,7 @@
   "skills": [
     {
       "name": "HTML",
-      "level": "精通",
+      "level": "Master",
       "keywords": [
         "網頁開發",
         "前端"
@@ -129,7 +188,7 @@
     },
     {
       "name": "CSS",
-      "level": "精通",
+      "level": "Master",
       "keywords": [
         "網頁開發",
         "前端",
@@ -138,7 +197,7 @@
     },
     {
       "name": "JavaScript",
-      "level": "精通",
+      "level": "Master",
       "keywords": [
         "網頁開發",
         "前端",
@@ -148,7 +207,7 @@
     },
     {
       "name": "Tailwind",
-      "level": "進階",
+      "level": "Medium",
       "keywords": [
         "網頁開發",
         "前端",
@@ -158,7 +217,7 @@
     },
     {
       "name": "TypeScript",
-      "level": "進階",
+      "level": "Medium",
       "keywords": [
         "網頁開發",
         "前端",
@@ -168,7 +227,7 @@
     },
     {
       "name": "Node",
-      "level": "進階",
+      "level": "Medium",
       "keywords": [
         "網頁開發",
         "後端",
@@ -178,7 +237,7 @@
     },
     {
       "name": "MySQL",
-      "level": "進階",
+      "level": "Advanced",
       "keywords": [
         "資料庫",
         "SQL",
@@ -188,7 +247,7 @@
     },
     {
       "name": "Git",
-      "level": "進階",
+      "level": "Advanced",
       "keywords": [
         "版本控制",
         "協作",
@@ -197,7 +256,7 @@
     },
     {
       "name": "GitHub",
-      "level": "進階",
+      "level": "Advanced",
       "keywords": [
         "版本控制",
         "協作",
@@ -207,7 +266,7 @@
     },
     {
       "name": "Next.js",
-      "level": "進階",
+      "level": "Basic",
       "keywords": [
         "網頁開發",
         "前端",
@@ -218,7 +277,7 @@
     },
     {
       "name": "React",
-      "level": "進階",
+      "level": "unknown",
       "keywords": [
         "網頁開發",
         "前端",
@@ -315,5 +374,8 @@
       ],
       "url": "https://miduconf.com"
     }
-  ]
+  ],
+  "print": {
+    "education.highlights": true
+  }
 }

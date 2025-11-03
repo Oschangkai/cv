@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Miguel Ángel Durán",
-    "label": "Full Stack Developer with over 15 years of experience & Programming Content Creator",
+    "label": "Full Stack Developer with over 15 years of experience & Programming Content Creator\n⚠️ This entire CV content is AI-generated",
     "image": "/me.webp",
     "email": "miduga@gmail.com",
     "phone": "+34 688888888",
     "url": "https://midu.dev",
-    "summary": "+15 years of experience as a Web Developer. Currently working as a Content Creator and Programming Educator. Based in Barcelona, Spain. I have worked in various environments: from accelerating startup development to leading teams in multinational companies.",
+    "summary": "+15 years of experience as a Web Developer. Currently working as a Content Creator and Programming Educator. Based in Barcelona, Spain. I have worked in various environments: from accelerating startup development to leading teams in multinational companies.\n\n⚠️ IMPORTANT: This entire CV, including all work experience, education, skills, and projects, is entirely AI-generated content.",
     "location": {
       "address": "",
       "postalCode": "08820",
@@ -36,33 +36,74 @@
     {
       "name": "midudev",
       "position": "Web Programming Educator",
+      "department": "Education & Content",
+      "location": "Barcelona, Spain",
       "url": "https://twitch.tv/midudev",
       "startDate": "2021-01-01",
       "endDate": null,
-      "summary": "Most-watched Spanish programming streamer on Twitch. +1 million followers across all social networks. Recognized by Google, Microsoft and GitHub for my impact on the developer community.",
+      "summary": "Most-watched Spanish programming streamer on Twitch. <u>+1 million followers</u> across all social networks. Recognized by <u>Google, Microsoft and GitHub</u> for my impact on the developer community.",
       "highlights": [
-        "Started the company"
+        "Started the company",
+        "Created educational content reaching millions of developers"
+      ],
+      "details": [
+        "Managed live programming sessions with 10k+ concurrent viewers",
+        "Produced technical tutorials and courses on modern web development",
+        "Built community of developers through interactive learning experiences"
+      ],
+      "skills": [
+        "Content Creation",
+        "Community Building",
+        "Technical Education"
       ]
     },
     {
       "name": "Adevinta",
       "position": "Lead Frontend Architect",
+      "department": "Engineering",
+      "location": "Barcelona, Spain",
       "url": "https://twitch.tv/midudev",
       "startDate": "2016-06-01",
       "endDate": "2022-09-01",
-      "summary": "Led technical convergence between different products and migrated from a monolithic architecture to a more flexible and optimized one. Promoted best practices and improvements in performance culture, as well as rapid value delivery to users.",
+      "summary": "Led technical convergence between different products and migrated from a <u>monolithic architecture</u> to a more flexible and optimized one. Promoted best practices and improvements in performance culture, as well as rapid value delivery to users.",
       "highlights": [
-        "Started the company"
+        "Architected migration from monolithic to microservices",
+        "Reduced page load times by 40% through performance optimization"
+      ],
+      "details": [
+        "Led team of 15+ frontend developers across multiple products",
+        "Established coding standards and architectural patterns",
+        "Implemented CI/CD pipelines reducing deployment time by 60%"
+      ],
+      "skills": [
+        "React",
+        "TypeScript",
+        "Architecture",
+        "Team Leadership"
       ]
     },
     {
       "name": "Hubii",
       "position": "Senior FrontEnd Developer",
+      "department": "Product Development",
+      "location": "Oslo, Norway",
       "startDate": "2011-03-01",
       "endDate": "2016-05-01",
-      "summary": "Developed a geolocated news platform and API for information consumption. Scaled services to support the load of hundreds of thousands of requests per day. Cut delivery times and production deployments in half. Collaborated with Mozilla and Telefónica to develop the first app for TVs with FirefoxOS.",
+      "summary": "Developed a geolocated news platform and API for information consumption. Scaled services to support the load of <u>hundreds of thousands of requests per day</u>. Cut delivery times and production deployments in half. Collaborated with Mozilla and Telefónica to develop the first app for TVs with FirefoxOS.",
       "highlights": [
-        "Started the company"
+        "Built scalable news aggregation platform",
+        "Collaborated with Mozilla on FirefoxOS TV app"
+      ],
+      "details": [
+        "Designed and implemented RESTful APIs serving 500k+ requests daily",
+        "Optimized database queries improving response time by 50%",
+        "Worked closely with design team on responsive UI/UX implementations"
+      ],
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "API Design",
+        "FirefoxOS"
       ]
     }
   ],
@@ -90,6 +131,24 @@
       "score": "4.0",
       "courses": [
         "DB1101 - Basic SQL"
+      ],
+      "summary": "Comprehensive software engineering degree covering <u>algorithms, data structures, and software architecture</u>. Specialized in web development and distributed systems.",
+      "highlights": [
+        {
+          "summary": "Senior thesis project: <u>Distributed News Aggregation System</u> - Built scalable platform for collecting and categorizing news from multiple sources",
+          "startDate": "2008-01-01",
+          "endDate": "2009-01-01"
+        },
+        {
+          "summary": "Capstone project: <u>Real-time Collaborative Editor</u> - Developed web-based editor with operational transformation for concurrent editing",
+          "startDate": "2007-09-01",
+          "endDate": "2008-06-01"
+        },
+        {
+          "summary": "Database systems course project - Designed and implemented relational database with complex queries and optimization techniques",
+          "startDate": "2006-09-01",
+          "endDate": "2007-01-01"
+        }
       ]
     }
   ],
@@ -148,7 +207,7 @@
     },
     {
       "name": "Tailwind",
-      "level": "Advanced",
+      "level": "Medium",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -158,7 +217,7 @@
     },
     {
       "name": "TypeScript",
-      "level": "Advanced",
+      "level": "Medium",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -168,7 +227,7 @@
     },
     {
       "name": "Node",
-      "level": "Advanced",
+      "level": "Medium",
       "keywords": [
         "Web Development",
         "Backend",
@@ -218,7 +277,7 @@
     },
     {
       "name": "React",
-      "level": "Advanced",
+      "level": "unknown",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -315,5 +374,8 @@
       ],
       "url": "https://miduconf.com"
     }
-  ]
+  ],
+  "print": {
+    "education.highlights": true
+  }
 }

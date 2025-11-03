@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Miguel Ángel Durán",
-    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación",
+    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación\n⚠️ Todo el contenido de este CV es generado por IA",
     "image": "/me.webp",
     "email": "miduga@gmail.com",
     "phone": "+34 688888888",
     "url": "https://midu.dev",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
+    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.\n\n⚠️ IMPORTANTE: Todo este CV, incluyendo toda la experiencia laboral, educación, habilidades y proyectos, es contenido completamente generado por IA.",
     "location": {
       "address": "",
       "postalCode": "08820",
@@ -36,154 +36,253 @@
     {
       "name": "midudev",
       "position": "Divulgador sobre Programación Web",
+      "department": "Educación y Contenido",
+      "location": "Barcelona, España",
       "url": "https://twitch.tv/midudev",
       "startDate": "2021-01-01",
       "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "summary": "Streamer de programación más visto en Español en Twitch. <u>+1 millón de seguidores</u> entre todas mis redes sociales. Reconocido por <u>Google, Microsoft y GitHub</u> por mi impacto en la comunidad de desarrolladores.",
       "highlights": [
-        "Started the company"
+        "Empecé la empresa",
+        "Creé contenido educativo que llegó a millones de desarrolladores"
+      ],
+      "details": [
+        "Gestioné sesiones de programación en vivo con más de 10k espectadores simultáneos",
+        "Produje tutoriales técnicos y cursos sobre desarrollo web moderno",
+        "Construí una comunidad de desarrolladores a través de experiencias de aprendizaje interactivas"
+      ],
+      "skills": [
+        "Creación de Contenido",
+        "Construcción de Comunidad",
+        "Educación Técnica"
       ]
     },
     {
       "name": "Adevinta",
       "position": "Lead Frontend Architect",
+      "department": "Ingeniería",
+      "location": "Barcelona, España",
       "url": "https://twitch.tv/midudev",
       "startDate": "2016-06-01",
       "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una <u>arquitectura monolítica</u> a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
       "highlights": [
-        "Started the company"
+        "Arquitecturé la migración de monolítico a microservicios",
+        "Reduje los tiempos de carga de página en un 40% mediante optimización de rendimiento"
+      ],
+      "details": [
+        "Lideré un equipo de más de 15 desarrolladores frontend en múltiples productos",
+        "Establecí estándares de codificación y patrones arquitectónicos",
+        "Implementé pipelines CI/CD reduciendo el tiempo de despliegue en un 60%"
+      ],
+      "skills": [
+        "React",
+        "TypeScript",
+        "Arquitectura",
+        "Liderazgo de Equipo"
       ]
     },
     {
       "name": "Hubii",
       "position": "Senior FrontEnd Developer",
+      "department": "Desarrollo de Producto",
+      "location": "Oslo, Noruega",
       "startDate": "2011-03-01",
       "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
+      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de <u>cientos de miles de peticiones al día</u>. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
       "highlights": [
-        "Started the company"
+        "Construí una plataforma escalable de agregación de noticias",
+        "Colaboré con Mozilla en la app de TV FirefoxOS"
+      ],
+      "details": [
+        "Diseñé e implementé APIs RESTful sirviendo más de 500k peticiones diarias",
+        "Optimicé consultas de base de datos mejorando el tiempo de respuesta en un 50%",
+        "Trabajé estrechamente con el equipo de diseño en implementaciones de UI/UX responsivas"
+      ],
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "Diseño de API",
+        "FirefoxOS"
       ]
     }
   ],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
-  "education": [{
-    "institution": "Universitat Oberta de Catalunya",
-    "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
-    "studyType": "Bachelor",
-    "startDate": "2003-01-01",
-    "endDate": "2009-01-01",
-    "score": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
-  }],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universitat Oberta de Catalunya",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "Ingeniero de Software",
+      "studyType": "Bachelor",
+      "startDate": "2003-01-01",
+      "endDate": "2009-01-01",
+      "score": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ],
+      "summary": "Título completo de ingeniería de software cubriendo <u>algoritmos, estructuras de datos y arquitectura de software</u>. Especializado en desarrollo web y sistemas distribuidos.",
+      "highlights": [
+        {
+          "summary": "Proyecto de tesis: <u>Sistema Distribuido de Agregación de Noticias</u> - Construí una plataforma escalable para recopilar y categorizar noticias de múltiples fuentes",
+          "startDate": "2008-01-01",
+          "endDate": "2009-01-01"
+        },
+        {
+          "summary": "Proyecto final: <u>Editor Colaborativo en Tiempo Real</u> - Desarrollé un editor basado en web con transformación operacional para edición concurrente",
+          "startDate": "2007-09-01",
+          "endDate": "2008-06-01"
+        },
+        {
+          "summary": "Proyecto del curso de sistemas de base de datos - Diseñé e implementé una base de datos relacional con consultas complejas y técnicas de optimización",
+          "startDate": "2006-09-01",
+          "endDate": "2007-01-01"
+        }
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
   "skills": [
     {
       "name": "HTML",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend"
+        "Desarrollo Web",
+        "Frontend"
       ]
     },
     {
       "name": "CSS",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
+        "Desarrollo Web",
+        "Frontend",
+        "Diseño Responsive"
       ]
     },
     {
       "name": "JavaScript",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
       ]
     },
     {
       "name": "Tailwind",
-      "level": "Avanzado",
+      "level": "Medium",
       "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
       ]
     },
     {
       "name": "TypeScript",
-      "level": "Avanzado",
+      "level": "Medium",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
       ]
     },
     {
       "name": "Node",
-      "level": "Avanzado",
+      "level": "Medium",
       "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+        "Desarrollo Web",
+        "Backend",
+        "JavaScript",
+        "Servidor"
       ]
     },
     {
       "name": "MySQL",
-      "level": "Avanzado",
+      "level": "Advanced",
       "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
       ]
     },
     {
       "name": "Git",
-      "level": "Avanzado",
+      "level": "Advanced",
       "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
       ]
     },
     {
       "name": "GitHub",
-      "level": "Avanzado",
+      "level": "Basic",
       "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
       ]
     },
     {
       "name": "Next.js",
-      "level": "Avanzado",
+      "level": "Basic",
       "keywords": [
-        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
       ]
     },
     {
       "name": "React",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
       ]
     }
   ],
@@ -197,17 +296,21 @@
       "fluency": "Advanced"
     }
   ],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
   "projects": [
     {
       "name": "mars.codes",
@@ -271,5 +374,8 @@
       ],
       "url": "https://miduconf.com"
     }
-  ]
+  ],
+  "print": {
+    "education.highlights": true
+  }
 }
