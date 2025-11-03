@@ -48,7 +48,7 @@ const t = useTranslation();
                 </header>
 
                 <footer>
-                  {summary && <p class="summary">{summary}</p>}
+                  {summary && <p class="summary" set:html={summary} />}
                   {highlights && highlights.length > 0 && (
                     <p class:list={["highlights-title", !print?.["education.highlights"] && "no-print"]}>
                       {t("education.highlights_title")}
@@ -63,8 +63,8 @@ const t = useTranslation();
                               highlight.endDate,
                               t
                             )}
+                            set:html={highlight.summary}
                           >
-                            {highlight.summary}
                           </li>
                         ))}
                       </ul>

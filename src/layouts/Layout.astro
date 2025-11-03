@@ -71,6 +71,13 @@ const { title, summary, image, url, currentLang } = Astro.props;
     text-decoration: none;
   }
 
+  u {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--text-color);
+    -webkit-text-stroke: 0.4px var(--text-color);
+  }
+
   ul {
     list-style: none;
     margin: 0;
