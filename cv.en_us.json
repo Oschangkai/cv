@@ -41,16 +41,15 @@
       "summary": "Freelance projects during master's studies\nIncluding cloud infrastructure management, development process automation setup, web frontend, and backend development",
       "highlights": [
         "Planning and implement <u>DevOps flow</u> for international logistics company: Used <u>Jenkins</u> to solve development and deployment automation, deployed to <u>global (on-premise) environments</u>.",
-        "Cross-site network planning and implementation for foundation: Connecting networks across three locations for secure access to internal resources, <u>running stably for 6 months</u> as of 2025/10.",
         "Office network planning and implementation for real estate company: Planned stable wireless environment and seamless secure remote access to internal resources for all employees, <u>running stably for over 2.5 years</u> as of 2025/10.",
-        "NTUST School of Management International Accreditation Website: Frontend and backend developed using <u>Angular</u> and <u>.NET Core 6</u> respectively, with <u>GitHub Actions CI/CD</u> for automatic deployment to on-campus machines. Successfully completed 2023 AACSB and 2024 EQUIS accreditations."
+        "NTUST School of Management International Accreditation Website: Frontend and backend developed using <u>Angular</u> and <u>.NET 6</u> respectively, with <u>GitHub Actions CI/CD</u> for automatic deployment to on-campus machines."
       ],
       "details": [
-        "Cross-site network planning and implementation for foundation: Connected three remote networks, enabling employees to securely access internal resources across branches. (2025/06 ~ 2025/07)",
+        "Cross-site network planning and implementation for foundation: Connected three remote networks, enabling employees to securely access internal resources across branches, <u>running stably for over 6 months</u> as of 2025/11. (2025/06 ~ 2025/07)",
         "Financial company cloud infrastructure management: Assisted in inventory and management of <u>AWS</u> resources, such as computing resources and web certificates, and provided implementation recommendations. (2024/12 ~ 2025/01)",
         "Office network planning and implementation for real estate company: Two-floor office IT equipment planning, including wireless access point deployment, guest network and firewall setup, NAS implementation, and <u>seamless secure remote access to internal resources for all employees</u>. (2023/04 ~ 2023/05)",
-        "NTUST School of Management AACSB Accreditation & AoL Assessment Website: Frontend using <u>Angular 16</u> with <u>Clarity Design</u> to quickly generate dashboards, with <u>reusable shared components</u> to <u>reduce code duplication</u>. Backend using <u>.NET Core 6</u> with <u>MSSQL</u> database, writing <u>SQL Views and Functions</u> to calculate reports. (2022/07 ~ 2025/01)",
-        "International logistics company automated deployment platform planning and implementation: According to requirements, used <u>Jenkins</u> to build the client's automated deployment platform, including code testing and building, covering <u>development, testing, and production environments</u>, finally deploying to <u>sites globally</u>. (2021/09 ~ 2022/01)"
+        "NTUST School of Management AACSB Accreditation & AoL Assessment Website: Containerized project. Frontend using <u>Angular 16</u>, following Angular Coding Style Guide, with modular features for <u>split packaging</u> to reduce initial load. Backend using <u>.NET 6</u> with <u>MSSQL</u> database, writing <u>SQL Views</u> and <u>SQL Functions</u> to calculate complex reports, with <u>db migration</u>, <u>background jobs</u>, and <u>granular permission control</u>. (2022/07 ~ 2025/01)",
+        "International logistics company automated deployment platform planning and implementation: According to requirements, used <u>Jenkins</u> to build the client's automated deployment platform, including code testing and building, covering <u>development, testing, and production environments</u>, with <u>rollback mechanism</u>, finally deploying to <u>sites globally</u>. (2021/09 ~ 2022/01)"
       ],
       "skills": [
         "Infrastructure (Cloud & On-premise)",
@@ -73,10 +72,10 @@
         "Internal system development: Successfully enabled non-IT/development staff to access resources with limited permissions, reducing inter-departmental communication costs, while achieving <u>more granular permission control</u> and <u>more detailed monitoring data than Azure Portal</u>. Used <u>Angular</u> for frontend, integrated with Azure, SendGrid and other APIs, deployed to Azure App Service using Azure DevOps"
       ],
       "details": [
-        "System Tech Stack: Backend built with <u>.NET Core 3</u> to create <u>RESTful API</u>, integrating with <u>Azure</u> services; frontend built with <u>Angular 12</u>, allowing users to operate cloud resources through a <u>single portal</u>, <u>eliminating the cost of learning multiple interfaces</u>.",
+        "System Tech Stack: Backend built with <u>.NET Core 3</u> to create <u>RESTful API</u>, integrating with <u>Azure</u> services; frontend built with <u>Angular 12</u>, allowing users to operate cloud resources through a single portal, eliminating the cost of learning multiple interfaces.",
         "System Features: Using company <u>AAD</u> account for <u>SSO</u>, helping MIS department to have more detailed cloud resource service monitoring information and alert rules than Azure Portal, and helping non-technical departments to self-serve cloud resources, achieving more granular permission control than Azure Portal.",
-        "System Development: <u>Developed independently</u>, with <u>Azure DevOps</u> automatic deployment to <u>Azure App Service</u>, and using <u>Application Insights</u> to monitor system status and usage.",
-        "Participated in new office network setup and wireless network planning"
+        "System Development: <u>Developed independently</u> for both frontend and backend. Frontend uses HTTP interceptors to automatically refresh tokens, and directives to show/hide components based on permissions. With <u>Azure DevOps</u> automatic deployment to <u>Azure App Service</u>, and using <u>Application Insights</u> to monitor system status and usage.",
+        "Participated in new office network setup and wireless network planning."
       ],
       "skills": [
         "Azure",
@@ -94,23 +93,24 @@
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
-      "summary": "Azure cloud-native application development, Microsoft 365 application development, PoC project development\nIntroduced CI/CD to the department, instructor for internal corporate hackathons",
+      "summary": "Azure cloud-native application development, Microsoft 365 application development\nPoC project development, introduced CI/CD and new technologies to the department\nInstructor for internal corporate hackathons",
       "highlights": [
-        "<u>Introduced CI/CD flow</u> and <u>served as the main DevOps role</u> in the department: Used <u>Azure DevOps</u> for dev/deploy automation (to <u>cloud or on-premise environments</u>).",
-        "Developed several projects based on <u>Azure</u> and <u>Microsoft 365</u> platforms and integrate with <u>Azure AD single sign-on</u>, such as Teams Apps, Chatbots, etc.",
-        "Proficient in <u>Azure cloud-native application development</u>, including general applications as well as <u>pure Serverless</u> and <u>Low Code</u> applications. Extensively used technologies: <u>Azure Functions</u>, <u>App Services</u>, <u>Logic Apps</u>, <u>Azure Container Registry</u>, <u>Azure SQL</u>"
+        "Used <u>Azure DevOps</u> for dev/deploy automation, deployment environments include <u>cloud or on-premise</u>, <u>modular projects</u>.",
+        "Proficient in <u>Azure cloud-native application development</u>, including microservices, <u>pure serverless</u>, and <u>low code</u> applications.",
+        "Multiple web frontend project development experience, mostly data reporting projects, using technologies including SPA, PWA, frameworks using <u>Angular</u>, Vue 2, and integrating with <u>Azure AD single sign-on</u>.",
+        "Developed/published tools on <u>Azure</u> and <u>Microsoft 365</u> platforms, such as Teams Apps, Teams Tabs, Chatbots, etc."
       ],
       "details": [
-        "(Web Development) ETL System & Report: Extensive charts and custom components to present enterprise data (Vue.js)",
-        "(Web Development) Dynamic Form Designer: Designed intuitive <u>drag-and-drop interface</u> for enterprises to create their own forms, achieving <u>digitized forms</u> (Vue.js)",
-        "(Web Development) Construction Site Inspection App: Used <u>PWA</u> to complete <u>cross-platform App development</u>, enabling <u>offline operation</u> and <u>online data synchronization</u>, suitable for construction site areas with poor network reception (Angular)",
-        "(DevOps) Manufacturing Monitor System: A <u>pure containerized system</u> that can deploy services into cloud service (<u>App Service</u>, <u>Azure Container Registry</u>, <u>Azure SQL</u> ... etc.) and local machines using <u>Azure DevOps</u>.",
-        "(DevOps) ETL System: Architect a reliable system on <u>Azure Cloud</u> and use <u>Azure DevOps</u> to build & deploy <u>containerized services</u>.",
-        "(Azure & Microsoft 365) Time Sheet Data ETL System: Used <u>Azure Data Factory</u> to retrieve and process data from MS365, and used <u>Azure Functions</u> for complex batch data transformation, achieving <u>(semi) automated timesheet system</u>.",
-        "(Azure & Microsoft 365) Licensing Key Management & Release: Used Azure to architect a <u>pure Serverless system</u>, utilizing <u>Logic Apps</u>, <u>Storage Account</u>, <u>API Management</u>, <u>Azure CDN</u>, <u>Azure Functions</u>, <u>Key Vault</u>, <u>Azure SQL</u>. (Angular)",
-        "(Microsoft 365) Pandemic Prevention Power BI: Assisted government departments in completing <u>real-time pandemic monitoring reports</u>.",
-        "(Azure & Microsoft 365) Teams App: Connected <u>Teams</u> & <u>MS365 API</u> to create <u>Teams Bot</u>, <u>Teams Tab</u> and other applications such as: Teams Bot for attendance record collection, Teams Tab (using Teams API for automatic login) combined with <u>Planner</u> for project management.",
-        "Served as <u>assistant instructor</u> for Far EasTone, Wistron <u>hackathons</u>, and <u>Power Platform introductory courses</u> for Wistron and non-profit organizations.\nLinks: https://news.microsoft.com/zh-tw/ai-ft-hackson/, https://www.wiadvance.com/highlights/4, https://news.microsoft.com/zh-tw/npo-power-platform/"
+        "ETL System & Report: Retrieved data from PLM system. Frontend built with Vue.js featuring extensive charts and custom components to present enterprise data. Backend using RabbitMQ with multiple consumers for scheduled batch processing. Entire project split into six sub-modules, containerized and deployed to both cloud and on-premise infrastructure using Azure DevOps.",
+        "Construction Site Inspection App: Used <u>PWA</u> to create <u>cross-platform App</u>, enabling <u>offline operation</u>, <u>online data synchronization</u>, and <u>automatic version updates</u>, suitable for construction site areas with poor network reception. (Angular)",
+        "Dynamic Form Designer: Intuitive drag-and-drop interface for enterprises to create digitized forms. This project is a module that can receive and pass data structures (such as form structure, form data content) and render forms, allowing reuse across multiple products. (Vue.js)",
+        "Manufacturing Monitor System: A <u>containerized system deployed on both cloud and on-premise</u>, utilizing <u>App Service</u>, <u>Azure Container Registry</u>, <u>Azure SQL</u>, etc., with <u>Azure DevOps</u> for automatic deployment.",
+        "Time Sheet Data ETL System: A PoC project. Used <u>Azure Data Factory</u> to retrieve and process data from Microsoft 365, and used <u>Azure Functions</u> for complex batch data transformation, achieving <u>(semi) automated timesheet system</u>.",
+        "Licensing Key Management & Release: A PoC project that has gone into production. Used Azure to architect a <u>pure serverless</u> system, utilizing <u>Logic Apps</u>, <u>Storage Account</u>, <u>API Management</u>, <u>Azure CDN</u>, <u>Azure Functions</u>, <u>Key Vault</u>, <u>Azure SQL</u>. (Angular)",
+        "Pandemic Prevention Power BI: Assisted government departments in completing <u>real-time pandemic monitoring reports</u>.",
+        "Teams App: Connected <u>Teams</u> and <u>Microsoft 365 API</u> to create <u>Teams Bot</u>, <u>Teams Tab</u> and other applications, such as: Teams Bot for attendance record collection, Teams Tab (using Teams API for automatic login) combined with <u>Planner</u> for project management.",
+        "Maintained company's customer billing system developed in <u>Java Spring Boot</u>.",
+        "Served as <u>assistant instructor</u> for <a href='https://news.microsoft.com/zh-tw/ai-ft-hackson/' target='_blank'>Far EasTone</a>, <a href='https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000574855_b9g78iqz6wuyyg405or1h' target='_blank'>Wistron</a> <u>hackathons</u>, and <u>Power Platform introductory courses</u> for Wistron and <a href='https://news.microsoft.com/zh-tw/npo-power-platform/' target='_blank'>non-profit organizations</a>."
       ],
       "skills": [
         "Azure",
@@ -133,7 +133,7 @@
       "endDate": "2019-06",
       "summary": "Internal system development",
       "highlights": [
-        "Customer billing analysis platform: Developed a <u>fully serverless application</u> on <u>Azure</u> and presented reports using <u>Power BI</u>. <u>The platform was introduced company-wide</u> and <u>successfully assisted the sales team in resolving billing issues</u>."
+        "Customer billing analysis platform: Developed a <u>pure serverless</u> data analysis backend on <u>Azure</u> and presented reports using <u>Power BI</u>. <u>The platform was introduced company-wide</u> and <u>successfully assisted the sales team in resolving billing issues</u>."
       ],
       "details": [
         "Customer Billing ETL & Data Visualization: Used <u>Azure Data Factory</u> for CSP data extraction, transformation, and calculation, then used <u>Power BI</u> to present customer usage charts. <u>Successfully introduced company-wide</u>, allowing sales team to more conveniently assist customers with billing inquiries, identify usage issues, and provide recommendations.",
@@ -155,8 +155,7 @@
       "summary": "Terminal computer environment maintenance and improvement, network equipment configuration and setup",
       "highlights": [
         "Participated in: Core Switch replacement project, ISO certification renewal, new company computer and equipment planning",
-        "IDC data center internship",
-        "Rack server setup"
+        "Internet data center (IDC) internship (tape backup, equipment replacement), rack server setup"
       ],
       "skills": [
         "Infrastructure (On-premise)",
@@ -310,7 +309,7 @@
       "summary": "Built a 12-server physical cluster, running for 22 months (2023/12 - 2025/10)",
       "highlights": [
         "Using <u>IaC tools</u> to manage computing resources with <u>monitoring and automated alerting mechanisms</u>",
-        "Built computing resources based on <u>ESXi</u> and <u>Proxmox</u>, with services running in <u>containerized</u> form on <u>Container OS</u>",
+        "Built computing resources based on <u>ESXi</u> and <u>Proxmox</u>, with services running in <u>containerized</u> form on <u>Container OS</u> (simple container services running on Flatcar Container Linux and Kubernetes running on Talos Linux)",
         "Managing 3 Microsoft 365 tenants and using Azure AD for single sign-on"
       ],
       "keywords": [

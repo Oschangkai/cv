@@ -41,16 +41,15 @@
       "summary": "碩士時期自由接案\n包含雲地基礎設施管理、開發流程自動化架設、網頁前後端開發",
       "highlights": [
         "國際物流公司 <u>DevOps 規劃建置</u>：使用 <u>Jenkins</u> 解決開發及部屬自動化，部屬至<u>全球（地端）環境</u>",
-        "基金會異地網路規劃建置：串接三異地網路，安全存取內部資源，至今 (2025/10) <u>已穩定運作半年</u>",
         "房仲業辦公室網路規劃建置：規劃穩定的無線環境，以及讓所有員工無感的在外地安全存取內部資源，至今 (2025/10) <u>已穩定運作超過 2.5 年</u>",
-        "台科大管院國際認證網站：前後端分別使用 <u>Angular</u> 及 <u>.NET Core 6</u>，並以 <u>GitHub Actions CI/CD</u> 自動部屬至校內機器，成功完成 2023 AACSB 以及 2024 EQUIS 認證"
+        "台科大管院國際認證網站：前後端分別使用 <u>Angular</u> 及 <u>.NET 6</u>，並以 <u>GitHub Actions CI/CD</u> 自動部屬至校內機器，並成功完成 2023 AACSB 以及 2024 EQUIS 認證"
       ],
       "details": [
-        "基金會異地網路規劃建置：串接三個異地網路，使得員工能在各分支中安全的存取異地內部資源。 (2025/06 ~ 2025/07)",
+        "基金會異地網路規劃建置：串接三個異地網路，使得員工能在各分支中安全的存取異地內部資源，至今 (2025/11) 已<u>穩定運作超過半年</u>。 (2025/06 ~ 2025/07)",
         "金融公司雲基礎設施管理：協助盤點及管理 <u>AWS</u> 資源，如運算資源、網頁憑證，並提供建置建議。(2024/12 ~ 2025/01)",
         "房仲業辦公室網路規劃建置：兩層樓的辦公室資訊設備規劃，包含無線網點部屬、訪客網路與防火牆設置、NAS 建置，並且讓所有員工<u>無感的在外地安全存取內部資源</u>。(2023/04 ~ 2023/05)",
-        "台科大管理學院 AASCB 認證網＆AoL 學習評估網：前端使用 <u>Angular 16</u> 搭配 <u>Clarity Design</u> 快速生成 dashboard，並且能將部分功能寫成<u>共用元件</u>，<u>重複使用減少程式碼生成</u>。後端使用 <u>.NET Core 6</u> 搭配 <u>MSSQL</u> 資料庫，撰寫 <u>SQL View 及 Function</u> 計算報表。(2022/07 ~ 2025/01)",
-        "國際物流公司自動部屬平台規劃與建置：依照需求，使用 <u>Jenkins</u> 建置客戶的自動部屬平台，包含程式碼測試 (test) 以及建置 (build)，環境涵蓋<u>開發區、測試區與正式區</u>，最後部屬至<u>全球各站</u>。(2021/09 ~ 2022/01)"
+        "台科大管理學院 AASCB 認證網＆AoL 學習評估網：容器化專案，前端使用 <u>Angular 16</u>，遵守 Angular Coding Style Guide，擁有模組化功能，使網頁能<u>分割打包</u>，減少初次讀取的負擔。後端使用 <u>.NET 6</u> 搭配 <u>MSSQL</u> 資料庫，撰寫 <u>SQL View</u> 及 <u>SQL Function</u> 計算複雜報表，並且擁有<u>db migration</u>、<u>背景工作</u>、<u>細緻權限控管</u>等機制。(2022/07 ~ 2025/01)",
+        "國際物流公司自動部屬平台規劃與建置：依照需求，使用 <u>Jenkins</u> 建置客戶的自動部屬平台，包含程式碼測試 (test) 以及建置 (build)，環境涵蓋<u>開發區、測試區與正式區</u>，並且設有<u>rollback 機制</u>，最後部屬至<u>全球各站</u>。(2021/09 ~ 2022/01)"
       ],
       "skills": [
         "Infrastructure (Cloud & On-premise)",
@@ -73,9 +72,9 @@
         "內部系統開發：成功使公司非 IT / 開發部門人員也能在受限權限下存取資源，減少部門間往返成本，同時達到<u>更細緻的權限控管</u>和<u>比 Azure Portal 更詳細的監控資料</u>。使用 <u>Angular</u> 撰寫前端頁面，串接 Azure, SendGrid 等 API，最後使用 Azure DevOps 部屬至 Azure App Service 等地"
       ],
       "details": [
-        "系統技術：後端使用 <u>.NET Core 3</u> 建立 <u>RESTful API</u>，串接 <u>Azure</u> 上的服務；前端使用 <u>Angular 12</u>，讓使用者使用<u>單一入口操作雲端資源</u>，<u>免除學習多套介面的成本</u>。",
+        "系統技術：後端使用 <u>.NET Core 3</u> 建立 <u>RESTful API</u>，串接 <u>Azure</u> 上的服務；前端使用 <u>Angular 12</u>，讓使用者使用單一入口操作雲端資源，免除學習多套介面的成本。",
         "系統功能：使用公司 <u>AAD</u> 帳號做 <u>SSO</u>，幫助 MIS 部門能有比 Azure Portal 詳細的雲端資源服務監控資訊、告警資訊，並且幫助非技術部門自助取用雲端資源，達到比 Azure 平台更細緻的權限控管。",
-        "系統開發：<u>獨自開發</u>，並且設有 <u>Azure DevOps</u> 自動部屬至 <u>Azure App Service</u>，以及使用 <u>Application Insights</u> 監控系統狀態與使用情形。",
+        "系統開發：<u>獨自開發</u>前後端，前端使用 HTTP interceptors 自動更新 refresh token、使用 directive 讓每一個元件都能依照權限顯示或隱藏。設有 <u>Azure DevOps</u> 自動部屬至 <u>Azure App Service</u>，以及使用 <u>Application Insights</u> 監控系統狀態與使用情形。",
         "參與新辦公室網路設定、無線網路規劃"
       ],
       "skills": [
@@ -94,23 +93,24 @@
       "url": "https://www.wiadvance.com/",
       "startDate": "2019-07",
       "endDate": "2021-03",
-      "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發、PoC 專案開發\n為部門導入 CI/CD、企業內部黑客松講師",
+      "summary": "Azure 雲原生應用開發、Microsoft 365 應用開發\nPoC 專案開發，為部門導入 CI/CD 和新技術、企業內部黑客松講師",
       "highlights": [
-        "<u>導入 CI/CD</u> 並<u>擔任部門主要的 DevOps 角色</u>：使用 <u>Azure DevOps</u> 開發及部屬流程自動化，至<u>雲或地端環境</u>",
-        "於 <u>Azure</u> 和 <u>Microsoft 365</u> 平台上開發工具並串接 <u>Azure AD 單一登入</u>，如 Teams App、Chatbot 等等",
-        "熟悉 <u>Azure 雲原生應用開發</u>，除一般應用，也開發過<u>純 Serverless</u>、<u>Low Code</u> 應用。大量使用技術：<u>Azure Functions</u>、<u>App Services</u>、<u>Logic Apps</u>、<u>Azure Container Registry</u>、<u>Azure SQL</u> "
+        "使用 <u>Azure DevOps</u> 開發及部屬流程自動化，部屬環境包含<u>雲或地端</u>、<u>模組化專案</u>",
+        "熟悉 <u>Azure 雲原生應用開發</u>，包含微服務、<u>純 Serverless</u>、<u>Low Code</u> 應用",
+        "多個網頁前端專案開發經驗，專案內容多為資料報表，使用技術包含 SPA、PWA，框架使用 <u>Angular</u>、Vue 2，並且串接 <u>Azure AD 單一登入</u>",
+        "於 <u>Azure</u> 和 <u>Microsoft 365</u> 平台上開發/上架工具，如 Teams App、Teams Tab、Chatbot 等等"
       ],
       "details": [
-        "(網頁開發) ETL System & Report: 大量的圖表、自定義元件，呈現企業的資料 (Vue.js)",
-        "(網頁開發) Dynamic Form Designer: 設計直覺的<u>拖拉介面</u>，供企業製作自己的表單，達到<u>電子化表單</u> (Vue.js)",
-        "(網頁開發) Construction Site Inspection App: 使用 <u>PWA</u> 完成<u>跨平台 App</u> 製作，可達成<u>離線操作</u>、<u>上線同步資料</u>，適用於網路收訊不好的工地區域 (Angular)",
-        "(DevOps) Manufacturing Monitor System: 一個部屬在<u>雲地兩端的純容器化系統</u>，應用了 <u>App Service</u>, <u>Azure Container Registry</u>, <u>Azure SQL</u> ... 等，並且使用 <u>Azure DevOps</u> 自動部屬。",
-        "(DevOps) ETL System: 在 <u>Azure Cloud</u> 上架構可靠的系統，並使用 <u>Azure DevOps</u> 自動建置、部屬<u>容器化服務</u>。",
-        "(Azure & Microsoft 365) Time Sheet Data ETL System: 利用 <u>Azure Data Factory</u> 撈取並處理 MS365 上的資料，並使用 <u>Azure Functions</u> 做複雜的批次資料轉換，達成 <u>(半) 自動化工時填表系統</u>。",
-        "(Azure & Microsoft 365) Licensing Key Management & Release: 使用 Azure，架構<u>純 Serverless 的系統</u>，其中使用到了 <u>Logic Apps</u>, <u>Storage Account</u>, <u>API Management</u>, <u>Azure CDN</u>, <u>Azure Functions</u>, <u>Key Vault</u>, <u>Azure SQL</u>. (Angular)",
-        "(Microsoft 365) 科技防疫 Power BI：協助政府部門完成<u>防疫即時監控報表</u>。",
-        "(Azure & Microsoft 365) Teams App: 連接 <u>Teams</u> & <u>MS365 API</u> 製作 <u>Teams Bot</u>, <u>Teams Tab</u> 等應用如：Teams Bot 打卡紀錄蒐集、Teams Tab (使用 Teams API 自動登入) 結合 <u>Planner</u> 計劃管理。",
-        "曾擔任遠傳、啟碁<u>黑客松助教</u>，緯創、非營利組織的 <u>Power Platform 入門課程講師</u>。\n連結：https://news.microsoft.com/zh-tw/ai-ft-hackson/、https://www.wiadvance.com/highlights/4、https://news.microsoft.com/zh-tw/npo-power-platform/"
+        "ETL System & Report: 自 PLM 系統撈取資料，前端以 Vue.js 製作大量的圖表、自定義元件，呈現企業資料，後端以 RabbitMQ 多個 consumer 定時分批處理資料。全專案拆為六個子模組，使用容器化以 Azure DevOps 部屬至雲地兩端。",
+        "Construction Site Inspection App: 使用 <u>PWA</u> 製作<u>跨平台 App</u>，可達成<u>離線操作</u>、<u>上線同步資料</u>、<u>自動更新版本</u>，適用於網路收訊不好的工地區域。(Angular)",
+        "Dynamic Form Designer: 擁有直覺的拖拉介面，供企業製作自己的電子化表單。此專案是能接收和傳遞資料結構（如表單結構、表單資料內容），並呈現表單的模組，讓多個產品可重複使用。(Vue.js)",
+        "Manufacturing Monitor System: 一個部屬在<u>雲地兩端的容器化系統</u>，應用了 <u>App Service</u>, <u>Azure Container Registry</u>, <u>Azure SQL</u> ... 等，並且使用 <u>Azure DevOps</u> 自動部屬。",
+        "Time Sheet Data ETL System: PoC 專案，利用 <u>Azure Data Factory</u> 撈取並處理 Microsoft 365 上的資料，並使用 <u>Azure Functions</u> 做複雜的批次資料轉換，達成 <u>(半) 自動化工時填表系統</u>。",
+        "Licensing Key Management & Release: 有正式上線的 PoC 專案，利用 Azure 架構<u>純 Serverless</u> 的系統，其中使用到了 <u>Logic Apps</u>, <u>Storage Account</u>, <u>API Management</u>, <u>Azure CDN</u>, <u>Azure Functions</u>, <u>Key Vault</u>, <u>Azure SQL</u>。(Angular)",
+        "科技防疫 Power BI：協助政府部門完成<u>防疫即時監控報表</u>。",
+        "Teams App: 連接 <u>Teams</u> 及 <u>Microsoft 365 API</u> 製作 <u>Teams Bot</u>, <u>Teams Tab</u> 等應用，如：Teams Bot 打卡紀錄蒐集、Teams Tab (使用 Teams API 自動登入) 結合 <u>Planner</u> 計劃管理。",
+        "維護公司以 <u>Java Spring Boot</u> 開發的客戶帳務系統。",
+        "曾擔任<a href='https://news.microsoft.com/zh-tw/ai-ft-hackson/' target='_blank'>遠傳</a>、<a href='https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000574855_b9g78iqz6wuyyg405or1h' target='_blank'>啟碁</a><u>黑客松助教</u>，緯創、<a href='https://news.microsoft.com/zh-tw/npo-power-platform/' target='_blank'>非營利組織</a>的 <u>Power Platform 入門課程講師</u>。"
       ],
       "skills": [
         "Azure",
@@ -133,14 +133,14 @@
       "endDate": "2019-06",
       "summary": "內部系統開發",
       "highlights": [
-        "客戶帳務分析平台：使用 <u>Azure</u> 平台開發<u>純 Serverless 應用</u>、<u>Power BI</u> 呈現報表。<u>平台導入全公司</u>，並<u>成功協助業務解決帳務問題</u>"
+        "客戶帳務分析平台：使用 <u>Azure</u> 開發<u>純 Serverless</u> 的資料分析後端、<u>Power BI</u> 呈現報表。<u>平台導入全公司</u>，並<u>成功協助業務解決帳務問題</u>"
       ],
       "skills": [
         "AWS",
         "Power BI"
       ],
       "details": [
-        "Customer Billing ETL & Data Visualization: 使用 <u>Azure Data Factory</u> 做 CSP 資料撈取、轉換、計算，後續再利用 <u>Power BI</u> 呈現客戶的用量圖表，<u>成功的導入全公司</u>，讓業務更方便地協助客戶查帳，找出用量問題並提供建議",
+        "Customer Billing ETL & Data Visualization: 使用 <u>Azure Data Factory</u> 做 CSP 資料撈取、轉換、計算，後續再利用 <u>Power BI</u> 呈現客戶的用量圖表，<u>成功導入全公司</u>，讓業務更方便地協助客戶查帳，找出用量問題並提供建議",
         "編纂 <u>AWS IoT Core</u> 平台教學文件"
       ]
     },
@@ -155,8 +155,7 @@
       "summary": "終端電腦環境維護與改善、網通設備設定與架設",
       "highlights": [
         "曾參與：Core Switch 更換計畫、ISO 續證、新公司電腦及設備規劃",
-        "IDC 機房見習",
-        "機架式伺服器架設"
+        "IDC 機房見習（磁帶機備份、設備更換）、機架式伺服器架設"
       ],
       "skills": [
         "Infrastructure (On-premise)",
@@ -310,7 +309,7 @@
       "summary": "架設 12 台實體伺服器叢集，已運作 22 個月 (2023/12 - 2025/10)",
       "highlights": [
         "使用 <u>IaC 工具</u> 管理運算資源，並設有<u>監控與自動告警機制</u>",
-        "以 <u>ESXi</u> 和 <u>Proxmox</u> 為基底建構運算資源，服務以<u>容器化</u>方式執行於 <u>Container OS</u>",
+        "以 <u>ESXi</u> 和 <u>Proxmox</u> 為基底建構運算資源，服務以<u>容器化</u>方式執行於 <u>Container OS</u>（簡單容器服務運作在 Flatcar Container Linux、Kubernetes 運作在 Talos Linux）",
         "管理 3 個 Microsoft 365 tenant 並使用 Azure AD 進行單一登入"
       ],
       "keywords": [
