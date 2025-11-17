@@ -3,9 +3,10 @@ import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
 
 const { summary } = getCVSection("basics");
+const print = getCVSection("print");
 const t = useTranslation();
 ---
 
-<Section title={t("about.title")}>
+<Section title={t("about.title")} print={print?.["about"]}>
   <p set:html={summary} />
 </Section>

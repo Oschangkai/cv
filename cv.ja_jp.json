@@ -39,6 +39,10 @@
   "references": [],
   "projects": [],
   "print": {
-    "education.highlights": true
+    "education.highlights": true,
+    "experience.duration": true,
+    "experience.skills": true,
+    "interests.keywords": true,
+    "projects": false
   }
 }

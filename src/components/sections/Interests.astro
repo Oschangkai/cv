@@ -3,6 +3,7 @@ import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
 
 const interests = getCVSection("interests");
+const print = getCVSection("print");
 const t = useTranslation();
 ---
 
@@ -34,7 +35,12 @@ const t = useTranslation();
                 )}
 
                 {hasKeywords && (
-                  <div class="keywords">
+                  <div
+                    class:list={[
+                      "keywords",
+                      !print?.["interests.keywords"] && "no-print",
+                    ]}
+                  >
                     {keywords.map((keyword) => (
                       <span class="keyword-tag">{keyword}</span>
                     ))}

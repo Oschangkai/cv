@@ -1,9 +1,9 @@
 ---
 // se ejecuta en el servidor o en build time <----
-const { title, breakInside = true } = Astro.props;
+const { title, breakInside = true, print = true } = Astro.props;
 ---
 
-<section class:list={[!breakInside && "no-break-inside"]}>
+<section class:list={[!breakInside && "no-break-inside", print || "no-print"]}>
   {title && <h2>{title}</h2>}
   <slot />
 </section>

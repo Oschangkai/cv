@@ -6,6 +6,7 @@ import { getSkillLevel } from "@/utils/skill-levels";
 import type { SkillsLevelKey } from "@/i18n/ui";
 
 const skills = getCVSection("skills");
+const print = getCVSection("print");
 const t = useTranslation();
 
 const SKILLS_ICONS: Record<string, any> = {
@@ -33,7 +34,11 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 ---
 
-<Section title={t("skills.title")} breakInside={false}>
+<Section
+  title={t("skills.title")}
+  breakInside={false}
+  print={print?.["skills"]}
+>
   <ul>
     {
       skills.map(({ name, level, keywords }) => {
