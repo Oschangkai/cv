@@ -13,7 +13,7 @@ import { useTranslation, getCVSection } from "@/utils/language-context";
 
 const { city, region } = location;
 const t = useTranslation();
-
+const print = getCVSection("print");
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
   LinkedIn,
@@ -26,7 +26,7 @@ const linkedUrl = linkedInfo?.url;
 const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
 
-<Section>
+<Section print={print?.["hero"]}>
   <div class="container">
     <div class="info">
       <h1>{name}</h1>

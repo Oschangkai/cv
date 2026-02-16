@@ -8,10 +8,11 @@ import {
 } from "@/utils/date-formatter";
 
 const work = getCVSection("work");
+const print = getCVSection("print");
 const t = useTranslation();
 ---
 
-<Section title={t("experience.title")}>
+<Section title={t("experience.title")} print={print?.["experience"]}>
   <ul>
     {
       work.map(
@@ -68,7 +69,12 @@ const t = useTranslation();
                     <time datetime={startDate} data-title={formattedDateRange}>
                       {formattedDateRange}
                     </time>
-                    <div class="duration">{`(${workDuration})`}</div>
+                    <div
+                      class:list={[
+                        "duration",
+                        !print?.["experience.duration"] && "no-print",
+                      ]}
+                    >{`(${workDuration})`}</div>
                   </div>
                 </header>
 
@@ -103,7 +109,12 @@ const t = useTranslation();
                     </div>
                   )}
                   {skills && skills.length > 0 && (
-                    <div class="skills">
+                    <div
+                      class:list={[
+                        "skills",
+                        !print?.["experience.skills"] && "no-print",
+                      ]}
+                    >
                       {skills.map((skill) => (
                         <span class="skill-chip">{skill}</span>
                       ))}

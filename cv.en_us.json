@@ -363,6 +363,7 @@
     }
   ],
   "print": {
-    "education.highlights": true
+    "education.highlights": true,
+    "experience.duration": true
   }
 }

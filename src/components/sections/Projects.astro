@@ -4,10 +4,15 @@ import Section from "../Section.astro";
 import { useTranslation, getCVSection } from "@/utils/language-context";
 
 const projects = getCVSection("projects");
+const print = getCVSection("print");
 const t = useTranslation();
 ---
 
-<Section title={t("projects.title")} breakInside={false}>
+<Section
+  title={t("projects.title")}
+  breakInside={false}
+  print={print?.["projects"]}
+>
   <ul>
     {
       projects.map(

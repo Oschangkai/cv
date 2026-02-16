@@ -1,10 +1,10 @@
 ---
-import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
-import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
-import PrintButton from "@/components/PrintButton.astro";
+import LanguageSwitcher from "@/components/page_controls/LanguageSwitcher.astro";
+import ThemeSwitcher from "@/components/page_controls/ThemeSwitcher.astro";
+import PrintButton from "@/components/page_controls/PrintButton.astro";
 ---
 
-<div class="header-actions no-print">
+<div class="page-controls no-print">
   <PrintButton />
   <LanguageSwitcher />
   <span class="separator"></span>
@@ -12,7 +12,7 @@ import PrintButton from "@/components/PrintButton.astro";
 </div>
 
 <style>
-  .header-actions {
+  .page-controls {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -30,7 +30,7 @@ import PrintButton from "@/components/PrintButton.astro";
   }
 
   @media (max-width: 600px) {
-    .header-actions {
+    .page-controls {
       top: 0.5rem;
       right: 10px;
       gap: 0.5rem;

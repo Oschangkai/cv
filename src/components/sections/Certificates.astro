@@ -4,10 +4,11 @@ import { useTranslation, getCVSection } from "@/utils/language-context";
 import { formatYearMonth, formatYearMonthDay } from "@/utils/date-formatter";
 
 const certificates = getCVSection("certificates");
+const print = getCVSection("print");
 const t = useTranslation();
 ---
 
-<Section title={t("certificates.title")}>
+<Section title={t("certificates.title")} print={print?.["certificates"]}>
   <ul>
     {
       certificates.map(({ name, date, issuer, url, score }) => {
