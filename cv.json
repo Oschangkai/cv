@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "張楷翊",
-    "label": "台科大資管碩士畢業，擁有近三年的雲原生開發工作經歷，並具有 IaC、CI/CD、網通設備管理的 hands-on 經驗",
+    "label": "2025 畢業於台科大資管碩士，擁有近三年的雲原生開發工作經歷，並具有 IaC、CI/CD、網通設備管理的 hands-on 經驗",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "張楷翊 2025 畢業於台科大資訊管理碩士班，擁有將近三年的工作經驗於<u>雲原生應用開發</u>，熟悉 Microsoft 生態系與容器化應用。具備 IaC 自動化、CI/CD 流程設計、網路規劃等 DevOps 實務能力，並透過 HomeLab 持續精進基礎設施管理技術。積極轉型 DevOps / Platform Engineer，致力橋接開發與維運。",
+    "summary": "張楷翊 2025 畢業於台科大資訊管理碩士班，擁有將近三年的工作經驗於<u>雲原生應用開發</u>，熟悉 Microsoft 生態系與容器化應用。具備 IaC 自動化、CI/CD 流程設計、網路規劃等 DevOps 實務能力，並透過 HomeLab 持續精進基礎設施管理技術，目前積極轉型 DevOps / Platform Engineer。",
     "location": {
       "address": "",
       "postalCode": "",
@@ -63,7 +63,7 @@
       "summary": "碩士期間自由接案，涵蓋 DevOps 規劃、網路架設、雲端基礎設施管理",
       "highlights": [
         "國際物流公司 DevOps 規劃建置：以 <u>Jenkins</u> 建立 CI/CD，自動化測試、建置與部屬，覆蓋<u>全球地端環境</u>",
-        "房仲業辦公室網路規劃：設計無線覆蓋、訪客隔離及 VPN 遠端無縫存取，至 2025/10 穩定運作超過 2.5 年",
+        "房仲業辦公室網路規劃：設計無線覆蓋、訪客隔離及 VPN 遠端無縫存取，自 2023/05 穩定運作超過 2.5 年",
         "台科大管院認證網站：<u>Angular</u> + <u>.NET 6</u> 前後端，以 GitHub Actions CI/CD 自動部屬，成功完成 2023 AACSB 及 2024 EQUIS 認證"
       ],
       "details": [
@@ -89,15 +89,15 @@
       "url": "https://www.mayohr.com/",
       "startDate": "2021-03",
       "endDate": "2021-09",
-      "summary": "開發 Azure 雲資源管理平台，改善部門間協作與資源管理",
+      "summary": "開發 Azure 雲資源管理平台，改善部門間合作與資源管理",
       "highlights": [
         "開發內部雲資源管理平台，整合 Azure API 與 SendGrid，讓非技術部門自助存取資源，提供比 Azure Portal 更細緻的監控與權限控管",
         "以 Azure DevOps CI/CD 自動部屬至 Azure App Service"
       ],
       "details": [
         "技術架構：後端以 <u>.NET Core 3</u> 建立 RESTful API 串接 Azure 服務；前端採用 <u>Angular 12</u>，提供統一操作介面，免除各部門學習多套介面的成本",
-        "功能設計：整合 <u>AAD SSO</u> 單一登入；MIS 部門可取得比 Azure Portal 更詳細的監控與告警資訊；非技術部門透過自助流程取用資源，實現細粒度跨部門權限控管",
-        "開發方式：<u>獨自完成</u>前後端開發。前端以 HTTP Interceptor 自動更新 Token，Directive 控制元件可見性；以 <u>Azure DevOps</u> CI/CD 部屬至 <u>Azure App Service</u>，並以 <u>Application Insights</u> 追蹤系統狀態與使用情形",
+        "功能設計：整合 <u>AAD SSO</u> 單一登入，MIS 部門可取得比 Azure Portal 更詳細的監控與告警資訊，非技術部門透過自助流程取用資源，實現細緻權限控管",
+        "開發方式：<u>獨自完成</u>前後端開發。前端以 HTTP Interceptor 自動更新 Token，Directive 控制元件可見性。以 <u>Azure DevOps</u> CI/CD 部屬至 <u>Azure App Service</u>，並以 <u>Application Insights</u> 追蹤系統狀態與使用情形",
         "參與新辦公室搬遷的網路規劃與無線環境建置"
       ],
       "skills": [
@@ -327,10 +327,10 @@
   "interests": [
     {
       "name": "HomeLab",
-      "summary": "架設 12 台實體伺服器叢集，已運作 22 個月 (2023/12 - 2025/10)",
+      "summary": "架設 12 台實體伺服器叢集，自 2023/12 穩定運作超過兩年",
       "highlights": [
-        "使用 <u>IaC 工具</u> 管理運算資源，並設有<u>監控與自動告警機制</u>",
         "以 <u>ESXi</u> 和 <u>Proxmox</u> 為基底建構運算資源，服務以<u>容器化</u>方式執行於 <u>Container OS</u>（簡單容器服務運作在 Flatcar Container Linux、Kubernetes 運作在 Talos Linux）",
+        "使用 <u>IaC 工具</u> 管理運算資源，並設有<u>監控與告警機制</u>",
         "管理 3 個 Microsoft 365 tenant 並使用 Azure AD 進行單一登入"
       ],
       "keywords": [
@@ -345,6 +345,13 @@
   ],
   "references": [],
   "projects": [
+    {
+      "name": "Terragrunt 結合 GitLab CI 的 Pipeline 模版",
+      "startDate": "2026-01",
+      "description": "一個用於 Terragrunt 的 GitLab CI Pipeline",
+      "url": "https://github.com/Oschangkai/terragrunt-gitlab-ci",
+      "github": "https://github.com/Oschangkai/terragrunt-gitlab-ci"
+    },
     {
       "name": "台科大管院國際認證網站 - 前端",
       "startDate": "2022-07",
@@ -373,6 +380,7 @@
   ],
   "print": {
     "education.highlights": false,
+    "projects": false,
     "experience.duration": true
   }
 }

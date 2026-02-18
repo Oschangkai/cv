@@ -6,7 +6,7 @@
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "Engineer with nearly three years of hands-on experience in <u>cloud-native application development</u>, proficient in the <u>Microsoft ecosystem</u> and containerized deployments. Brings practical DevOps skills including <u>IaC automation</u>, <u>CI/CD pipeline design</u>, and <u>network planning</u> — further reinforced through a self-managed <u>HomeLab</u>. Actively transitioning into a <u>DevOps / Platform Engineer</u> role, bridging development and operations.",
+    "summary": "KaiYi Chang graduated from NTUST with a Master's in Information Management in 2025, with nearly three years of experience in <u>cloud-native application development</u>, proficient in the Microsoft ecosystem and containerized applications. Brings hands-on DevOps skills including <u>IaC automation</u>, <u>CI/CD pipeline design</u>, and <u>network planning</u>, continuously sharpening infrastructure management skills through a self-managed <u>HomeLab</u>. Actively transitioning into a <u>DevOps / Platform Engineer</u> role.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -39,7 +39,7 @@
       "location": "Daan Dist., TPE",
       "url": "https://www.sndaits.com/",
       "startDate": "2025-12",
-      "summary": "Seconded to Cathay Health Management; responsible for CI/CD pipeline setup and AWS infrastructure maintenance",
+      "summary": "Seconded to Cathay Healthcare Management; responsible for CI/CD pipeline setup and AWS infrastructure maintenance",
       "highlights": [
         "Built <u>GitLab</u> / <u>Azure DevOps</u> CI/CD Pipelines to automate Kubernetes, Helm Chart, and Terragrunt deployments",
         "Wrote Dockerfiles and Helm Charts for containerized application deployment",
@@ -63,7 +63,7 @@
       "summary": "Freelance projects during master's studies, covering DevOps consulting, network infrastructure, and cloud management",
       "highlights": [
         "International logistics company DevOps planning & implementation: Built CI/CD with <u>Jenkins</u>, automating testing, building, and deployment across <u>global on-premise environments</u>",
-        "Real estate company office network: Designed AP coverage, guest network isolation, and VPN remote access — running stably for over 2.5 years as of 2025/10",
+        "Real estate company office network: Designed AP coverage, guest network isolation, and VPN remote access — running stably for over 2.5 years since 2023/05",
         "NTUST School of Management accreditation website: <u>Angular</u> + <u>.NET 6</u> full-stack, deployed via <u>GitHub Actions</u> CI/CD — successfully completed AACSB (2023) and EQUIS (2024) accreditations"
       ],
       "details": [
@@ -327,7 +327,7 @@
   "interests": [
     {
       "name": "HomeLab",
-      "summary": "Built a 12-server physical cluster, running for 22 months (2023/12 - 2025/10)",
+      "summary": "Built a 12-server physical cluster, running for 2 years since 2023/12",
       "highlights": [
         "Using <u>IaC tools</u> to manage computing resources with <u>monitoring and automated alerting mechanisms</u>",
         "Built computing resources based on <u>ESXi</u> and <u>Proxmox</u>, with services running in <u>containerized</u> form on <u>Container OS</u> (simple container services running on Flatcar Container Linux and Kubernetes running on Talos Linux)",
@@ -345,6 +345,13 @@
   ],
   "references": [],
   "projects": [
+    {
+      "name": "Terragrunt GitLab CI Pipeline Template",
+      "startDate": "2026-01",
+      "description": "A template for Terragrunt GitLab CI Pipeline",
+      "url": "https://github.com/Oschangkai/terragrunt-gitlab-ci",
+      "github": "https://github.com/Oschangkai/terragrunt-gitlab-ci"
+    },
     {
       "name": "NTUST SoM International Accreditation Website - Frontend",
       "startDate": "2022-07",
@@ -373,6 +380,7 @@
   ],
   "print": {
     "education.highlights": false,
+    "projects": false,
     "experience.duration": true
   }
 }
