@@ -7,7 +7,7 @@ const print = getCVSection("print");
 const t = useTranslation();
 ---
 
-<Section title={t("interests.title")}>
+<Section title={t("interests.title")} print={print?.["interests"]}>
   <ul>
     {
       interests.map(({ name, summary, highlights, keywords }) => {
