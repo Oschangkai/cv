@@ -122,6 +122,56 @@ languageNames: {
 }
 ```
 
+## 🖨️ Print Configuration
+
+Control which sections and elements appear when printing your CV. Add a `print` object to your CV JSON file:
+
+```json
+{
+  "print": {
+    "hero": true,
+    "about": true,
+    "experience": true,
+    "experience.duration": true,
+    "experience.skills": true,
+    "education": true,
+    "education.highlights": true,
+    "skills": true,
+    "interests": true,
+    "interests.keywords": true,
+    "projects": true,
+    "certificates": true
+  }
+}
+```
+
+### Available Print Options
+
+**Section-level controls** (hide entire sections, default: `true`):
+- `hero` - Hero section with name, title, and contact info
+- `about` - About section with summary
+- `experience` - Work experience section
+- `education` - Education section
+- `skills` - Skills section
+- `interests` - Interests section
+- `projects` - Projects section
+- `certificates` - Certificates section
+
+**Element-level controls** (hide specific elements within sections, default: `false`):
+- `experience.duration` - Work duration display (e.g., "2 years 3 months")
+- `experience.skills` - Skills chips in work experience entries
+- `education.highlights` - Education highlights list
+- `interests.keywords` - Keywords tags in interests section
+
+**Note:** The following elements are **always hidden** when printing (cannot be configured):
+- Hero section social media icons (email, phone, LinkedIn buttons)
+- Experience location and department fields
+- Experience expandable details section
+- Skills level indicators and expand arrows
+- Education "show more/less" toggle buttons
+
+Set any option to `false` to hide it when printing, or omit the option to use the default behavior.
+
 ## 🎯 Enhancements
 
 1. **Multi-language Support** - Automatic detection with browser preference integration and persistence
@@ -130,7 +180,7 @@ languageNames: {
 4. **Theme System** - Complete dark mode with automatic system detection and persistence
 5. **Interactive Skills** - Expandable cards with level indicators, keywords, and category icons
 6. **Rich CV Sections** - Certificates, interests, education highlights with conditional rendering
-7. **Native Print Support** - Built-in window.print() with optimized A4 layouts and page breaks
+7. **Configurable Print Support** - Built-in window.print() with configurable sections and optimized A4 layouts
 8. **Smart Date Formatting** - Displays work duration in natural language and i18n support
 
 ## 📄 License
