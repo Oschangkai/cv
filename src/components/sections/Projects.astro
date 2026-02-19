@@ -51,7 +51,7 @@ const t = useTranslation();
               </article>
             </li>
           );
-        }
+        },
       )
     }
   </ul>
@@ -144,14 +144,36 @@ const t = useTranslation();
 
     article {
       border: none;
-      box-shadow: 0 1px 1px var(--project-border);
       padding: 0 0 16px 0;
     }
   }
 
   @media print {
+    ul {
+      /* Reset negative margins to prevent overflow in print mode on A4 */
+      margin-inline: 0;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.8rem;
+    }
+
+    article {
+      padding: 12px;
+    }
+
+    article p {
+      font-size: 0.9rem;
+    }
+
     article h3 span {
       animation-name: none;
+    }
+
+    footer span {
+      background: none;
+      border: 1px solid var(--skill-chip-border);
+      color: var(--skill-chip-color);
+      padding: 2px 6px;
+      font-size: 0.75rem;
     }
   }
 </style>

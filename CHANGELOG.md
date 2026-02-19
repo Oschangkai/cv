@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.11.0] - 2026-02-19
+
+### Added
+- **Print Configuration** - Configurable print display for experience duration, skills, interests keywords, projects, and interests section (bfd795b, 9e7e61e)
+
+### Changed
+- **Component Structure** - Reorganized page control components into page_controls subdirectory (7df2600)
+- **Dependencies** - Updated Astro to 5.17.2 and @astrojs/check to 0.9.6 (7f93dd5)
+
+### Fixed
+- **Print Layout** - Prevent projects section from overflowing A4 page (f84bb81)
+
 ## [1.10.0] - 2025-11-03
 
 ### Added
