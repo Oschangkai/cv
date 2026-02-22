@@ -8,10 +8,13 @@ interface Props {
 }
 
 const { title, summary, image, url, currentLang } = Astro.props;
+
+// Convert underscore to hyphen for proper BCP 47 language tag (e.g., zh_tw -> zh-tw)
+const htmlLang = currentLang.replace(/_/g, "-");
 ---
 
 <!doctype html>
-<html lang={currentLang}>
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <title>{title.trim()}</title>
@@ -64,7 +67,7 @@ const { title, summary, image, url, currentLang } = Astro.props;
     text-autospace: normal;
   }
 
-  html:lang(zh_tw) {
+  html:lang(zh-tw) {
     font-family:
       Huninn,
       Menlo,
@@ -128,7 +131,7 @@ const { title, summary, image, url, currentLang } = Astro.props;
       sans-serif;
   }
 
-  html:lang(zh_tw) :is(h1, h2, h3, h4) {
+  html:lang(zh-tw) :is(h1, h2, h3, h4) {
     font-family:
       Huninn,
       system-ui,
