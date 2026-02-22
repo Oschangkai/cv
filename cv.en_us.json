@@ -379,8 +379,9 @@
     }
   ],
   "print": {
-    "education.highlights": false,
     "projects": false,
+    "interests": false,
+    "education.highlights": false,
     "experience.duration": true
   }
 }
