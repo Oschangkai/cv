@@ -6,7 +6,7 @@ export const i18nConfig = {
   // 語言顯示名稱
   languageNames: {
     'zh_tw': '繁體中文',
-    'en_us': 'English (US)',
+    'en_us': 'English',
     'ja_jp': '日本語',
     'ko_kr': '한국어',
     'fr_fr': 'Français',

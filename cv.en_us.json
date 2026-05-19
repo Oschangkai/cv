@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "KaiYi (Oscar) Chang",
-    "label": "NTUST Master's graduate in Information Management (2025), with nearly 3 years of cloud-native development experience and hands-on expertise in IaC, CI/CD automation, and network infrastructure management.",
+    "label": "Transitioning into DevOps / Platform Engineering × IaC × Cloud",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "KaiYi Chang graduated from NTUST with a Master's in Information Management in 2025, with nearly three years of experience in <u>cloud-native application development</u>, proficient in the Microsoft ecosystem and containerized applications. Brings hands-on DevOps skills including <u>IaC automation</u>, <u>CI/CD pipeline design</u>, and <u>network planning</u>, continuously sharpening infrastructure management skills through a self-managed <u>HomeLab</u>. Actively transitioning into a <u>DevOps / Platform Engineer</u> role.",
+    "summary": "KaiYi loves turning repetitive workflows into codified, automated pipelines, and is actively transitioning from cloud application development into a DevOps / Platform Engineer role. He is building hands-on expertise in IaC, CI/CD pipeline design, and network planning across both AWS and on-premise environments, and continuously sharpens his infrastructure skills through a self-built HomeLab. Before that, he spent three years developing on the Microsoft ecosystem — including Azure and Microsoft 365 applications — using cloud services to automate everyday office workflows.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -36,23 +36,26 @@
     {
       "name": "Shanda Information Services",
       "position": "Cloud Application Engineer",
+      "department": "Data Intelligence Development Department",
       "location": "Daan Dist., TPE",
       "url": "https://www.sndaits.com/",
       "startDate": "2025-12",
-      "summary": "Seconded to Cathay Healthcare Management; responsible for CI/CD pipeline setup and AWS infrastructure maintenance",
+      "summary": "Seconded to Cathay Healthcare Management; responsible for CI/CD pipeline setup, AWS infrastructure maintenance, and IaC script development",
       "highlights": [
-        "Built <u>GitLab</u> / <u>Azure DevOps</u> CI/CD Pipelines to automate Kubernetes, Helm Chart, and Terragrunt deployments",
-        "Wrote Dockerfiles and Helm Charts for containerized application deployment",
-        "Maintained AWS monitoring and alerting using <u>CloudWatch</u>"
+        "Built <u>GitLab</u> and <u>Azure DevOps</u> CI/CD scripts, covering deployment pipelines for Terragrunt, AWS resources, and Helm Charts",
+        "Maintained AWS monitoring and alerting using <u>CloudWatch</u>, including alert rules, notification mechanisms, log queries, and dashboard creation",
+        "Developed IaC scripts to maintain on-premise services and AWS infrastructure",
+        "Refactored Terragrunt scripts to improve maintainability and readability",
+        "Wrote Dockerfiles, Helm Charts, and Devcontainer configurations to containerize production applications and development environments"
       ],
       "skills": [
         "AWS",
-        "Kubernetes",
+        "Azure DevOps",
         "Terragrunt",
-        "Docker",
-        "Helm",
         "GitLab",
-        "Azure DevOps"
+        "Kubernetes",
+        "Container",
+        "Helm"
       ]
     },
     {
@@ -89,10 +92,9 @@
       "url": "https://www.mayohr.com/",
       "startDate": "2021-03",
       "endDate": "2021-09",
-      "summary": "Developed an Azure cloud resource management platform to streamline cross-department collaboration and resource access",
+      "summary": "Developed an Azure cloud resource management platform to streamline cross-department communication and unify the resource management interface",
       "highlights": [
-        "Built an internal cloud resource portal integrating <u>Azure APIs</u> and SendGrid, enabling non-technical teams to self-serve cloud resources with finer-grained monitoring and access control than Azure Portal",
-        "Set up <u>Azure DevOps</u> CI/CD pipeline for automated deployment to <u>Azure App Service</u>"
+        "Built an internal cloud resource portal integrating <u>Azure APIs</u> and SendGrid, enabling non-technical teams to self-serve cloud resources with finer-grained monitoring and access control than Azure Portal"
       ],
       "details": [
         "Tech Stack: Backend built with <u>.NET Core 3</u> RESTful API integrating Azure services; frontend built with <u>Angular 12</u>, providing a unified portal that eliminates the need to learn multiple interfaces.",
@@ -379,6 +381,7 @@
     }
   ],
   "print": {
+    "avatar": false,
     "projects": false,
     "interests": false,
     "education.highlights": false,

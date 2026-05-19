@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "張楷翊",
-    "label": "2025 畢業於台科大資管碩士，擁有近三年的雲原生開發工作經歷，並具有 IaC、CI/CD、網通設備管理的 hands-on 經驗",
+    "label": "正在轉型 DevOps / Platform 工程師 × IaC × 雲端",
     "image": "/me.webp",
     "email": "me@kaiyeee.tw",
     "phone": "",
     "url": "https://cv.kaiyeee.tw",
-    "summary": "張楷翊 2025 畢業於台科大資訊管理碩士班，擁有將近三年的工作經驗於<u>雲原生應用開發</u>，熟悉 Microsoft 生態系與容器化應用。具備 IaC 自動化、CI/CD 流程設計、網路規劃等 DevOps 實務能力，並透過 HomeLab 持續精進基礎設施管理技術，目前積極轉型 DevOps / Platform Engineer。",
+    "summary": "張楷翊喜愛將重複的流程規則化、自動化，目前正積極從雲端應用開發轉型為 DevOps / Platform 工程師，持續累積 AWS 與地端上的 IaC 經驗、CI/CD 流程設計、網路規劃等實務能力，並透過自建 HomeLab 精進基礎設施管理技術。過去三年著重於 Microsoft 生態系的開發，包含 Azure 及 Microsoft 365 應用開發，利用雲端服務自動化辦公日常。",
     "location": {
       "address": "",
       "postalCode": "",
@@ -36,23 +36,26 @@
     {
       "name": "盛大資訊股份有限公司",
       "position": "雲端應用工程師",
+      "department": "數據智慧發展部",
       "location": "臺北市大安區",
       "url": "https://www.sndaits.com/",
       "startDate": "2025-12",
-      "summary": "派駐至國泰健康管理中心，負責 CI/CD 流程建置與 AWS 基礎設施維護",
+      "summary": "派駐至國泰健康管理中心，負責 CI/CD 流程建置、AWS 基礎設施維護、IaC 腳本開發",
       "highlights": [
-        "建置 <u>GitLab</u> 及 Azure DevOps CI/CD Pipeline，自動化部屬 Kubernetes、Helm Chart 及 Terragrunt",
-        "撰寫 Dockerfile 及 Helm Chart，容器化應用部屬",
-        "使用 CloudWatch 維護 AWS 監控告警"
+        "建立 <u>GitLab</u> 及 <u>Azure DevOps</u> CI/CD 腳本，包含 Terragrunt、AWS 資源及 Helm Chart 部屬流程",
+        "使用 CloudWatch 維護 AWS 監控告警，包含設定告警規則、通知機制、log 查詢與建立儀表板",
+        "開發 IaC 腳本，維護地端服務及 AWS 基礎設施",
+        "Refactor Terragrunt 腳本以提升維護性與可讀性",
+        "撰寫 Dockerfile、Helm Chart 及 Devcontainer 設定，容器化線上應用及開發環境"
       ],
       "skills": [
         "AWS",
-        "Kubernetes",
+        "Azure DevOps",
         "Terragrunt",
-        "Docker",
-        "Helm",
         "GitLab",
-        "Azure DevOps"
+        "Kubernetes",
+        "Container",
+        "Helm"
       ]
     },
     {
@@ -89,10 +92,9 @@
       "url": "https://www.mayohr.com/",
       "startDate": "2021-03",
       "endDate": "2021-09",
-      "summary": "開發 Azure 雲資源管理平台，改善部門間合作與資源管理",
+      "summary": "開發 Azure 雲資源管理平台，用以改善部門間溝通流程與統一資源管理介面",
       "highlights": [
-        "開發內部雲資源管理平台，整合 Azure API 與 SendGrid，讓非技術部門自助存取資源，提供比 Azure Portal 更細緻的監控與權限控管",
-        "以 Azure DevOps CI/CD 自動部屬至 Azure App Service"
+        "開發內部雲資源管理平台，整合 Azure API 與 SendGrid，讓非技術部門自助存取資源，提供比 Azure Portal 更細緻的監控與權限控管"
       ],
       "details": [
         "技術架構：後端以 <u>.NET Core 3</u> 建立 RESTful API 串接 Azure 服務；前端採用 <u>Angular 12</u>，提供統一操作介面，免除各部門學習多套介面的成本",
