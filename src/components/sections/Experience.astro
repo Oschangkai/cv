@@ -118,7 +118,7 @@ const durationTemplates = {
                         ))}
                       </ul>
                       {/* prettier-ignore */}
-                      <button type="button" class="show-more-btn" onclick="toggleDetails(this)" data-show-more-text={t("show_more")} data-show-less-text={t("show_less")}>
+                      <button type="button" class="show-more-btn" data-show-more-text={t("show_more")} data-show-less-text={t("show_less")}>
                         {t("show_more")}<Arrow class={["toggle-icon"]} />
                       </button>
                     </div>
@@ -538,4 +538,10 @@ const durationTemplates = {
       }
     }
   }
+
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest(".show-more-btn");
+    if (!button) return;
+    toggleDetails(button);
+  });
 </script>
