@@ -266,6 +266,14 @@ const htmlLang = currentLang.replace(/_/g, "-");
       background: #ffffff !important;
       color: #444 !important;
     }
+
+    /* Force browser to preserve exact colors when printing to PDF.
+       Without this, browsers may auto-adjust colors (e.g. #777 → #222)
+       under the default "economy" mode. */
+    * {
+      print-color-adjust: exact !important;
+      -webkit-print-color-adjust: exact !important;
+    }
   }
   :root {
     --gray: rgb(108, 117, 125);
