@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.11.1] - 2026-05-20
+
+### Fixed
+- **Work Duration** - Refresh ongoing work duration at runtime to avoid stale values (209b3c3)
+- **Print Color** - Force exact color adjust to preserve grayscale in PDF export (d7435f9)
+- **Arc Browser Compatibility** - Use BCP 47 hyphenated lang tag for proper language detection (cf2c51b)
+
 ## [1.11.0] - 2026-02-19
 
 ### Added
