@@ -8,10 +8,13 @@ interface Props {
 }
 
 const { title, summary, image, url, currentLang } = Astro.props;
+
+// Convert underscore to hyphen for proper BCP 47 language tag (e.g., zh_tw -> zh-tw)
+const htmlLang = currentLang.replace(/_/g, "-");
 ---
 
 <!doctype html>
-<html lang={currentLang}>
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <title>{title.trim()}</title>
@@ -228,6 +231,14 @@ const { title, summary, image, url, currentLang } = Astro.props;
     body {
       background: #ffffff !important;
       color: #444 !important;
+    }
+
+    /* Force browser to preserve exact colors when printing to PDF.
+       Without this, browsers may auto-adjust colors (e.g. #777 → #222)
+       under the default "economy" mode. */
+    * {
+      print-color-adjust: exact !important;
+      -webkit-print-color-adjust: exact !important;
     }
   }
   :root {

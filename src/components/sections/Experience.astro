@@ -10,10 +10,23 @@ import {
 const work = getCVSection("work");
 const print = getCVSection("print");
 const t = useTranslation();
+
+// i18n templates for duration strings, passed to the client script so it can
+// re-render durations for ongoing work without re-implementing i18n.
+// We inject placeholder tokens that the client will substitute at runtime.
+const durationTemplates = {
+  years: t("duration.years", { years: "{years}" }),
+  months: t("duration.months", { months: "{months}" }),
+  yearsMonths: t("duration.years_months", {
+    years: "{years}",
+    months: "{months}",
+  }),
+  lessThanMonth: t("duration.less_than_month"),
+};
 ---
 
 <Section title={t("experience.title")} print={print?.["experience"]}>
-  <ul>
+  <ul class="experience-list">
     {
       work.map(
         ({
@@ -72,8 +85,10 @@ const t = useTranslation();
                     <div
                       class:list={[
                         "duration",
+                        !endDate && "is-current",
                         !print?.["experience.duration"] && "no-print",
                       ]}
+                      data-current-start={!endDate ? startDate : undefined}
                     >{`(${workDuration})`}</div>
                   </div>
                 </header>
@@ -103,7 +118,7 @@ const t = useTranslation();
                         ))}
                       </ul>
                       {/* prettier-ignore */}
-                      <button type="button" class="show-more-btn" onclick="toggleDetails(this)" data-show-more-text={t("show_more")} data-show-less-text={t("show_less")}>
+                      <button type="button" class="show-more-btn" data-show-more-text={t("show_more")} data-show-less-text={t("show_less")}>
                         {t("show_more")}<Arrow class={["toggle-icon"]} />
                       </button>
                     </div>
@@ -447,7 +462,61 @@ const t = useTranslation();
     }
   }
 </style>
-<script is:inline>
+<script define:vars={{ durationTemplates }}>
+  // Recalculate "current/ongoing" work duration on the client so the value
+  // reflects the time the page is viewed, not the time it was built.
+  // The static HTML keeps the build-time value as a fallback for no-JS / print.
+  function computeCurrentDuration(startDate) {
+    const start = new Date(startDate);
+    const end = new Date();
+
+    let years = end.getFullYear() - start.getFullYear();
+    let months = end.getMonth() - start.getMonth();
+    const days = end.getDate() - start.getDate();
+
+    // If month diff is negative, borrow a year
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    // Same year + same month and only days differ: treat as "less than a month"
+    if (years === 0 && months === 0 && days !== 0) {
+      return durationTemplates.lessThanMonth;
+    }
+
+    // +1 to count the current month (e.g. Aug -> Aug = 1 month)
+    // Mirrors calculateWorkDuration() in src/utils/date-formatter.ts
+    months += 1;
+    if (months >= 12) {
+      years += Math.floor(months / 12);
+      months = months % 12;
+    }
+
+    if (years === 0) {
+      return durationTemplates.months.replace("{months}", String(months));
+    }
+    if (months === 0) {
+      return durationTemplates.years.replace("{years}", String(years));
+    }
+    return durationTemplates.yearsMonths
+      .replace("{years}", String(years))
+      .replace("{months}", String(months));
+  }
+
+  function refreshCurrentDurations() {
+    const nodes = document.querySelectorAll(
+      ".experience-list .duration.is-current[data-current-start]"
+    );
+    nodes.forEach((el) => {
+      const start = el.getAttribute("data-current-start");
+      if (!start) return;
+      el.textContent = `(${computeCurrentDuration(start)})`;
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", refreshCurrentDurations);
+
   function toggleDetails(button) {
     const container = button.closest(".details");
     if (!container) return;
@@ -469,4 +538,10 @@ const t = useTranslation();
       }
     }
   }
+
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest(".show-more-btn");
+    if (!button) return;
+    toggleDetails(button);
+  });
 </script>
